@@ -33,14 +33,14 @@ export function ProcessMau1() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[var(--bg-section)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn direction="up">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C5A880] uppercase tracking-widest">
-              <span className="w-6 h-0.5 bg-[#C5A880]" />
+            <div className="inline-flex items-center gap-2 text-xs font-bold text-[var(--color-accent)] uppercase tracking-widest">
+              <span className="w-6 h-0.5 bg-[var(--color-accent)]" />
               <span>QUY TRÌNH LÀM VIỆC CHUẨN MỰC</span>
-              <span className="w-6 h-0.5 bg-[#C5A880]" />
+              <span className="w-6 h-0.5 bg-[var(--color-accent)]" />
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight">
               4 Bước Tư vấn Pháp lý Chuẩn hóa
@@ -56,14 +56,14 @@ export function ProcessMau1() {
           {steps.map((item, idx) => (
             <StaggerItem key={idx}>
               <div
-                className="relative p-6 rounded-xl border border-slate-200 bg-white corporate-card-shadow hover:corporate-card-shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-4 h-full"
+                className="relative p-6 rounded-xl border border-[var(--color-border)] bg-[var(--surface)] corporate-card-shadow hover:corporate-card-shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-4 h-full"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-lg bg-[var(--bg-section-alt)] text-[var(--color-primary)] flex items-center justify-center">
                       {item.icon}
                     </div>
-                    <span className="text-2xl font-black text-slate-200 tracking-wider font-mono">
+                    <span className="text-2xl font-black text-slate-300 tracking-wider font-mono">
                       {item.step}
                     </span>
                   </div>
@@ -75,8 +75,8 @@ export function ProcessMau1() {
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-slate-100 flex items-center gap-1.5 text-[11px] font-semibold text-[#0A2540]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880]" />
+                <div className="pt-3 border-t border-[var(--color-border)] flex items-center gap-1.5 text-[11px] font-semibold text-[var(--color-primary)]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]" />
                   <span>Cam kết chuẩn mực & Đúng hạn</span>
                 </div>
               </div>

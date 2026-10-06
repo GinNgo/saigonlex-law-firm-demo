@@ -98,7 +98,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col font-sans bg-white text-[#202124] selection:bg-amber-100 selection:text-amber-900">
+      <body className="min-h-full flex flex-col font-sans bg-[var(--bg-page)] text-[var(--color-text)] selection:bg-[var(--color-accent)]/20 selection:text-[var(--color-primary-dark)]">
         <DemoThemeProvider>
           <TemplateTransitionOverlay />
           {children}

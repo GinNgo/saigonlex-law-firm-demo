@@ -27,13 +27,13 @@ export function CoreValuesMau1() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[var(--bg-section)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Title & Strategy */}
           <FadeIn direction="right" className="lg:col-span-5 space-y-5">
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C5A880] uppercase tracking-wide">
-              <span className="w-6 h-0.5 bg-[#C5A880]" />
+            <div className="inline-flex items-center gap-2 text-xs font-bold text-[var(--color-accent)] uppercase tracking-wide">
+              <span className="w-6 h-0.5 bg-[var(--color-accent)]" />
               <span>NGUYÊN TẮC HÀNH NGHỀ</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F172A] tracking-tight">
@@ -42,9 +42,9 @@ export function CoreValuesMau1() {
             <p className="text-[#202124] text-[15px] sm:text-[16px] leading-[1.7]">
               Chúng tôi tin rằng niềm tin của khách hàng không được xây dựng bằng những lời hứa hoa mỹ, mà bằng tính kỷ luật, sự chuẩn xác trong từng điều khoản và phong cách làm việc chuyên nghiệp, minh bạch.
             </p>
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-[#202124] space-y-2">
+            <div className="p-4 rounded-xl bg-[var(--bg-section-alt)] border border-[var(--color-border)] text-xs text-[var(--color-text)] space-y-2">
               <div className="font-semibold text-[#111827] flex items-center gap-1.5">
-                <Shield className="w-4 h-4 text-[#C5A880]" />
+                <Shield className="w-4 h-4 text-[var(--color-accent)]" />
                 <span>Tiêu chuẩn Đạo đức Nghề nghiệp Luật sư Việt Nam</span>
               </div>
               <p className="text-[#4B5563] leading-relaxed">
@@ -57,8 +57,8 @@ export function CoreValuesMau1() {
           <StaggerContainer className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {values.map((v, i) => (
               <StaggerItem key={i}>
-                <div className="p-6 rounded-xl border border-slate-200 bg-white hover:border-[#C5A880] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 space-y-3 group h-full">
-                  <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center group-hover:bg-[#17365D] transition">
+                <div className="p-6 rounded-xl border border-[var(--color-border)] bg-[var(--surface)] hover:border-[var(--color-accent)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 space-y-3 group h-full">
+                  <div className="w-12 h-12 rounded-lg bg-[var(--bg-soft)] flex items-center justify-center group-hover:bg-[var(--color-primary)] transition">
                     {v.icon}
                   </div>
                   <h3 className="text-base font-semibold text-[#111827]">

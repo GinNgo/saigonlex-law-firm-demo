@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import { DemoBanner } from "@/components/common/DemoBanner";
 import { JsonLd } from "@/components/common/JsonLd";
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function Mau1HomePage() {
   return (
-    <TemplatePageWrapper templateId="mau-a" className="min-h-screen flex flex-col bg-white">
+    <TemplatePageWrapper templateId="mau-a" className="min-h-screen flex flex-col bg-[var(--bg-page)] text-[var(--color-text)]">
       {/* Demo Switcher Banner */}
       <DemoBanner />
 

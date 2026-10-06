@@ -6,12 +6,12 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/common/Motio
 
 export function IntroMau1() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[var(--bg-section)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Images Grid */}
           <FadeIn direction="right" className="lg:col-span-5 relative">
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl border border-slate-100 aspect-[4/3] group">
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl border border-[var(--color-border)] aspect-[4/3] group">
               <Image
                 src="/images/about-firm.png"
                 alt="Khu vực sảnh lễ tân sang trọng và hiện đại của công ty luật SAIGONLEX"
@@ -22,7 +22,7 @@ export function IntroMau1() {
             </div>
 
             {/* Overlapping Secondary Image */}
-            <div className="hidden sm:block absolute -bottom-10 -right-6 w-3/5 aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-20 group">
+            <div className="hidden sm:block absolute -bottom-10 -right-6 w-3/5 aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-[var(--surface)] z-20 group">
               <Image
                 src="/images/desk-contract-1.png"
                 alt="Hợp đồng pháp lý và bút ký tại bàn làm việc luật sư SAIGONLEX"
@@ -32,13 +32,13 @@ export function IntroMau1() {
               />
             </div>
 
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-slate-100 rounded-full -z-10" />
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-[var(--bg-section-alt)] rounded-full -z-10" />
           </FadeIn>
 
           {/* Text Content */}
           <FadeIn direction="left" className="lg:col-span-7 space-y-6 lg:pl-6">
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C5A880] uppercase tracking-widest">
-              <span className="w-6 h-0.5 bg-[#C5A880]" />
+            <div className="inline-flex items-center gap-2 text-xs font-bold text-[var(--color-accent)] uppercase tracking-widest">
+              <span className="w-6 h-0.5 bg-[var(--color-accent)]" />
               <span>VỀ CHÚNG TÔI – SAIGONLEX</span>
             </div>
 
@@ -56,17 +56,17 @@ export function IntroMau1() {
 
             {/* Value Pillars */}
             <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <StaggerItem className="border border-slate-200 p-4 rounded-xl hover:border-blue-400 hover:shadow-md transition bg-slate-50/50">
-                <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#17365D] flex items-center justify-center mb-2">
-                  <Scale className="w-4 h-4 text-[#17365D]" />
+              <StaggerItem className="border border-[var(--color-border)] p-4 rounded-xl hover:border-[var(--color-primary)] hover:shadow-md transition bg-[var(--bg-section-alt)]">
+                <div className="w-8 h-8 rounded-lg bg-[var(--bg-soft)] text-[var(--color-primary)] flex items-center justify-center mb-2">
+                  <Scale className="w-4 h-4 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-sm font-semibold text-[#111827] mb-1">Thượng tôn Pháp luật</h3>
                 <p className="text-xs text-[#4B5563] leading-relaxed">Mọi giải pháp đều đảm bảo tính hợp pháp, bền vững và chống chịu rủi ro lâu dài.</p>
               </StaggerItem>
 
-              <StaggerItem className="border border-slate-200 p-4 rounded-xl hover:border-blue-400 hover:shadow-md transition bg-slate-50/50">
-                <div className="w-8 h-8 rounded-lg bg-amber-100 text-[#C5A880] flex items-center justify-center mb-2">
-                  <ShieldCheck className="w-4 h-4 text-amber-800" />
+              <StaggerItem className="border border-[var(--color-border)] p-4 rounded-xl hover:border-[var(--color-primary)] hover:shadow-md transition bg-[var(--bg-section-alt)]">
+                <div className="w-8 h-8 rounded-lg bg-[var(--bg-soft)] text-[var(--color-accent)] flex items-center justify-center mb-2">
+                  <ShieldCheck className="w-4 h-4 text-[var(--color-accent)]" />
                 </div>
                 <h3 className="text-sm font-semibold text-[#111827] mb-1">Bảo mật Nghiêm ngặt</h3>
                 <p className="text-xs text-[#4B5563] leading-relaxed">Thông tin vụ việc và chiến lược của thân chủ là tài sản vô giá cần được bảo vệ tuyệt đối.</p>
@@ -76,10 +76,10 @@ export function IntroMau1() {
             <div className="pt-2">
               <Link
                 href="/mau-1/gioi-thieu"
-                className="text-[#17365D] hover:text-[#0f2847] font-semibold text-sm inline-flex items-center gap-1.5 group hover:underline"
+                className="text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] font-semibold text-sm inline-flex items-center gap-1.5 group hover:underline"
               >
                 <span>Xem thêm chi tiết lịch sử và sứ mệnh SAIGONLEX</span>
-                <ArrowRight className="w-4 h-4 text-[#C5A880] group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 text-[var(--color-accent)] group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </FadeIn>

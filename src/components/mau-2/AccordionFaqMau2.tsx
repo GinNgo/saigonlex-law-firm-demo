@@ -14,43 +14,43 @@ export function AccordionFaqMau2() {
   };
 
   return (
-    <section className="py-24 bg-[#FAF7F0] text-[#111827] relative border-b border-[#EFE9D9]" id="faq">
+    <section className="py-24 bg-[var(--bg-section)] text-[var(--color-heading)] relative border-b border-[var(--color-border)]" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn direction="up">
           <div className="text-center mb-16 space-y-3">
-            <span className="text-[#997836] text-xs uppercase tracking-wider font-semibold">
+            <span className="text-[var(--color-accent)] text-xs uppercase tracking-wider font-semibold">
               GIẢI ĐÁP QUY CHUẨN
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-heading)]">
               Những Câu hỏi Thường Gặp
             </h2>
-            <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
+            <p className="text-[var(--color-text)] text-sm sm:text-base leading-[1.7]">
               Quy trình tiếp nhận vụ việc cơ mật, chính sách tính thù lao luật sư và cam kết bảo vệ quyền lợi thân chủ.
             </p>
           </div>
         </FadeIn>
 
-        {/* Accordions (Bright Ivory Cards) */}
+        {/* Accordions (Bright Ivory / Themed Cards) */}
         <StaggerContainer className="space-y-4" staggerDelay={0.08}>
           {GENERAL_FAQS.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
               <StaggerItem key={faq.id}>
                 <div
-                  className="rounded-sm border border-[#E5DEC9] bg-white overflow-hidden transition-all duration-300 editorial-card-shadow"
+                  className="rounded-sm border border-[var(--color-border)] bg-[var(--surface)] overflow-hidden transition-all duration-300 editorial-card-shadow"
                 >
                   <button
                     type="button"
                     onClick={() => toggle(idx)}
-                    className="w-full text-left p-6 flex items-center justify-between gap-4 font-semibold text-base sm:text-[17px] text-[#111827] hover:text-[#17365D] transition cursor-pointer"
+                    className="w-full text-left p-6 flex items-center justify-between gap-4 font-semibold text-base sm:text-[17px] text-[var(--color-heading)] hover:text-[var(--color-primary)] transition cursor-pointer"
                     aria-expanded={isOpen}
                   >
                     <span className="flex items-center gap-3">
-                      <span className="font-mono text-xs text-[#997836] font-bold">0{idx + 1}.</span>
+                      <span className="font-mono text-xs text-[var(--color-accent)] font-bold">0{idx + 1}.</span>
                       <span>{faq.question}</span>
                     </span>
                     <ChevronDown
-                      className={`w-5 h-5 text-[#C5A059] shrink-0 transition-transform duration-300 ${
+                      className={`w-5 h-5 text-[var(--color-accent)] shrink-0 transition-transform duration-300 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
@@ -65,7 +65,7 @@ export function AccordionFaqMau2() {
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 pb-6 pt-1 text-[#202124] text-sm leading-[1.72] border-t border-[#F0EAD8] bg-[#FAF7F0]">
+                        <div className="px-6 pb-6 pt-1 text-[var(--color-text)] text-sm leading-[1.72] border-t border-[var(--color-border)] bg-[var(--bg-section-alt)]">
                           <p className="mt-2">{faq.answer}</p>
                         </div>
                       </motion.div>

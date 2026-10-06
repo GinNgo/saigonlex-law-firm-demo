@@ -6,9 +6,9 @@ import { PRACTICE_AREAS } from "@/data/services";
 
 export function FooterMau1() {
   return (
-    <footer className="bg-[#0A192F] text-slate-300 border-t border-slate-800">
+    <footer className="bg-[var(--bg-dark)] text-slate-300 border-t border-white/10">
       {/* Top CTA Strip */}
-      <div className="bg-[#071324] border-b border-slate-800 py-10 px-4 sm:px-6 lg:px-8">
+      <div className="bg-black/25 border-b border-white/10 py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
@@ -21,14 +21,14 @@ export function FooterMau1() {
           <div className="flex flex-wrap items-center gap-3">
             <Link
               href="/mau-1/lien-he"
-              className="bg-[#C5A880] hover:bg-[#b39266] text-slate-950 font-bold px-6 py-3 rounded text-sm transition flex items-center gap-2"
+              className="bg-[var(--color-accent)] hover:opacity-90 text-[var(--color-primary-dark)] font-bold px-6 py-3 rounded text-sm transition flex items-center gap-2 shadow-sm"
             >
               <span>Đặt lịch hẹn tư vấn</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
               href={`tel:${SITE_CONFIG.hotline.replace(/[^0-9]/g, "")}`}
-              className="bg-slate-800/80 hover:bg-slate-800 text-white font-semibold px-5 py-3 rounded text-sm border border-slate-700 transition"
+              className="bg-white/10 hover:bg-white/20 text-white font-semibold px-5 py-3 rounded text-sm border border-white/15 transition"
             >
               Gọi {SITE_CONFIG.hotline}
             </a>
@@ -42,12 +42,12 @@ export function FooterMau1() {
           {/* Brand info (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded bg-[#132E50] text-[#C5A880] flex items-center justify-center font-bold">
-                <Scale className="w-5 h-5 text-[#C5A880]" />
+              <div className="w-10 h-10 rounded bg-[var(--color-primary)] text-[var(--color-accent)] flex items-center justify-center font-bold">
+                <Scale className="w-5 h-5 text-[var(--color-accent)]" />
               </div>
               <div>
                 <span className="text-2xl font-extrabold text-white tracking-tight">
-                  SAIGON<span className="text-[#C5A880]">LEX</span>
+                  SAIGON<span className="text-[var(--color-accent)]">LEX</span>
                 </span>
                 <p className="text-[11px] text-slate-300 uppercase tracking-widest font-medium">
                   Corporate Law Firm • DEMO
@@ -59,8 +59,8 @@ export function FooterMau1() {
               Hãng luật chuyên sâu về tư vấn quản trị doanh nghiệp, M&A, hợp đồng thương mại, đầu tư FDI và giải quyết tranh chấp kinh doanh tại Việt Nam.
             </p>
 
-            <div className="pt-2 text-xs text-amber-300/80 bg-slate-900/80 p-3 rounded border border-slate-800">
-              <div className="flex items-center gap-1.5 font-semibold text-amber-300 mb-1">
+            <div className="pt-2 text-xs bg-black/25 p-3 rounded border border-white/10">
+              <div className="flex items-center gap-1.5 font-semibold text-[var(--color-accent)] mb-1">
                 <ShieldCheck className="w-4 h-4" />
                 <span>Thông tin pháp lý công ty [DEMO]</span>
               </div>
@@ -72,7 +72,7 @@ export function FooterMau1() {
 
           {/* Practice areas */}
           <div>
-            <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-4 border-l-2 border-[#C5A880] pl-2.5">
+            <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-4 border-l-2 border-[var(--color-accent)] pl-2.5">
               Lĩnh vực hành nghề
             </h4>
             <ul className="space-y-2 text-xs">
@@ -82,7 +82,7 @@ export function FooterMau1() {
                     href={`/mau-1/linh-vuc/${svc.slug}`}
                     className="text-slate-300 hover:text-white transition flex items-center gap-1.5"
                   >
-                    <span className="text-[#C5A880]">›</span>
+                    <span className="text-[var(--color-accent)]">›</span>
                     <span>{svc.shortTitle}</span>
                   </Link>
                 </li>
@@ -90,7 +90,7 @@ export function FooterMau1() {
               <li>
                 <Link
                   href="/mau-1/linh-vuc"
-                  className="text-[#C5A880] hover:underline font-semibold inline-block pt-1"
+                  className="text-[var(--color-accent)] hover:underline font-semibold inline-block pt-1"
                 >
                   Xem tất cả 8 lĩnh vực →
                 </Link>
@@ -100,7 +100,7 @@ export function FooterMau1() {
 
           {/* Quick links */}
           <div>
-            <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-4 border-l-2 border-[#C5A880] pl-2.5">
+            <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-4 border-l-2 border-[var(--color-accent)] pl-2.5">
               Liên kết nhanh
             </h4>
             <ul className="space-y-2 text-xs">
@@ -130,7 +130,7 @@ export function FooterMau1() {
                 </Link>
               </li>
               <li>
-                <Link href="/mau-2" className="text-amber-400 hover:underline font-semibold flex items-center gap-1">
+                <Link href="/mau-2" className="text-[var(--color-accent)] hover:underline font-semibold flex items-center gap-1">
                   <span>Xem MẪU B (Signature Premium)</span>
                   <ExternalLink className="w-3 h-3" />
                 </Link>
@@ -140,24 +140,24 @@ export function FooterMau1() {
 
           {/* Contact Details */}
           <div>
-            <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-4 border-l-2 border-[#C5A880] pl-2.5">
+            <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-4 border-l-2 border-[var(--color-accent)] pl-2.5">
               Trụ sở SAIGONLEX
             </h4>
             <div className="space-y-3 text-xs text-slate-300">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[var(--color-accent)] shrink-0 mt-0.5" />
                 <span>{SITE_CONFIG.address}</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#C5A880] shrink-0" />
+                <Phone className="w-4 h-4 text-[var(--color-accent)] shrink-0" />
                 <span>{SITE_CONFIG.phone}</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#C5A880] shrink-0" />
+                <Mail className="w-4 h-4 text-[var(--color-accent)] shrink-0" />
                 <span>{SITE_CONFIG.email}</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Clock className="w-4 h-4 text-[#C5A880] shrink-0" />
+                <Clock className="w-4 h-4 text-[var(--color-accent)] shrink-0" />
                 <span>{SITE_CONFIG.workingHours}</span>
               </div>
             </div>
@@ -165,9 +165,9 @@ export function FooterMau1() {
         </div>
 
         {/* Disclaimer & Copyright */}
-        <div className="mt-12 pt-8 border-t border-slate-800 text-xs text-slate-400 space-y-3">
-          <p className="leading-relaxed bg-slate-900/50 p-4 rounded text-slate-300 border border-slate-800/80">
-            <strong className="text-amber-400">Tuyên bố miễn trừ trách nhiệm pháp lý (Bản DEMO):</strong> {SITE_CONFIG.disclaimer}
+        <div className="mt-12 pt-8 border-t border-white/10 text-xs text-slate-400 space-y-3">
+          <p className="leading-relaxed bg-black/20 p-4 rounded text-slate-300 border border-white/10">
+            <strong className="text-[var(--color-accent)]">Tuyên bố miễn trừ trách nhiệm pháp lý (Bản DEMO):</strong> {SITE_CONFIG.disclaimer}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 pt-2">
             <div>

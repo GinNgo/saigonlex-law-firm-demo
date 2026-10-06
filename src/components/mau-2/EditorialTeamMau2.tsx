@@ -9,18 +9,18 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/common/Motio
 
 export function EditorialTeamMau2() {
   return (
-    <section className="py-24 bg-[#FDFBF7] text-[#111827] relative border-b border-[#EFE9D9]" id="luat-su">
+    <section className="py-24 bg-[var(--bg-section)] text-[var(--color-heading)] relative border-b border-[var(--color-border)]" id="luat-su">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn direction="up">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 border-b border-[#E8E1CE] pb-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 border-b border-[var(--color-border)] pb-8">
             <div className="space-y-3 max-w-2xl">
-              <span className="text-[#997836] text-xs uppercase tracking-wider font-semibold block">
+              <span className="text-[var(--color-accent)] text-xs uppercase tracking-wider font-semibold block">
                 HỘI ĐỒNG THÀNH VIÊN
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A]">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-heading)]">
                 Đội đồng Luật sư Trưởng & Cố vấn
               </h2>
-              <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
+              <p className="text-[var(--color-text)] text-sm sm:text-base leading-[1.7]">
                 Mỗi luật sư thành viên là chuyên gia đầu ngành trong lĩnh vực phụ trách, sở hữu nền tảng học thuật quốc tế và bề dày kinh nghiệm thực tế tại Việt Nam.
               </p>
             </div>
@@ -28,10 +28,10 @@ export function EditorialTeamMau2() {
             <div>
               <Link
                 href="/mau-2/doi-ngu"
-                className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[#17365D] hover:text-[#0f2746] transition font-semibold"
+                className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] transition font-semibold"
               >
                 <span>Xem toàn thể thành viên</span>
-                <ArrowUpRight className="w-4 h-4 text-[#C5A059]" />
+                <ArrowUpRight className="w-4 h-4 text-[var(--color-accent)]" />
               </Link>
             </div>
           </div>
@@ -45,7 +45,7 @@ export function EditorialTeamMau2() {
                 className="group flex flex-col justify-between space-y-4 hover:-translate-y-1.5 transition-all duration-300 h-full"
               >
                 {/* Photo Frame with Editorial Border */}
-                <div className="relative aspect-[3/4] w-full rounded-sm overflow-hidden border border-[#E5DEC9] bg-[#0C1829] group-hover:border-[#C5A059] transition-all duration-500 shadow-lg">
+                <div className="relative aspect-[3/4] w-full rounded-sm overflow-hidden border border-[var(--color-border)] bg-[var(--bg-dark)] group-hover:border-[var(--color-accent)] transition-all duration-500 shadow-lg">
                   <Image
                     src={lawyer.image}
                     alt={`Chân dung minh họa ${lawyer.name}`}
@@ -53,17 +53,17 @@ export function EditorialTeamMau2() {
                     className="object-cover object-top filter grayscale contrast-110 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0C1829]/80 via-transparent to-transparent opacity-70 group-hover:opacity-40 transition" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-70 group-hover:opacity-40 transition" />
 
-                  <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm border border-[#E5DEC9] text-[#0C1829] text-[9px] font-mono tracking-wider px-2 py-0.5 rounded-sm font-bold">
+                  <div className="absolute top-3 right-3 bg-[var(--surface)]/90 backdrop-blur-sm border border-[var(--color-border)] text-[var(--color-heading)] text-[9px] font-mono tracking-wider px-2 py-0.5 rounded-sm font-bold">
                     DEMO PROFILE
                   </div>
 
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <div className="text-[10px] font-mono text-[#F5E6BE] uppercase tracking-wider mb-0.5 font-medium">
+                    <div className="text-[10px] font-mono text-[var(--color-accent)] uppercase tracking-wider mb-0.5 font-medium">
                       {lawyer.barAssociation}
                     </div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-[#EBD59B] transition">
+                    <h3 className="text-lg font-bold text-white group-hover:text-[var(--color-accent)] transition">
                       {lawyer.name}
                     </h3>
                   </div>
@@ -71,17 +71,17 @@ export function EditorialTeamMau2() {
 
                 {/* Text Info */}
                 <div className="space-y-1.5">
-                  <div className="text-xs text-[#997836] tracking-wide font-bold">
+                  <div className="text-xs text-[var(--color-accent)] tracking-wide font-bold">
                     {lawyer.role}
                   </div>
-                  <p className="text-xs text-[#4B5563] leading-relaxed line-clamp-2 font-normal">
+                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed line-clamp-2 font-normal">
                     {lawyer.department}
                   </p>
                   <div className="flex flex-wrap gap-1 pt-1">
                     {lawyer.practices.slice(0, 2).map((p, i) => (
                       <span
                         key={i}
-                        className="text-[9px] text-[#4B5563] border border-[#E5DEC9] px-2 py-0.5 rounded-sm bg-white font-medium"
+                        className="text-[9px] text-[var(--color-text-secondary)] border border-[var(--color-border)] px-2 py-0.5 rounded-sm bg-[var(--surface)] font-medium"
                       >
                         {p}
                       </span>
@@ -95,8 +95,8 @@ export function EditorialTeamMau2() {
 
         {/* Demo Disclaimer notice */}
         <FadeIn direction="up" delay={0.2}>
-          <div className="mt-12 p-4 text-center border border-[#E5DEC9] bg-[#FAF7F0] text-[#202124] text-xs leading-[1.7] font-normal rounded-sm">
-            <strong className="text-[#0F172A] font-bold">Thông báo minh họa dữ liệu nhân sự (DEMO):</strong> Ảnh chân dung phong cách editorial và hồ sơ luật sư trên là mẫu thiết kế giao diện. Website khi vận hành chính thức sẽ cập nhật chân dung thực tế và số thẻ luật sư được cấp bởi Liên đoàn Luật sư Việt Nam.
+          <div className="mt-12 p-4 text-center border border-[var(--color-border)] bg-[var(--bg-section-alt)] text-[var(--color-text)] text-xs leading-[1.7] font-normal rounded-sm">
+            <strong className="text-[var(--color-heading)] font-bold">Thông báo minh họa dữ liệu nhân sự (DEMO):</strong> Ảnh chân dung phong cách editorial và hồ sơ luật sư trên là mẫu thiết kế giao diện. Website khi vận hành chính thức sẽ cập nhật chân dung thực tế và số thẻ luật sư được cấp bởi Liên đoàn Luật sư Việt Nam.
           </div>
         </FadeIn>
       </div>

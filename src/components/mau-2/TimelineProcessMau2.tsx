@@ -44,17 +44,17 @@ export function TimelineProcessMau2() {
   ];
 
   return (
-    <section className="py-24 bg-[#FAF7F0] text-[#111827] relative border-b border-[#EFE9D9]">
+    <section className="py-24 bg-[var(--bg-section-alt)] text-[var(--color-heading)] relative border-b border-[var(--color-border)]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn direction="up" once={true}>
           <div className="text-center max-w-3xl mx-auto mb-20 space-y-3">
-            <span className="text-[#997836] text-xs uppercase tracking-wider font-semibold">
+            <span className="text-[var(--color-accent)] text-xs uppercase tracking-wider font-semibold">
               TIẾN TRÌNH CỐ VẤN
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-heading)]">
               Lộ trình 4 Giai đoạn Chuẩn hóa
             </h2>
-            <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
+            <p className="text-[var(--color-text)] text-sm sm:text-base leading-[1.7]">
               Mỗi bước đi đều được tính toán với độ chính xác cao nhất nhằm giảm thiểu xung đột và gia tăng ưu thế đàm phán.
             </p>
           </div>
@@ -63,11 +63,11 @@ export function TimelineProcessMau2() {
         {/* Timeline Layout with Continuous Scroll Progress Line */}
         <div ref={containerRef} className="space-y-8 relative">
           {/* Static Background Track */}
-          <div className="absolute inset-y-0 left-8 md:left-1/2 -translate-x-1/2 w-[2px] bg-[#E5DEC9]" />
+          <div className="absolute inset-y-0 left-8 md:left-1/2 -translate-x-1/2 w-[2px] bg-[var(--color-border)]" />
 
           {/* Continuous Scroll Progress Line */}
           <motion.div
-            className="absolute top-0 bottom-0 left-8 md:left-1/2 -translate-x-1/2 w-[2px] bg-[var(--color-accent,#C5A059)] origin-top z-0"
+            className="absolute top-0 bottom-0 left-8 md:left-1/2 -translate-x-1/2 w-[2px] bg-[var(--color-accent)] origin-top z-0"
             style={{ scaleY: scrollYProgress }}
           />
 
@@ -81,7 +81,7 @@ export function TimelineProcessMau2() {
                 } gap-8 md:gap-16`}
               >
                 {/* Center Node Pin */}
-                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-white border-2 border-[var(--color-accent,#C5A059)] flex items-center justify-center text-[#0F172A] font-bold text-xs shadow-md z-10">
+                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-[var(--surface)] border-2 border-[var(--color-accent)] flex items-center justify-center text-[var(--color-heading)] font-bold text-xs shadow-md z-10">
                   {st.number}
                 </div>
 
@@ -92,26 +92,26 @@ export function TimelineProcessMau2() {
                   delay={0.08 * idx}
                   once={true}
                 >
-                  <div className="p-6 sm:p-8 rounded-sm border border-[#E5DEC9] bg-white editorial-card-shadow hover:border-[#C5A059] hover:-translate-y-1 transition duration-300 space-y-3">
+                  <div className="p-6 sm:p-8 rounded-sm border border-[var(--color-border)] bg-[var(--surface)] editorial-card-shadow hover:border-[var(--color-accent)] hover:-translate-y-1 transition duration-300 space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="font-mono text-xs text-[#997836] tracking-wider uppercase font-bold">
+                      <span className="font-mono text-xs text-[var(--color-accent)] tracking-wider uppercase font-bold">
                         GIAI ĐOẠN {st.number}
                       </span>
-                      <span className="text-xs text-[#4B5563] px-2.5 py-0.5 rounded-sm bg-[#FAF7F0] border border-[#E5DEC9] font-medium">
+                      <span className="text-xs text-[var(--color-text-secondary)] px-2.5 py-0.5 rounded-sm bg-[var(--bg-section-alt)] border border-[var(--color-border)] font-medium">
                         {st.timeline}
                       </span>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-bold text-[#111827]">
+                    <h3 className="text-lg sm:text-xl font-bold text-[var(--color-heading)]">
                       {st.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-[#202124] leading-[1.7] font-normal">
+                    <p className="text-xs sm:text-sm text-[var(--color-text)] leading-[1.7] font-normal">
                       {st.desc}
                     </p>
 
-                    <div className="pt-2 text-xs font-mono text-[#111827] flex items-center gap-1.5 border-t border-[#F0EAD8] font-medium">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#C5A059]" />
+                    <div className="pt-2 text-xs font-mono text-[var(--color-heading)] flex items-center gap-1.5 border-t border-[var(--color-border)] font-medium">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[var(--color-accent)]" />
                       <span>{st.focus}</span>
                     </div>
                   </div>

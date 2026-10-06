@@ -9,12 +9,12 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/common/Motio
 
 export function TeamMau1() {
   return (
-    <section className="py-20 bg-slate-50 border-t border-slate-200" id="doi-ngu">
+    <section className="py-20 bg-[var(--bg-section-alt)] border-t border-[var(--color-border)]" id="doi-ngu">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div className="max-w-2xl space-y-3">
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C5A880] uppercase tracking-widest">
-              <span className="w-6 h-0.5 bg-[#C5A880]" />
+            <div className="inline-flex items-center gap-2 text-xs font-bold text-[var(--color-accent)] uppercase tracking-widest">
+              <span className="w-6 h-0.5 bg-[var(--color-accent)]" />
               <span>ĐỘI NGŨ LUẬT SƯ CHỦ CHỐT</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight">
@@ -28,10 +28,10 @@ export function TeamMau1() {
           <div>
             <Link
               href="/mau-1/doi-ngu"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#17365D] hover:underline group"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:underline group"
             >
               <span>Xem toàn bộ đội ngũ & hồ sơ năng lực</span>
-              <ArrowRight className="w-4 h-4 text-[#C5A880] group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 text-[var(--color-accent)] group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </FadeIn>
@@ -40,7 +40,7 @@ export function TeamMau1() {
         <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {LAWYERS.map((lawyer) => (
             <StaggerItem key={lawyer.id}>
-              <div className="bg-white rounded-xl overflow-hidden border border-slate-200 corporate-card-shadow hover:corporate-card-shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col group h-full">
+              <div className="bg-[var(--surface)] rounded-xl overflow-hidden border border-[var(--color-border)] corporate-card-shadow hover:corporate-card-shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col group h-full">
                 {/* Photo Frame */}
                 <div className="relative aspect-[3/4] w-full bg-slate-800 overflow-hidden">
                   <Image
@@ -66,10 +66,10 @@ export function TeamMau1() {
                 {/* Info */}
                 <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    <h3 className="text-base font-semibold text-[#111827] group-hover:text-[#17365D] transition">
+                    <h3 className="text-base font-semibold text-[#111827] group-hover:text-[var(--color-primary)] transition">
                       {lawyer.name}
                     </h3>
-                    <div className="text-xs font-semibold text-[#C5A880] mt-0.5">
+                    <div className="text-xs font-semibold text-[var(--color-accent)] mt-0.5">
                       {lawyer.role}
                     </div>
                     <p className="text-xs text-[#4B5563] mt-2 line-clamp-2 leading-relaxed">
@@ -78,7 +78,7 @@ export function TeamMau1() {
                   </div>
 
                   {/* Practices */}
-                  <div className="pt-3 border-t border-slate-100">
+                  <div className="pt-3 border-t border-[var(--color-border)]">
                     <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
                       Chuyên môn chính:
                     </div>
@@ -86,7 +86,7 @@ export function TeamMau1() {
                       {lawyer.practices.map((p, idx) => (
                         <span
                           key={idx}
-                          className="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded"
+                          className="text-[10px] bg-[var(--bg-section-alt)] text-[var(--color-text)] px-2 py-0.5 rounded"
                         >
                           {p}
                         </span>

@@ -11,13 +11,13 @@ export function InsightsMau1() {
   const featuredPosts = BLOG_POSTS.slice(0, 3);
 
   return (
-    <section className="py-20 bg-white" id="tin-tuc">
+    <section className="py-20 bg-[var(--bg-section)]" id="tin-tuc">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn direction="up">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
             <div className="max-w-2xl space-y-3">
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C5A880] uppercase tracking-widest">
-                <span className="w-6 h-0.5 bg-[#C5A880]" />
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-[var(--color-accent)] uppercase tracking-widest">
+                <span className="w-6 h-0.5 bg-[var(--color-accent)]" />
                 <span>GÓC NHÌN PHÁP LÝ & ẤN PHẨM</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight">
@@ -31,10 +31,10 @@ export function InsightsMau1() {
             <div>
               <Link
                 href="/mau-1/tin-tuc"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#17365D] hover:underline group"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:underline group"
               >
                 <span>Xem tất cả bài viết & ấn phẩm</span>
-                <ArrowRight className="w-4 h-4 text-[#C5A880] group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 text-[var(--color-accent)] group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
@@ -45,7 +45,7 @@ export function InsightsMau1() {
           {featuredPosts.map((post) => (
             <StaggerItem key={post.slug}>
               <article
-                className="bg-white rounded-xl overflow-hidden border border-slate-200 corporate-card-shadow hover:corporate-card-shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col group h-full"
+                className="bg-[var(--surface)] rounded-xl overflow-hidden border border-[var(--color-border)] corporate-card-shadow hover:corporate-card-shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col group h-full"
               >
                 <div className="relative h-52 w-full bg-slate-800 overflow-hidden">
                   <Image
@@ -55,7 +55,7 @@ export function InsightsMau1() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
-                  <div className="absolute top-3 left-3 bg-[#0A2540] text-white text-[11px] font-bold px-2.5 py-1 rounded shadow">
+                  <div className="absolute top-3 left-3 bg-[var(--color-primary)] text-white text-[11px] font-bold px-2.5 py-1 rounded shadow">
                     {post.category}
                   </div>
                 </div>

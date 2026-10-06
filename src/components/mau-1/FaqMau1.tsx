@@ -14,14 +14,14 @@ export function FaqMau1() {
   };
 
   return (
-    <section className="py-20 bg-slate-50 border-y border-slate-200" id="faq">
+    <section className="py-20 bg-[var(--bg-section-alt)] border-y border-[var(--color-border)]" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn direction="up">
           <div className="text-center mb-14 space-y-3">
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C5A880] uppercase tracking-widest">
-              <span className="w-6 h-0.5 bg-[#C5A880]" />
+            <div className="inline-flex items-center gap-2 text-xs font-bold text-[var(--color-accent)] uppercase tracking-widest">
+              <span className="w-6 h-0.5 bg-[var(--color-accent)]" />
               <span>GIẢI ĐÁP THẮC MẮC PHỔ BIẾN</span>
-              <span className="w-6 h-0.5 bg-[#C5A880]" />
+              <span className="w-6 h-0.5 bg-[var(--color-accent)]" />
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight">
               Câu hỏi Thường gặp (FAQ)
@@ -39,21 +39,21 @@ export function FaqMau1() {
             return (
               <StaggerItem key={faq.id}>
                 <div
-                  className="bg-white rounded-xl border border-slate-200 overflow-hidden corporate-card-shadow transition duration-200"
+                  className="bg-[var(--surface)] rounded-xl border border-[var(--color-border)] overflow-hidden corporate-card-shadow transition duration-200"
                 >
                   <button
                     type="button"
                     onClick={() => toggle(idx)}
-                    className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-semibold text-base sm:text-[17px] text-[#111827] hover:text-[#17365D] transition"
+                    className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-semibold text-base sm:text-[17px] text-[#111827] hover:text-[var(--color-primary)] transition"
                     aria-expanded={isOpen}
                   >
                     <div className="flex items-center gap-3">
-                      <HelpCircle className="w-5 h-5 text-[#C5A880] shrink-0" />
+                      <HelpCircle className="w-5 h-5 text-[var(--color-accent)] shrink-0" />
                       <span>{faq.question}</span>
                     </div>
                     <ChevronDown
                       className={`w-5 h-5 text-[#6B7280] shrink-0 transition-transform duration-300 ${
-                        isOpen ? "rotate-180 text-[#17365D]" : ""
+                        isOpen ? "rotate-180 text-[var(--color-primary)]" : ""
                       }`}
                     />
                   </button>
@@ -67,7 +67,7 @@ export function FaqMau1() {
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                         className="overflow-hidden"
                       >
-                        <div className="px-5 pb-6 sm:px-6 pt-1 text-[#202124] text-sm sm:text-[15px] leading-[1.72] border-t border-slate-100 bg-slate-50/50">
+                        <div className="px-5 pb-6 sm:px-6 pt-1 text-[#202124] text-sm sm:text-[15px] leading-[1.72] border-t border-[var(--color-border)] bg-[var(--bg-section-alt)]/50">
                           <p className="mt-2">{faq.answer}</p>
                         </div>
                       </motion.div>

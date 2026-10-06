@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import { CheckCircle2 } from "lucide-react";
+import { FadeIn } from "@/components/common/Motion";
 
 export function TimelineProcessMau2() {
   const steps = [
@@ -36,17 +39,19 @@ export function TimelineProcessMau2() {
   return (
     <section className="py-24 bg-[#FAF7F0] text-[#111827] relative border-b border-[#EFE9D9]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-20 space-y-3">
-          <span className="text-[#997836] font-serif text-xs uppercase tracking-[0.25em]">
-            TIẾN TRÌNH CỐ VẤN
-          </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C1829]">
-            Lộ trình 4 Giai đoạn Chuẩn hóa
-          </h2>
-          <p className="text-slate-600 font-sans text-sm font-light leading-relaxed">
-            Mỗi bước đi đều được tính toán với độ chính xác cao nhất nhằm giảm thiểu xung đột và gia tăng ưu thế đàm phán.
-          </p>
-        </div>
+        <FadeIn direction="up">
+          <div className="text-center max-w-3xl mx-auto mb-20 space-y-3">
+            <span className="text-[#997836] font-serif text-xs uppercase tracking-[0.25em]">
+              TIẾN TRÌNH CỐ VẤN
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C1829]">
+              Lộ trình 4 Giai đoạn Chuẩn hóa
+            </h2>
+            <p className="text-slate-600 font-sans text-sm font-light leading-relaxed">
+              Mỗi bước đi đều được tính toán với độ chính xác cao nhất nhằm giảm thiểu xung đột và gia tăng ưu thế đàm phán.
+            </p>
+          </div>
+        </FadeIn>
 
         {/* Timeline Layout */}
         <div className="space-y-8 relative before:absolute before:inset-0 before:left-8 md:before:left-1/2 before:w-[2px] before:bg-gradient-to-b before:from-[#E5DEC9] before:via-[#C5A059] before:to-[#E5DEC9]">
@@ -65,8 +70,12 @@ export function TimelineProcessMau2() {
                 </div>
 
                 {/* Content Box */}
-                <div className="ml-16 md:ml-0 md:w-1/2">
-                  <div className="p-6 sm:p-8 rounded-sm border border-[#E5DEC9] bg-white editorial-card-shadow hover:border-[#C5A059] transition duration-300 space-y-3">
+                <FadeIn
+                  direction={isEven ? "left" : "right"}
+                  className="ml-16 md:ml-0 md:w-1/2"
+                  delay={0.1 * idx}
+                >
+                  <div className="p-6 sm:p-8 rounded-sm border border-[#E5DEC9] bg-white editorial-card-shadow hover:border-[#C5A059] hover:-translate-y-1 transition duration-300 space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-xs text-[#997836] tracking-widest uppercase font-bold">
                         GIAI ĐOẠN {st.number}
@@ -89,7 +98,7 @@ export function TimelineProcessMau2() {
                       <span>{st.focus}</span>
                     </div>
                   </div>
-                </div>
+                </FadeIn>
               </div>
             );
           })}

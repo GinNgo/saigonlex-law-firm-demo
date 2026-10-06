@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import { MessageSquareText, FileSearch, FileSignature, CheckCircle2 } from "lucide-react";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/common/Motion";
 
 export function ProcessMau1() {
   const steps = [
@@ -32,51 +35,54 @@ export function ProcessMau1() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C5A880] uppercase tracking-widest">
-            <span className="w-6 h-0.5 bg-[#C5A880]" />
-            <span>QUY TRÌNH LÀM VIỆC CHUẨN MỰC</span>
-            <span className="w-6 h-0.5 bg-[#C5A880]" />
+        <FadeIn direction="up">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C5A880] uppercase tracking-widest">
+              <span className="w-6 h-0.5 bg-[#C5A880]" />
+              <span>QUY TRÌNH LÀM VIỆC CHUẨN MỰC</span>
+              <span className="w-6 h-0.5 bg-[#C5A880]" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
+              4 Bước Tư vấn Pháp lý Chuẩn hóa
+            </h2>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              Mỗi khách hàng đến với SAIGONLEX đều được áp dụng quy trình tiếp nhận và xử lý hồ sơ khoa học, bảo mật và chuẩn xác theo quy chuẩn nghề nghiệp.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
-            4 Bước Tư vấn Pháp lý Chuẩn hóa
-          </h2>
-          <p className="text-slate-600 text-sm leading-relaxed">
-            Mỗi khách hàng đến với SAIGONLEX đều được áp dụng quy trình tiếp nhận và xử lý hồ sơ khoa học, bảo mật và chuẩn xác theo quy chuẩn nghề nghiệp.
-          </p>
-        </div>
+        </FadeIn>
 
         {/* 4 Steps Grid with connecting line */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative" staggerDelay={0.12}>
           {steps.map((item, idx) => (
-            <div
-              key={idx}
-              className="relative p-6 rounded-xl border border-slate-200 bg-white corporate-card-shadow hover:corporate-card-shadow-hover transition duration-200 flex flex-col justify-between space-y-4"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-                    {item.icon}
+            <StaggerItem key={idx}>
+              <div
+                className="relative p-6 rounded-xl border border-slate-200 bg-white corporate-card-shadow hover:corporate-card-shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-4 h-full"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
+                      {item.icon}
+                    </div>
+                    <span className="text-2xl font-black text-slate-200 tracking-wider font-mono">
+                      {item.step}
+                    </span>
                   </div>
-                  <span className="text-2xl font-black text-slate-200 tracking-wider font-mono">
-                    {item.step}
-                  </span>
+                  <h3 className="text-base font-bold text-[#0A2540] mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
-                <h3 className="text-base font-bold text-[#0A2540] mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
 
-              <div className="pt-3 border-t border-slate-100 flex items-center gap-1.5 text-[11px] font-semibold text-[#0A2540]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880]" />
-                <span>Cam kết chuẩn mực & Đúng hạn</span>
+                <div className="pt-3 border-t border-slate-100 flex items-center gap-1.5 text-[11px] font-semibold text-[#0A2540]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880]" />
+                  <span>Cam kết chuẩn mực & Đúng hạn</span>
+                </div>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

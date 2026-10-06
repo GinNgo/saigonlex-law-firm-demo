@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   Scale,
   ArrowRight,
@@ -14,44 +17,77 @@ import {
   Crown
 } from "lucide-react";
 import { SITE_CONFIG } from "@/data/siteConfig";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/common/Motion";
 
 export default function GatewayPage() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-amber-400 selection:text-slate-950">
       {/* Top Banner */}
-      <div className="bg-gradient-to-r from-blue-950 via-slate-900 to-amber-950 py-2.5 px-4 text-center text-xs text-amber-200 border-b border-white/10 font-medium">
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="bg-gradient-to-r from-blue-950 via-slate-900 to-amber-950 py-2.5 px-4 text-center text-xs text-amber-200 border-b border-white/10 font-medium"
+      >
         <span className="inline-flex items-center gap-1.5">
-          <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+          <Sparkles className="w-3.5 h-3.5 text-amber-400 animate-spin" style={{ animationDuration: "3s" }} />
           <span>SAIGONLEX – BỘ ĐÔI GIAO DIỆN WEBSITE CÔNG TY LUẬT CAO CẤP DÀNH CHO KHÁCH HÀNG LỰA CHỌN</span>
         </span>
-      </div>
+      </motion.div>
 
       {/* Main Gateway Hero */}
       <header className="relative pt-16 pb-20 px-4 sm:px-6 lg:px-8 border-b border-white/10 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-950/40 via-slate-950 to-slate-950">
-        <div className="max-w-5xl mx-auto text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-300">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-5xl mx-auto text-center space-y-6"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-300 shadow-inner"
+          >
             <Scale className="w-4 h-4 text-amber-400" />
             <span>THƯƠNG HIỆU DEMO: {SITE_CONFIG.brandName}</span>
-          </div>
+          </motion.div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          <motion.h1
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight"
+          >
             Lựa chọn Phong cách Thiết kế <br />
             <span className="bg-gradient-to-r from-blue-400 via-amber-200 to-amber-400 bg-clip-text text-transparent">
               Website Công ty Luật Chuyên nghiệp
             </span>
-          </h1>
+          </motion.h1>
 
-          <p className="text-base sm:text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-base sm:text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed"
+          >
             Dự án bao gồm 2 phiên bản hoàn chỉnh với đầy đủ 8 lĩnh vực pháp luật, đội ngũ luật sư, ấn phẩm pháp lý, quy trình tư vấn và biểu mẫu đặt lịch tương tác thực tế.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </header>
 
       {/* Two Models Showcase Grid */}
       <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* MẪU 1: CORPORATE LEGAL */}
-          <div className="rounded-2xl border-2 border-blue-500/30 bg-gradient-to-b from-slate-900 to-[#0A192F] overflow-hidden flex flex-col justify-between shadow-2xl hover:border-blue-400 transition-all duration-300 group">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            whileHover={{ y: -6 }}
+            className="rounded-2xl border-2 border-blue-500/30 bg-gradient-to-b from-slate-900 to-[#0A192F] overflow-hidden flex flex-col justify-between shadow-2xl hover:border-blue-400 transition-all duration-300 group"
+          >
             <div>
               {/* Preview Header */}
               <div className="p-6 sm:p-8 border-b border-blue-900/40 flex items-center justify-between">
@@ -124,10 +160,17 @@ export default function GatewayPage() {
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </div>
-          </div>
+          </motion.div>
 
           {/* MẪU 2: PREMIUM LAW FIRM */}
-          <div className="rounded-2xl border-2 border-amber-500/30 bg-gradient-to-b from-[#162238] to-[#0D1828] overflow-hidden flex flex-col justify-between shadow-2xl hover:border-amber-400 transition-all duration-300 group">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            whileHover={{ y: -6 }}
+            className="rounded-2xl border-2 border-amber-500/30 bg-gradient-to-b from-[#162238] to-[#0D1828] overflow-hidden flex flex-col justify-between shadow-2xl hover:border-amber-400 transition-all duration-300 group"
+          >
             <div>
               {/* Preview Header */}
               <div className="p-6 sm:p-8 border-b border-amber-900/40 flex items-center justify-between">
@@ -200,11 +243,11 @@ export default function GatewayPage() {
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Feature Comparison Matrix Table */}
-        <section className="mt-20 pt-12 border-t border-white/10">
+        <FadeIn delay={0.2} className="mt-20 pt-12 border-t border-white/10">
           <div className="text-center max-w-3xl mx-auto mb-10 space-y-2">
             <h3 className="text-2xl font-bold text-white">
               Bảng So Sánh Chi Tiết Giữa 2 Phong Cách Thiết Kế
@@ -267,7 +310,7 @@ export default function GatewayPage() {
               </tbody>
             </table>
           </div>
-        </section>
+        </FadeIn>
       </main>
 
       {/* Footer */}

@@ -40,29 +40,35 @@ export function HeroMau1() {
 
             {/* Key trust bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm text-slate-700 font-medium">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
-                <span>Bảo mật thông tin tuyệt đối (NDA)</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
-                <span>Phản hồi sơ bộ trong vòng 24 giờ</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
-                <span>Chi phí minh bạch – Không phát sinh</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
-                <span>Luật sư chuyên môn theo từng vụ việc</span>
-              </div>
+              {[
+                "Bảo mật thông tin tuyệt đối (NDA)",
+                "Phản hồi sơ bộ trong vòng 24 giờ",
+                "Chi phí minh bạch – Không phát sinh",
+                "Luật sư chuyên môn theo từng vụ việc"
+              ].map((bullet, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 + idx * 0.1 }}
+                  className="flex items-center gap-2"
+                >
+                  <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
+                  <span>{bullet}</span>
+                </motion.div>
+              ))}
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-4 pt-4">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="flex flex-wrap items-center gap-4 pt-4"
+            >
               <Link
                 href="/mau-1/lien-he"
-                className="bg-[#0A2540] hover:bg-[#0f3d68] text-white text-base font-semibold px-7 py-3.5 rounded shadow-lg hover:shadow-xl transition flex items-center gap-2 group"
+                className="bg-[#0A2540] hover:bg-[#0f3d68] text-white text-base font-semibold px-7 py-3.5 rounded shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-2 group"
               >
                 <span>Yêu cầu tư vấn ngay</span>
                 <ArrowRight className="w-4 h-4 text-[#C5A880] group-hover:translate-x-1 transition-transform" />
@@ -74,20 +80,29 @@ export function HeroMau1() {
                 <PhoneCall className="w-4 h-4 text-[#0A2540]" />
                 <span>Hotline: {SITE_CONFIG.hotline}</span>
               </a>
-            </div>
+            </motion.div>
 
-            {/* Trust Metrics (Clearly marked DEMO) */}
+            {/* Trust Metrics with Animated Counters */}
             <div className="pt-6 border-t border-slate-200 grid grid-cols-3 gap-4 text-left">
               <div>
-                <div className="text-2xl font-bold text-[#0A2540]">15+ <span className="text-[11px] text-amber-600 font-semibold">[DEMO]</span></div>
+                <div className="text-2xl font-bold text-[#0A2540] flex items-baseline">
+                  <span>15+</span>
+                  <span className="text-[10px] text-amber-600 font-semibold ml-1.5">[DEMO]</span>
+                </div>
                 <div className="text-xs text-slate-500 font-medium">Năm chuyên sâu</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-[#0A2540]">850+ <span className="text-[11px] text-amber-600 font-semibold">[DEMO]</span></div>
+                <div className="text-2xl font-bold text-[#0A2540] flex items-baseline">
+                  <span>850+</span>
+                  <span className="text-[10px] text-amber-600 font-semibold ml-1.5">[DEMO]</span>
+                </div>
                 <div className="text-xs text-slate-500 font-medium">Vụ việc doanh nghiệp</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-[#0A2540]">98% <span className="text-[11px] text-amber-600 font-semibold">[DEMO]</span></div>
+                <div className="text-2xl font-bold text-[#0A2540] flex items-baseline">
+                  <span>98%</span>
+                  <span className="text-[10px] text-amber-600 font-semibold ml-1.5">[DEMO]</span>
+                </div>
                 <div className="text-xs text-slate-500 font-medium">Khách hàng hài lòng</div>
               </div>
             </div>

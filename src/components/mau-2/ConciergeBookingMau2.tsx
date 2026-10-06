@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Send, CheckCircle2, AlertCircle, Lock, ShieldCheck, ArrowUpRight } from "lucide-react";
 import { PRACTICE_AREAS } from "@/data/services";
 import { SITE_CONFIG } from "@/data/siteConfig";
+import { FadeIn } from "@/components/common/Motion";
 
 export function ConciergeBookingMau2() {
   const [formData, setFormData] = useState({
@@ -85,7 +86,7 @@ export function ConciergeBookingMau2() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Description Column */}
-          <div className="lg:col-span-5 space-y-6">
+          <FadeIn direction="left" className="lg:col-span-5 space-y-6">
             <span className="text-[#C5A059] font-serif text-xs uppercase tracking-[0.25em] block font-semibold">
               HỘI ĐÀM CƠ MẬT
             </span>
@@ -121,10 +122,10 @@ export function ConciergeBookingMau2() {
                 </div>
               </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Right Form Card */}
-          <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-sm border border-[#E5DEC9] shadow-xl">
+          <FadeIn direction="right" className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-sm border border-[#E5DEC9] shadow-xl">
             {submitSuccess ? (
               <div className="p-8 rounded-sm bg-[#FAF7F0] border border-[#E5DEC9] text-center space-y-4 animate-in fade-in">
                 <div className="w-14 h-14 rounded-full bg-amber-500/10 border border-[#C5A059] flex items-center justify-center text-[#C5A059] mx-auto">
@@ -278,7 +279,7 @@ export function ConciergeBookingMau2() {
                 </button>
               </form>
             )}
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

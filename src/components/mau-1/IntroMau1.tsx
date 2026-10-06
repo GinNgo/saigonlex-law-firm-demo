@@ -1,9 +1,8 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Scale, ShieldCheck, Target, ArrowRight } from "lucide-react";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/common/Motion";
 
 export function IntroMau1() {
   return (
@@ -11,33 +10,33 @@ export function IntroMau1() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Images Grid */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl border border-slate-100 aspect-[4/3]">
+          <FadeIn direction="right" className="lg:col-span-5 relative">
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl border border-slate-100 aspect-[4/3] group">
               <Image
                 src="/images/about-firm.png"
                 alt="Khu vực sảnh lễ tân sang trọng và hiện đại của công ty luật SAIGONLEX"
                 fill
-                className="object-cover"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
             </div>
 
             {/* Overlapping Secondary Image */}
-            <div className="hidden sm:block absolute -bottom-10 -right-6 w-3/5 aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-20">
+            <div className="hidden sm:block absolute -bottom-10 -right-6 w-3/5 aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-20 group">
               <Image
                 src="/images/desk-contract-1.png"
                 alt="Hợp đồng pháp lý và bút ký tại bàn làm việc luật sư SAIGONLEX"
                 fill
-                className="object-cover"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="30vw"
               />
             </div>
 
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-slate-100 rounded-full -z-10" />
-          </div>
+          </FadeIn>
 
           {/* Text Content */}
-          <div className="lg:col-span-7 space-y-6 lg:pl-6">
+          <FadeIn direction="left" className="lg:col-span-7 space-y-6 lg:pl-6">
             <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C5A880] uppercase tracking-widest">
               <span className="w-6 h-0.5 bg-[#C5A880]" />
               <span>VỀ CHÚNG TÔI – SAIGONLEX</span>
@@ -56,23 +55,23 @@ export function IntroMau1() {
             </p>
 
             {/* Value Pillars */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="border border-slate-200 p-4 rounded-xl hover:border-blue-400 transition bg-slate-50/50">
+            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <StaggerItem className="border border-slate-200 p-4 rounded-xl hover:border-blue-400 hover:shadow-md transition bg-slate-50/50">
                 <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#0A2540] flex items-center justify-center mb-2">
                   <Scale className="w-4 h-4 text-[#0A2540]" />
                 </div>
                 <h3 className="text-sm font-bold text-[#0A2540] mb-1">Thượng tôn Pháp luật</h3>
                 <p className="text-xs text-slate-500">Mọi giải pháp đều đảm bảo tính hợp pháp, bền vững và chống chịu rủi ro lâu dài.</p>
-              </div>
+              </StaggerItem>
 
-              <div className="border border-slate-200 p-4 rounded-xl hover:border-blue-400 transition bg-slate-50/50">
+              <StaggerItem className="border border-slate-200 p-4 rounded-xl hover:border-blue-400 hover:shadow-md transition bg-slate-50/50">
                 <div className="w-8 h-8 rounded-lg bg-amber-100 text-[#C5A880] flex items-center justify-center mb-2">
                   <ShieldCheck className="w-4 h-4 text-amber-800" />
                 </div>
                 <h3 className="text-sm font-bold text-[#0A2540] mb-1">Bảo mật Nghiêm ngặt</h3>
                 <p className="text-xs text-slate-500">Thông tin vụ việc và chiến lược của thân chủ là tài sản vô giá cần được bảo vệ tuyệt đối.</p>
-              </div>
-            </div>
+              </StaggerItem>
+            </StaggerContainer>
 
             <div className="pt-2">
               <Link
@@ -83,7 +82,7 @@ export function IntroMau1() {
                 <ArrowRight className="w-4 h-4 text-[#C5A880] group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

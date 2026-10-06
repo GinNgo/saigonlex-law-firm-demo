@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Send, CheckCircle2, AlertCircle, Shield, Clock, Phone } from "lucide-react";
 import { PRACTICE_AREAS } from "@/data/services";
 import { SITE_CONFIG } from "@/data/siteConfig";
+import { FadeIn } from "@/components/common/Motion";
 
 export function ConsultationFormMau1() {
   const [formData, setFormData] = useState({
@@ -85,7 +86,7 @@ export function ConsultationFormMau1() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Info Column */}
-          <div className="lg:col-span-5 space-y-6">
+          <FadeIn direction="left" className="lg:col-span-5 space-y-6">
             <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C5A880] uppercase tracking-widest">
               <span className="w-6 h-0.5 bg-[#C5A880]" />
               <span>TIẾP NHẬN YÊU CẦU BẢO MẬT</span>
@@ -130,10 +131,10 @@ export function ConsultationFormMau1() {
                 </div>
               </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Right Form Card */}
-          <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 corporate-card-shadow">
+          <FadeIn direction="right" className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 corporate-card-shadow">
             {submitSuccess ? (
               <div className="p-6 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-950 space-y-4 animate-in fade-in">
                 <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 mx-auto">
@@ -311,7 +312,7 @@ export function ConsultationFormMau1() {
                 </button>
               </form>
             )}
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

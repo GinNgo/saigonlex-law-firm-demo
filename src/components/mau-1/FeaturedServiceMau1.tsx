@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, ArrowRight, ShieldCheck, Clock, Users } from "lucide-react";
+import { FadeIn, ScaleReveal, CounterNumber } from "@/components/common/Motion";
 
 export function FeaturedServiceMau1() {
   return (
@@ -14,7 +15,7 @@ export function FeaturedServiceMau1() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Text */}
-          <div className="lg:col-span-6 space-y-6">
+          <FadeIn direction="left" className="lg:col-span-6 space-y-6">
             <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C5A880] uppercase tracking-widest">
               <span className="w-6 h-0.5 bg-[#C5A880]" />
               <span>DỊCH VỤ NỔI BẬT DÀNH CHO DOANH NGHIỆP</span>
@@ -52,34 +53,34 @@ export function FeaturedServiceMau1() {
             <div className="flex flex-wrap items-center gap-4 pt-4">
               <Link
                 href="/mau-1/linh-vuc/tu-van-doanh-nghiep"
-                className="bg-[#C5A880] hover:bg-[#b39266] text-slate-950 font-bold text-sm px-6 py-3.5 rounded transition flex items-center gap-2"
+                className="bg-[#C5A880] hover:bg-[#b39266] text-slate-950 font-bold text-sm px-6 py-3.5 rounded transition flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 <span>Xem chi tiết gói doanh nghiệp</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/mau-1/lien-he"
-                className="text-white hover:text-[#C5A880] font-semibold text-sm border border-slate-700 px-5 py-3 rounded transition"
+                className="text-white hover:text-[#C5A880] font-semibold text-sm border border-slate-700 hover:border-[#C5A880] px-5 py-3 rounded transition"
               >
                 Nhận đề xuất báo giá riêng
               </Link>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Right Image */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-800 aspect-[4/3]">
+          <FadeIn direction="right" className="lg:col-span-6 relative">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-800 aspect-[4/3] group">
               <Image
                 src="/images/consultation-meeting.png"
                 alt="Luật sư SAIGONLEX tư vấn pháp lý trực tiếp cho đại diện ban giám đốc doanh nghiệp"
                 fill
-                className="object-cover"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
 
               {/* Inset Metric Card */}
-              <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-slate-700 flex items-center justify-between">
+              <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-slate-700 flex items-center justify-between shadow-lg">
                 <div>
                   <div className="text-xs text-slate-400">Thời gian phản hồi cam kết</div>
                   <div className="text-lg font-bold text-white flex items-center gap-1.5 mt-0.5">
@@ -93,7 +94,7 @@ export function FeaturedServiceMau1() {
                 </div>
               </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

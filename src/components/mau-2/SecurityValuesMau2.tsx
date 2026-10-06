@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import { Lock, EyeOff, ShieldCheck, Scale, FileSpreadsheet, KeyRound } from "lucide-react";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/common/Motion";
 
 export function SecurityValuesMau2() {
   const commitments = [
@@ -31,37 +34,40 @@ export function SecurityValuesMau2() {
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#C5A059]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-[#C5A059] font-serif text-xs uppercase tracking-[0.25em]">
-            CAM KẾT CƠ MẬT
-          </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-            Bảo mật Thông tin & Tính Minh bạch
-          </h2>
-          <p className="text-slate-300 font-sans text-sm font-light leading-relaxed">
-            Uy tín của một hãng luật được tôi luyện qua năng lực giữ trọn bí mật kinh doanh cho thân chủ trước mọi biến động thị trường.
-          </p>
-        </div>
+        <FadeIn direction="up">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <span className="text-[#C5A059] font-serif text-xs uppercase tracking-[0.25em]">
+              CAM KẾT CƠ MẬT
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+              Bảo mật Thông tin & Tính Minh bạch
+            </h2>
+            <p className="text-slate-300 font-sans text-sm font-light leading-relaxed">
+              Uy tín của một hãng luật được tôi luyện qua năng lực giữ trọn bí mật kinh doanh cho thân chủ trước mọi biến động thị trường.
+            </p>
+          </div>
+        </FadeIn>
 
         {/* 4 Pillars Grid (Deep Navy Accent Section) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.12}>
           {commitments.map((c, i) => (
-            <div
-              key={i}
-              className="p-8 rounded-sm border border-white/10 bg-[#122238] hover:border-[#C5A059] transition duration-300 space-y-4 group shadow-lg"
-            >
-              <div className="w-12 h-12 rounded-sm bg-[#0C1829] border border-[#C5A059]/40 flex items-center justify-center group-hover:scale-105 transition-transform">
-                {c.icon}
+            <StaggerItem key={i}>
+              <div
+                className="p-8 rounded-sm border border-white/10 bg-[#122238] hover:border-[#C5A059] hover:-translate-y-1.5 transition-all duration-300 space-y-4 group shadow-lg h-full"
+              >
+                <div className="w-12 h-12 rounded-sm bg-[#0C1829] border border-[#C5A059]/40 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  {c.icon}
+                </div>
+                <h3 className="font-serif text-lg font-bold text-white">
+                  {c.title}
+                </h3>
+                <p className="text-xs text-slate-300 font-sans font-light leading-relaxed">
+                  {c.desc}
+                </p>
               </div>
-              <h3 className="font-serif text-lg font-bold text-white">
-                {c.title}
-              </h3>
-              <p className="text-xs text-slate-300 font-sans font-light leading-relaxed">
-                {c.desc}
-              </p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

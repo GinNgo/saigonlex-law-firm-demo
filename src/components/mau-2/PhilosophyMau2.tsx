@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Quote } from "lucide-react";
+import { FadeIn } from "@/components/common/Motion";
 
 export function PhilosophyMau2() {
   return (
@@ -11,13 +12,13 @@ export function PhilosophyMau2() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Left Column: Image with Fine Editorial Border */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative rounded-sm aspect-[4/5] overflow-hidden border-2 border-[#E5DEC9] shadow-xl bg-slate-900">
+          <FadeIn direction="left" className="lg:col-span-5 relative">
+            <div className="relative rounded-sm aspect-[4/5] overflow-hidden border-2 border-[#E5DEC9] shadow-xl bg-slate-900 group">
               <Image
                 src="/images/about-philosophy.png"
                 alt="Thư viện pháp luật và không gian hội đàm kín SAIGONLEX"
                 fill
-                className="object-cover"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0C1829]/60 via-transparent to-transparent" />
@@ -25,10 +26,10 @@ export function PhilosophyMau2() {
 
             {/* Overlapping Fine Accent Line */}
             <div className="hidden sm:block absolute -bottom-6 -right-6 w-40 h-40 border-2 border-[#C5A059]/30 -z-10 rounded-sm" />
-          </div>
+          </FadeIn>
 
           {/* Right Column: Editorial Creed */}
-          <div className="lg:col-span-7 space-y-8">
+          <FadeIn direction="right" className="lg:col-span-7 space-y-8">
             <div className="space-y-3">
               <span className="text-[#997836] font-serif text-xs uppercase tracking-[0.25em] block">
                 TRIẾT LÝ HÀNH NGHỀ & TÔN CHỈ
@@ -43,7 +44,7 @@ export function PhilosophyMau2() {
             </p>
 
             {/* Managing Partner Quote Card (Bright Luxury with Gold Accent) */}
-            <div className="p-8 rounded-sm bg-white border-l-4 border-[#C5A059] border-t border-r border-b border-[#EAE3D2] relative space-y-4 editorial-card-shadow">
+            <div className="p-8 rounded-sm bg-white border-l-4 border-[#C5A059] border-t border-r border-b border-[#EAE3D2] relative space-y-4 editorial-card-shadow hover:-translate-y-1 transition-all duration-300">
               <Quote className="w-8 h-8 text-[#C5A059]/30 absolute top-4 right-4" />
               <p className="font-serif italic text-base sm:text-lg text-[#0C1829] leading-relaxed">
                 “Một vụ việc pháp lý thành công không đo đếm bằng số lượng văn bản được ký kết, mà bằng sự an tâm tuyệt đối của thân chủ khi đối diện với các ngã rẽ định mệnh.”
@@ -72,7 +73,7 @@ export function PhilosophyMau2() {
                 <ArrowUpRight className="w-4 h-4 text-[#C5A059] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

@@ -105,7 +105,7 @@ export function FooterMau2() {
               </li>
               <li className="pt-2">
                 <Link href="/mau-1" className="text-blue-400 hover:underline flex items-center gap-1 font-semibold">
-                  <span>Chuyển sang Mẫu 1 (Corporate)</span>
+                  <span>Xem MẪU A (Corporate Premium)</span>
                   <ArrowUpRight className="w-3 h-3" />
                 </Link>
               </li>

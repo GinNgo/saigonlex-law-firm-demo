@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -67,7 +67,7 @@ export default async function BlogPostDetailMau2Page({ params }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
-                { label: "Trang chủ Mẫu 2", href: "/mau-2" },
+                { label: "Trang chủ Mẫu B", href: "/mau-2" },
                 { label: "Ấn phẩm", href: "/mau-2/tin-tuc" },
                 { label: post.category }
               ]}

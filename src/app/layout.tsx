@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Be_Vietnam_Pro, Roboto } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import { DemoThemeProvider } from "@/context/DemoThemeContext";
+import { TemplateTransitionOverlay } from "@/components/common/TemplateTransitionOverlay";
+import { DemoToolbar } from "@/components/common/DemoToolbar";
 import "./globals.css";
 
 const headingFont = Be_Vietnam_Pro({
@@ -77,8 +80,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className={`${headingFont.variable} ${bodyFont.variable} h-full antialiased`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('saigonlex-demo-theme');
+                  if (saved) {
+                    document.documentElement.setAttribute('data-theme', saved);
+                  } else {
+                    document.documentElement.setAttribute('data-theme', 'navy-gold');
+                  }
+                } catch(e) {}
+              })();
+            `
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col font-sans bg-white text-[#202124] selection:bg-amber-100 selection:text-amber-900">
-        {children}
+        <DemoThemeProvider>
+          <TemplateTransitionOverlay />
+          {children}
+          <DemoToolbar />
+        </DemoThemeProvider>
         <SpeedInsights />
         <Analytics />
       </body>

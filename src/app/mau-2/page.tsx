@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import { DemoBanner } from "@/components/common/DemoBanner";
 import { JsonLd } from "@/components/common/JsonLd";
@@ -15,16 +15,17 @@ import { PublicationsMau2 } from "@/components/mau-2/PublicationsMau2";
 import { AccordionFaqMau2 } from "@/components/mau-2/AccordionFaqMau2";
 import { ConciergeBookingMau2 } from "@/components/mau-2/ConciergeBookingMau2";
 import { FooterMau2 } from "@/components/mau-2/FooterMau2";
+import { TemplatePageWrapper } from "@/components/common/TemplatePageWrapper";
 
 export const metadata: Metadata = {
-  title: "Mẫu 2 – Premium Law Firm | SAIGONLEX – Hãng luật Cao cấp",
+  title: "MẪU B – Signature Premium | SAIGONLEX – Hãng luật Cao cấp",
   description:
-    "Giao diện website luật phong cách Premium Law Firm sang trọng, phong cách tối giản thanh lịch, nghệ thuật thị giác và nội dung pháp lý đẳng cấp."
+    "Giao diện website luật phong cách Signature Premium sang trọng, phong cách tối giản thanh lịch, nghệ thuật thị giác và nội dung pháp lý đẳng cấp."
 };
 
 export default function Mau2HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FDFBF7] text-[#111827]">
+    <TemplatePageWrapper templateId="mau-b" className="min-h-screen flex flex-col bg-[#FDFBF7] text-[#111827]">
       {/* Demo Switcher Banner */}
       <DemoBanner />
 
@@ -71,6 +72,6 @@ export default function Mau2HomePage() {
 
       {/* Section 12: Footer sang trọng */}
       <FooterMau2 />
-    </div>
+    </TemplatePageWrapper>
   );
 }

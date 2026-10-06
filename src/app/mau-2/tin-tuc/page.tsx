@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -37,7 +37,7 @@ export default function BlogListMau2Page() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
-                { label: "Trang chủ Mẫu 2", href: "/mau-2" },
+                { label: "Trang chủ Mẫu B", href: "/mau-2" },
                 { label: "Ấn phẩm pháp lý" }
               ]}
               theme="editorial"

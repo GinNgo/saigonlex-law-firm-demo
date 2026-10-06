@@ -67,7 +67,7 @@ export function HeaderMau1() {
           <div className="flex items-center gap-5">
             <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-300/90 bg-blue-900/40 px-2 py-0.5 rounded border border-amber-500/20">
               <ShieldCheck className="w-3 h-3 text-[#C5A880]" />
-              <span>CORPORATE LEGAL DEMO</span>
+              <span>MẪU A • CORPORATE PREMIUM</span>
             </span>
             <span className="text-slate-600">|</span>
             <a

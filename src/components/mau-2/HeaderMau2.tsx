@@ -44,7 +44,7 @@ export function HeaderMau2() {
             <span className="text-[#4B5563]">Hotline: <strong className="text-[#111827]">{SITE_CONFIG.hotline}</strong></span>
             <span className="text-[#D1C7B2]">/</span>
             <span className="font-mono text-[10px] text-[#997836] bg-[#C5A059]/10 px-2 py-0.5 rounded border border-[#C5A059]/30 font-medium">
-              EDITORIAL DEMO
+              MẪU B • SIGNATURE PREMIUM
             </span>
           </div>
         </div>
@@ -71,7 +71,7 @@ export function HeaderMau2() {
                 SAIGON<span className="text-[#C5A059] font-bold">LEX</span>
               </div>
               <div className="text-[10px] font-sans tracking-wider text-[#8C7A58] uppercase mt-1 font-semibold">
-                EDITORIAL LEGAL ADVISORY
+                SIGNATURE LEGAL ADVISORY
               </div>
             </div>
           </Link>

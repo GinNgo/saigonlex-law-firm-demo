@@ -93,11 +93,11 @@ export default function GatewayPage() {
               <div className="p-6 sm:p-8 border-b border-blue-900/40 flex items-center justify-between">
                 <div>
                   <span className="text-xs font-mono text-blue-400 tracking-wider uppercase bg-blue-500/10 px-2.5 py-1 rounded border border-blue-500/30">
-                    PHIÊN BẢN 01
+                    PHIÊN BẢN A
                   </span>
                   <h2 className="text-2xl font-bold text-white mt-2 flex items-center gap-2">
                     <Briefcase className="w-6 h-6 text-blue-400" />
-                    <span>Mẫu 1 – Corporate Legal</span>
+                    <span>MẪU A – Corporate Premium</span>
                   </h2>
                 </div>
                 <div className="w-3 h-3 rounded-full bg-blue-400 animate-pulse" />
@@ -107,14 +107,14 @@ export default function GatewayPage() {
               <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-950">
                 <Image
                   src="/images/hero-corporate.png"
-                  alt="Xem trước giao diện Mẫu 1 – Corporate Legal SAIGONLEX"
+                  alt="Xem trước giao diện MẪU A – Corporate Premium SAIGONLEX"
                   fill
                   className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                   <span className="bg-slate-900/90 backdrop-blur-sm text-xs font-medium text-slate-200 px-3 py-1.5 rounded border border-white/10">
-                    Cảm hứng cấu trúc: Garage.vn
+                    Phong cách: Corporate Law Firm
                   </span>
                   <span className="bg-blue-600/90 text-white text-xs font-bold px-3 py-1.5 rounded shadow">
                     12 Section Hoàn chỉnh
@@ -156,7 +156,7 @@ export default function GatewayPage() {
                 href="/mau-1"
                 className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl text-center text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-blue-500/25 transition group/btn"
               >
-                <span>Trải nghiệm Demo Mẫu 1 (Corporate Premium)</span>
+                <span>Trải nghiệm Demo MẪU A (Corporate Premium)</span>
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -176,11 +176,11 @@ export default function GatewayPage() {
               <div className="p-6 sm:p-8 border-b border-amber-900/40 flex items-center justify-between">
                 <div>
                   <span className="text-xs font-mono text-amber-400 tracking-wider uppercase bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/30">
-                    PHIÊN BẢN 02
+                    PHIÊN BẢN B
                   </span>
                   <h2 className="text-2xl font-bold text-white mt-2 flex items-center gap-2 font-serif">
                     <Crown className="w-6 h-6 text-amber-400" />
-                    <span>Mẫu 2 – Editorial Premium</span>
+                    <span>MẪU B – Signature Premium</span>
                   </h2>
                 </div>
                 <div className="w-3 h-3 rounded-full bg-amber-400 animate-pulse" />
@@ -190,14 +190,14 @@ export default function GatewayPage() {
               <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-950">
                 <Image
                   src="/images/hero-premium.png"
-                  alt="Xem trước giao diện Mẫu 2 – Editorial Premium Law Firm SAIGONLEX"
+                  alt="Xem trước giao diện MẪU B – Signature Premium Law Firm SAIGONLEX"
                   fill
                   className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                   <span className="bg-slate-900/90 backdrop-blur-sm text-xs font-medium text-slate-200 px-3 py-1.5 rounded border border-white/10 font-serif">
-                    Cảm hứng nghệ thuật: Movic.vn
+                    Phong cách: Signature Law Firm
                   </span>
                   <span className="bg-gradient-to-r from-amber-600 to-amber-700 text-white text-xs font-bold px-3 py-1.5 rounded shadow">
                     12 Section Sang trọng
@@ -239,7 +239,7 @@ export default function GatewayPage() {
                 href="/mau-2"
                 className="w-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 text-slate-950 font-bold py-4 rounded-xl text-center text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-amber-500/25 transition group/btn"
               >
-                <span>Trải nghiệm Demo Mẫu 2 (Editorial Premium)</span>
+                <span>Trải nghiệm Demo MẪU B (Signature Premium)</span>
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -262,8 +262,8 @@ export default function GatewayPage() {
               <thead className="bg-slate-900 text-slate-200 uppercase font-mono text-[11px] border-b border-white/10">
                 <tr>
                   <th className="p-4">Tiêu chí so sánh</th>
-                  <th className="p-4 text-blue-400">Mẫu 1 – Corporate Premium</th>
-                  <th className="p-4 text-amber-400">Mẫu 2 – Editorial Premium</th>
+                  <th className="p-4 text-blue-400">MẪU A – Corporate Premium</th>
+                  <th className="p-4 text-amber-400">MẪU B – Signature Premium</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">

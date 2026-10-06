@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import { DemoBanner } from "@/components/common/DemoBanner";
 import { HeaderMau2 } from "@/components/mau-2/HeaderMau2";
@@ -36,7 +36,7 @@ export default function ContactMau2Page() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
-                { label: "Trang chủ Mẫu 2", href: "/mau-2" },
+                { label: "Trang chủ Mẫu B", href: "/mau-2" },
                 { label: "Liên hệ & Hội đàm" }
               ]}
               theme="editorial"

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import { DemoBanner } from "@/components/common/DemoBanner";
 import { JsonLd } from "@/components/common/JsonLd";
@@ -15,16 +15,17 @@ import { FaqMau1 } from "@/components/mau-1/FaqMau1";
 import { ConsultationFormMau1 } from "@/components/mau-1/ConsultationFormMau1";
 import { MapSectionMau1 } from "@/components/mau-1/MapSectionMau1";
 import { FooterMau1 } from "@/components/mau-1/FooterMau1";
+import { TemplatePageWrapper } from "@/components/common/TemplatePageWrapper";
 
 export const metadata: Metadata = {
-  title: "Mẫu 1 – Corporate Legal | SAIGONLEX – Hãng luật Doanh nghiệp Uy tín",
+  title: "MẪU A – Corporate Premium | SAIGONLEX – Hãng luật Doanh nghiệp Uy tín",
   description:
-    "Giao diện website luật phong cách Corporate Legal hiện đại, cấu trúc rõ ràng, chuyên nghiệp với 12 section toàn diện và nội dung pháp lý chuyên sâu."
+    "Giao diện website luật phong cách Corporate Premium hiện đại, cấu trúc rõ ràng, chuyên nghiệp với 12 section toàn diện và nội dung pháp lý chuyên sâu."
 };
 
 export default function Mau1HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <TemplatePageWrapper templateId="mau-a" className="min-h-screen flex flex-col bg-white">
       {/* Demo Switcher Banner */}
       <DemoBanner />
 
@@ -71,6 +72,7 @@ export default function Mau1HomePage() {
 
       {/* Section 12: Footer đầy đủ */}
       <FooterMau1 />
-    </div>
+    </TemplatePageWrapper>
   );
 }
+

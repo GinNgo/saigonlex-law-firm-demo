@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --corporate-primary: #0a2540;
+    --corporate-secondary: #0f3d68;
+    --corporate-accent: #c5a880;
+    --corporate-accent-hover: #b39266;
+    --corporate-light-bg: #f8fafc;
+    --corporate-card-bg: #ffffff;
+    --corporate-border: #e2e8f0;
+    --corporate-text-main: #0f172a;
+    --corporate-text-muted: #64748b;
+
+    --premium-bg: #090e17;
+    --premium-surface: #101826;
+    --premium-surface-light: #162236;
+    --premium-gold: #d4af37;
+    --premium-gold-light: #f3e5ab;
+    --premium-gold-dark: #aa820a;
+    --premium-ivory: #faf8f5;
+    --premium-text-muted: #94a3b8;
+    --premium-border: rgba(212, 175, 55, 0.2);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #0f172a;
+    overflow-x: hidden;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Luxury card gold glow */
+.gold-glow {
+  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.2);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 35px -5px rgba(212, 175, 55, 0.35);
+}
+
+/* Corporate shadow */
+.corporate-card-shadow {
+  box-shadow: 0 4px 20px -2px rgba(10, 37, 64, 0.06), 0 2px 6px -1px rgba(10, 37, 64, 0.04);
+}
+
+.corporate-card-shadow-hover:hover {
+  box-shadow: 0 12px 30px -4px rgba(10, 37, 64, 0.12), 0 4px 10px -2px rgba(10, 37, 64, 0.06);
 }

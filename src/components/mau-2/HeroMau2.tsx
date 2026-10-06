@@ -1,15 +1,23 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight, Scale, Shield, ArrowDown } from "lucide-react";
 import { SITE_CONFIG } from "@/data/siteConfig";
 
 export function HeroMau2() {
+  const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const decorativeFrameY = useTransform(scrollYProgress, [0, 1], [0, 35]);
+
   return (
-    <section className="relative bg-[#FDFBF7] text-[#111827] pt-14 pb-24 md:py-28 overflow-hidden border-b border-[#EFE9D9]">
+    <section ref={containerRef} className="relative bg-[#FDFBF7] text-[#111827] pt-14 pb-24 md:py-28 overflow-hidden border-b border-[#EFE9D9]">
       {/* Subtle fine editorial background line grid */}
       <div className="absolute inset-0 opacity-[0.035] bg-[linear-gradient(to_right,#0C1829_1px,transparent_1px),linear-gradient(to_bottom,#0C1829_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
 
@@ -110,8 +118,11 @@ export function HeroMau2() {
               </div>
             </div>
 
-            {/* Subtle decorative fine frame */}
-            <div className="hidden sm:block absolute -top-4 -right-4 w-full h-full border border-[#C5A059]/30 -z-10 rounded-sm" />
+            {/* Subtle decorative fine frame with gentle scroll parallax */}
+            <motion.div
+              style={{ y: decorativeFrameY }}
+              className="hidden sm:block absolute -top-4 -right-4 w-full h-full border border-[var(--color-accent,#C5A059)]/30 -z-10 rounded-sm pointer-events-none"
+            />
           </motion.div>
         </div>
       </div>

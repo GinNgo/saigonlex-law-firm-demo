@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useScroll, motion } from "framer-motion";
 import {
   Phone,
   Mail,
@@ -22,6 +23,7 @@ export function HeaderMau1() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const pathname = usePathname();
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,9 +47,13 @@ export function HeaderMau1() {
   ];
 
   return (
-    <header className="w-full z-40 bg-white">
+    <header className="sticky top-0 z-40 w-full bg-white transition-shadow duration-300">
       {/* Executive Top Bar */}
-      <div className="bg-[#0A2540] text-slate-200 text-xs py-2 px-4 border-b border-blue-950 hidden md:block">
+      <div
+        className={`bg-[#0A2540] text-slate-200 text-xs px-4 border-b border-blue-950 hidden md:block transition-all duration-300 overflow-hidden ${
+          isScrolled ? "max-h-0 py-0 opacity-0 border-b-0" : "max-h-12 py-2 opacity-100"
+        }`}
+      >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5 text-slate-300">
@@ -85,7 +91,7 @@ export function HeaderMau1() {
       <div
         className={`w-full transition-all duration-200 border-b ${
           isScrolled
-            ? "sticky top-0 bg-white/95 backdrop-blur-md shadow-sm border-slate-200 py-3"
+            ? "bg-white/95 backdrop-blur-md shadow-sm border-slate-200 py-3"
             : "relative bg-white border-slate-100 py-4"
         }`}
       >
@@ -236,6 +242,12 @@ export function HeaderMau1() {
           </div>
         )}
       </div>
+
+      {/* Subtle Scroll Reading Progress Indicator */}
+      <motion.div
+        className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[var(--color-accent,#B3955B)] origin-left z-50 pointer-events-none"
+        style={{ scaleX: scrollYProgress }}
+      />
     </header>
   );
 }

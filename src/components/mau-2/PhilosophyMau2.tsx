@@ -1,18 +1,27 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight, Quote } from "lucide-react";
 import { FadeIn } from "@/components/common/Motion";
 
 export function PhilosophyMau2() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  });
+
+  const accentBorderY = useTransform(scrollYProgress, [0, 1], [-20, 20]);
+
   return (
-    <section className="py-24 bg-[#FAF7F0] text-[#111827] relative border-b border-[#EFE9D9]" id="triet-ly">
+    <section ref={sectionRef} className="py-24 bg-[#FAF7F0] text-[#111827] relative border-b border-[#EFE9D9]" id="triet-ly">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Left Column: Image with Fine Editorial Border */}
-          <FadeIn direction="left" className="lg:col-span-5 relative">
+          <FadeIn direction="left" className="lg:col-span-5 relative" once={true}>
             <div className="relative rounded-sm aspect-[4/5] overflow-hidden border-2 border-[#E5DEC9] shadow-xl bg-slate-900 group">
               <Image
                 src="/images/about-philosophy.png"
@@ -24,12 +33,15 @@ export function PhilosophyMau2() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0C1829]/60 via-transparent to-transparent" />
             </div>
 
-            {/* Overlapping Fine Accent Line */}
-            <div className="hidden sm:block absolute -bottom-6 -right-6 w-40 h-40 border-2 border-[#C5A059]/30 -z-10 rounded-sm" />
+            {/* Overlapping Fine Accent Line with subtle continuous scroll parallax */}
+            <motion.div
+              style={{ y: accentBorderY }}
+              className="hidden sm:block absolute -bottom-6 -right-6 w-40 h-40 border-2 border-[var(--color-accent,#C5A059)]/30 -z-10 rounded-sm pointer-events-none"
+            />
           </FadeIn>
 
           {/* Right Column: Editorial Creed */}
-          <FadeIn direction="right" className="lg:col-span-7 space-y-8">
+          <FadeIn direction="right" className="lg:col-span-7 space-y-8" once={true}>
             <div className="space-y-3">
               <span className="text-[#997836] text-xs uppercase tracking-wider font-semibold block">
                 TRIẾT LÝ HÀNH NGHỀ & TÔN CHỈ

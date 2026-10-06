@@ -1,10 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { CheckCircle2 } from "lucide-react";
+import { motion, useScroll } from "framer-motion";
 import { FadeIn } from "@/components/common/Motion";
 
 export function TimelineProcessMau2() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start 75%", "end 60%"]
+  });
+
   const steps = [
     {
       number: "I",
@@ -39,7 +46,7 @@ export function TimelineProcessMau2() {
   return (
     <section className="py-24 bg-[#FAF7F0] text-[#111827] relative border-b border-[#EFE9D9]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <FadeIn direction="up">
+        <FadeIn direction="up" once={true}>
           <div className="text-center max-w-3xl mx-auto mb-20 space-y-3">
             <span className="text-[#997836] text-xs uppercase tracking-wider font-semibold">
               TIẾN TRÌNH CỐ VẤN
@@ -53,8 +60,17 @@ export function TimelineProcessMau2() {
           </div>
         </FadeIn>
 
-        {/* Timeline Layout */}
-        <div className="space-y-8 relative before:absolute before:inset-0 before:left-8 md:before:left-1/2 before:w-[2px] before:bg-gradient-to-b before:from-[#E5DEC9] before:via-[#C5A059] before:to-[#E5DEC9]">
+        {/* Timeline Layout with Continuous Scroll Progress Line */}
+        <div ref={containerRef} className="space-y-8 relative">
+          {/* Static Background Track */}
+          <div className="absolute inset-y-0 left-8 md:left-1/2 -translate-x-1/2 w-[2px] bg-[#E5DEC9]" />
+
+          {/* Continuous Scroll Progress Line */}
+          <motion.div
+            className="absolute top-0 bottom-0 left-8 md:left-1/2 -translate-x-1/2 w-[2px] bg-[var(--color-accent,#C5A059)] origin-top z-0"
+            style={{ scaleY: scrollYProgress }}
+          />
+
           {steps.map((st, idx) => {
             const isEven = idx % 2 === 0;
             return (
@@ -65,15 +81,16 @@ export function TimelineProcessMau2() {
                 } gap-8 md:gap-16`}
               >
                 {/* Center Node Pin */}
-                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-white border-2 border-[#C5A059] flex items-center justify-center text-[#0F172A] font-bold text-xs shadow-md z-10">
+                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-white border-2 border-[var(--color-accent,#C5A059)] flex items-center justify-center text-[#0F172A] font-bold text-xs shadow-md z-10">
                   {st.number}
                 </div>
 
-                {/* Content Box */}
+                {/* Content Box with one-time entrance reveal */}
                 <FadeIn
                   direction={isEven ? "left" : "right"}
                   className="ml-16 md:ml-0 md:w-1/2"
-                  delay={0.1 * idx}
+                  delay={0.08 * idx}
+                  once={true}
                 >
                   <div className="p-6 sm:p-8 rounded-sm border border-[#E5DEC9] bg-white editorial-card-shadow hover:border-[#C5A059] hover:-translate-y-1 transition duration-300 space-y-3">
                     <div className="flex items-center justify-between">

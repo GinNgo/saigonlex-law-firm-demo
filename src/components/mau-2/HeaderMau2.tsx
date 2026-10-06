@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useScroll, motion } from "framer-motion";
 import { Menu, X, ArrowUpRight, ChevronDown, Sparkles } from "lucide-react";
 import { SITE_CONFIG } from "@/data/siteConfig";
 import { PRACTICE_AREAS } from "@/data/services";
@@ -12,6 +13,7 @@ export function HeaderMau2() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const pathname = usePathname();
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,9 +33,13 @@ export function HeaderMau2() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full transition-all duration-300">
+    <header className="sticky top-0 z-40 w-full transition-all duration-300 bg-[#FDFBF7] shadow-sm">
       {/* Editorial Micro Header Strip */}
-      <div className="bg-[#FAF7F0] text-[#4B5563] text-[11px] py-1.5 px-4 border-b border-[#E5DEC9] hidden md:block">
+      <div
+        className={`bg-[#FAF7F0] text-[#4B5563] text-[11px] px-4 border-b border-[#E5DEC9] hidden md:block transition-all duration-300 overflow-hidden ${
+          isScrolled ? "max-h-0 py-0 opacity-0 border-b-0" : "max-h-10 py-1.5 opacity-100"
+        }`}
+      >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4">
             <span className="tracking-wide text-[#111827] font-semibold">SAIGONLEX PRIVATE CLIENT & ADVISORY</span>
@@ -192,6 +198,12 @@ export function HeaderMau2() {
           </div>
         )}
       </div>
+
+      {/* Editorial Scroll Reading Progress Indicator */}
+      <motion.div
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-[var(--color-accent,#C5A059)] origin-left z-50 pointer-events-none"
+        style={{ scaleX: scrollYProgress }}
+      />
     </header>
   );
 }

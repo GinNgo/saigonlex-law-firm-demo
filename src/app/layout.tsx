@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const sansFont = Plus_Jakarta_Sans({
@@ -77,6 +79,8 @@ export default function RootLayout({
     <html lang="vi" className={`${sansFont.variable} ${serifFont.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans bg-white text-slate-900 selection:bg-amber-100 selection:text-amber-900">
         {children}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 
 @layer base {
   :root {
+    /* Sample 1: Corporate Premium (Clean, structured, executive, confident) */
     --corporate-primary: #0a2540;
     --corporate-secondary: #0f3d68;
     --corporate-accent: #c5a880;
@@ -12,15 +13,20 @@
     --corporate-text-main: #0f172a;
     --corporate-text-muted: #64748b;
 
-    --premium-bg: #090e17;
-    --premium-surface: #101826;
-    --premium-surface-light: #162236;
-    --premium-gold: #d4af37;
-    --premium-gold-light: #f3e5ab;
-    --premium-gold-dark: #aa820a;
-    --premium-ivory: #faf8f5;
-    --premium-text-muted: #94a3b8;
-    --premium-border: rgba(212, 175, 55, 0.2);
+    /* Sample 2: Editorial Premium (Bright luxury, warm ivory, champagne, navy accent) */
+    --editorial-bg: #fdfbf7;
+    --editorial-surface: #ffffff;
+    --editorial-surface-warm: #faf7f0;
+    --editorial-surface-card: #f5f2ea;
+    --editorial-navy: #0c1829;
+    --editorial-champagne: #c5a059;
+    --editorial-champagne-light: #dfc88f;
+    --editorial-champagne-dark: #997836;
+    --editorial-text-heading: #111827;
+    --editorial-text-body: #4b5563;
+    --editorial-text-muted: #6b7280;
+    --editorial-border: rgba(197, 160, 89, 0.28);
+    --editorial-border-light: rgba(17, 24, 39, 0.08);
   }
 
   html {
@@ -49,14 +55,14 @@
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbars */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f8fafc;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -68,20 +74,36 @@
   background: #94a3b8;
 }
 
-/* Luxury card gold glow */
-.gold-glow {
-  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.2);
-}
-
-.gold-glow-hover:hover {
-  box-shadow: 0 0 35px -5px rgba(212, 175, 55, 0.35);
-}
-
-/* Corporate shadow */
+/* Sample 1: Corporate Shadows & Hover Utilities */
 .corporate-card-shadow {
-  box-shadow: 0 4px 20px -2px rgba(10, 37, 64, 0.06), 0 2px 6px -1px rgba(10, 37, 64, 0.04);
+  box-shadow: 0 1px 3px 0 rgba(10, 37, 64, 0.04), 0 4px 16px -2px rgba(10, 37, 64, 0.06);
 }
 
 .corporate-card-shadow-hover:hover {
-  box-shadow: 0 12px 30px -4px rgba(10, 37, 64, 0.12), 0 4px 10px -2px rgba(10, 37, 64, 0.06);
+  box-shadow: 0 12px 28px -4px rgba(10, 37, 64, 0.12), 0 4px 12px -2px rgba(10, 37, 64, 0.06);
+}
+
+/* Sample 2: Editorial Luxury Card Shadows & Hairlines */
+.editorial-card-shadow {
+  box-shadow: 0 4px 20px -2px rgba(17, 24, 39, 0.04), 0 1px 3px 0 rgba(17, 24, 39, 0.02);
+}
+
+.editorial-card-hover:hover {
+  box-shadow: 0 16px 36px -6px rgba(17, 24, 39, 0.09), 0 4px 12px -2px rgba(197, 160, 89, 0.15);
+}
+
+.champagne-glow {
+  box-shadow: 0 0 25px -4px rgba(197, 160, 89, 0.2);
+}
+
+/* Editorial Dropcap */
+.editorial-dropcap::first-letter {
+  font-family: var(--font-serif);
+  float: left;
+  font-size: 3.8rem;
+  line-height: 0.8;
+  padding-right: 0.6rem;
+  padding-top: 0.2rem;
+  color: #0c1829;
+  font-weight: 700;
 }

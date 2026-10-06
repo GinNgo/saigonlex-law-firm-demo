@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function Mau2HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#090E17] text-[#FAF8F5]">
+    <div className="min-h-screen flex flex-col bg-[#FDFBF7] text-[#111827]">
       {/* Demo Switcher Banner */}
       <DemoBanner />
 

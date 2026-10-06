@@ -96,15 +96,15 @@ export default function GatewayPage() {
                 <div className="space-y-2.5 text-xs text-slate-300">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0" />
-                    <span><strong>Tông màu:</strong> Deep Navy Blue, Trắng tinh khôi, Điểm nhấn Vàng đồng.</span>
+                    <span><strong>Định vị:</strong> Large, established, trusted corporate law firm (Hãng luật doanh nghiệp định chế bề thế).</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0" />
-                    <span><strong>Phong cách:</strong> Corporate vững chãi, rõ ràng, dễ tiếp cận, độ tin cậy cao.</span>
+                    <span><strong>Tông màu:</strong> Trắng, Xám sáng, Deep Navy Blue và Muted Gold hoàng gia.</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0" />
-                    <span><strong>Phù hợp:</strong> Công ty luật chuyên Doanh nghiệp, Đầu tư, Thuế và Hợp đồng thương mại.</span>
+                    <span><strong>Ngôn ngữ thị giác:</strong> Sáng sủa, chuẩn mực, cards có cấu trúc vững vàng, fade-up & stagger animation.</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0" />
@@ -120,14 +120,14 @@ export default function GatewayPage() {
                 href="/mau-1"
                 className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl text-center text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-blue-500/25 transition group/btn"
               >
-                <span>Trải nghiệm Demo Mẫu 1 (Corporate Legal)</span>
+                <span>Trải nghiệm Demo Mẫu 1 (Corporate Premium)</span>
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
 
           {/* MẪU 2: PREMIUM LAW FIRM */}
-          <div className="rounded-2xl border-2 border-amber-500/30 bg-gradient-to-b from-[#0F1726] to-[#080D16] overflow-hidden flex flex-col justify-between shadow-2xl hover:border-amber-400 transition-all duration-300 group">
+          <div className="rounded-2xl border-2 border-amber-500/30 bg-gradient-to-b from-[#162238] to-[#0D1828] overflow-hidden flex flex-col justify-between shadow-2xl hover:border-amber-400 transition-all duration-300 group">
             <div>
               {/* Preview Header */}
               <div className="p-6 sm:p-8 border-b border-amber-900/40 flex items-center justify-between">
@@ -137,7 +137,7 @@ export default function GatewayPage() {
                   </span>
                   <h2 className="text-2xl font-bold text-white mt-2 flex items-center gap-2 font-serif">
                     <Crown className="w-6 h-6 text-amber-400" />
-                    <span>Mẫu 2 – Premium Law Firm</span>
+                    <span>Mẫu 2 – Editorial Premium</span>
                   </h2>
                 </div>
                 <div className="w-3 h-3 rounded-full bg-amber-400 animate-pulse" />
@@ -147,7 +147,7 @@ export default function GatewayPage() {
               <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-950">
                 <Image
                   src="/images/hero-premium.png"
-                  alt="Xem trước giao diện Mẫu 2 – Premium Law Firm SAIGONLEX"
+                  alt="Xem trước giao diện Mẫu 2 – Editorial Premium Law Firm SAIGONLEX"
                   fill
                   className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
@@ -165,22 +165,22 @@ export default function GatewayPage() {
               {/* Content Description */}
               <div className="p-6 sm:p-8 space-y-5">
                 <p className="text-sm text-slate-300 leading-relaxed font-light">
-                  Thiết kế theo phong cách Private Client & Prestige Law Firm đỉnh cao. Sử dụng nghệ thuật typography serif, hero toàn màn hình, thẻ dịch vụ bất đối xứng, tab chuyên môn và timeline lộ trình cao cấp.
+                  Thiết kế theo phong cách Modern Boutique Advisory Firm. Bề mặt sáng ấm (75% Ivory & Alabaster), điểm xuyết 15-20% Midnight Navy và 5-10% Champagne Gold. Typography serif cỡ lớn, cinematic reveal và bố cục bất đối xứng.
                 </p>
 
                 {/* Characteristic Bullets */}
                 <div className="space-y-2.5 text-xs text-slate-300">
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
-                    <span><strong>Tông màu:</strong> Obsidian Dark Navy, Ivory Cream, Vàng Champagne hoàng gia.</span>
+                    <span><strong>Định vị:</strong> Modern, boutique, premium legal advisory firm (Hãng cố vấn tinh hoa boutique).</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
-                    <span><strong>Phong cách:</strong> Luxury, giàu tính biểu tượng, tranh ảnh nghệ thuật, bí mật cơ mật.</span>
+                    <span><strong>Tông màu:</strong> Warm Ivory (#FDFBF7), Alabaster (#FAF7F0), Champagne Gold, Navy Accent.</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
-                    <span><strong>Phù hợp:</strong> Hãng luật Tranh tụng trọng tài, M&A triệu đô, Khách hàng tư nhân VIP (Private Wealth).</span>
+                    <span><strong>Ngôn ngữ thị giác:</strong> Bright Luxury, editorial portraits, tabbed practice, timeline quy trình, case studies ẩn danh.</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
@@ -196,7 +196,7 @@ export default function GatewayPage() {
                 href="/mau-2"
                 className="w-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 text-slate-950 font-serif font-bold py-4 rounded-xl text-center text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-amber-500/25 transition group/btn"
               >
-                <span>Trải nghiệm Demo Mẫu 2 (Premium Law Firm)</span>
+                <span>Trải nghiệm Demo Mẫu 2 (Editorial Premium)</span>
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -207,10 +207,10 @@ export default function GatewayPage() {
         <section className="mt-20 pt-12 border-t border-white/10">
           <div className="text-center max-w-3xl mx-auto mb-10 space-y-2">
             <h3 className="text-2xl font-bold text-white">
-              Bảng So Sánh Chi Tiết Giữa 2 Giao Diện
+              Bảng So Sánh Chi Tiết Giữa 2 Phong Cách Thiết Kế
             </h3>
             <p className="text-sm text-slate-400">
-              Cả hai phiên bản đều sở hữu đầy đủ tính năng kỹ thuật, khác biệt chủ đạo nằm ở ngôn ngữ thị giác và đối tượng thân chủ mục tiêu.
+              Cả hai phiên bản đều đạt đẳng cấp Premium đồng đều, khác biệt về PHONG CÁCH và HÌNH THÁI chứ không phải cấp độ chất lượng.
             </p>
           </div>
 
@@ -219,45 +219,50 @@ export default function GatewayPage() {
               <thead className="bg-slate-900 text-slate-200 uppercase font-mono text-[11px] border-b border-white/10">
                 <tr>
                   <th className="p-4">Tiêu chí so sánh</th>
-                  <th className="p-4 text-blue-400">Mẫu 1 – Corporate Legal</th>
-                  <th className="p-4 text-amber-400">Mẫu 2 – Premium Law Firm</th>
+                  <th className="p-4 text-blue-400">Mẫu 1 – Corporate Premium</th>
+                  <th className="p-4 text-amber-400">Mẫu 2 – Editorial Premium</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
                 <tr>
-                  <td className="p-4 font-bold text-white">Cảm hứng cấu trúc</td>
-                  <td className="p-4">Garage.vn (Hiện đại, lưới dịch vụ, tin cậy cao)</td>
-                  <td className="p-4">Movic.vn (Nghệ thuật, giàu hình ảnh, timeline, case study)</td>
+                  <td className="p-4 font-bold text-white">Cảm nhận thương hiệu</td>
+                  <td className="p-4">Established, institutional, trusted, structured corporate law firm</td>
+                  <td className="p-4">Modern, boutique, high-end private advisory, bespoke luxury law firm</td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-bold text-white">Màu sắc chủ đạo</td>
-                  <td className="p-4">Navy Blue (#0A2540), Trắng, Xám Slate sáng</td>
-                  <td className="p-4">Obsidian Navy (#090E17), Vàng Champagne, Ivory Cream</td>
+                  <td className="p-4 font-bold text-white">Bảng màu chủ đạo</td>
+                  <td className="p-4">White, Light Gray, Deep Navy Blue (#0A2540), Muted Gold</td>
+                  <td className="p-4">Warm Ivory (#FDFBF7), Alabaster (#FAF7F0), Champagne Gold, Navy Accent</td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-bold text-white">Kiểu chữ (Typography)</td>
-                  <td className="p-4">Plus Jakarta Sans (Hiện đại, dễ đọc, dứt khoát)</td>
-                  <td className="p-4">Playfair Display Serif (Sang trọng, quyền lực, hàn lâm)</td>
+                  <td className="p-4 font-bold text-white">Tỷ lệ diện tích màu</td>
+                  <td className="p-4">75% Light surfaces, 20% Deep Navy, 5% Gold</td>
+                  <td className="p-4">70-75% Ivory/Alabaster, 15-20% Midnight Navy, 5-10% Champagne</td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-bold text-white">Cách trình bày Lĩnh vực</td>
-                  <td className="p-4">Lưới 8 thẻ dịch vụ hiện đại có icon & tóm tắt</td>
-                  <td className="p-4">Thẻ lớn bất đối xứng + Bộ tab chuyển đổi tương tác</td>
+                  <td className="p-4 font-bold text-white">Typography & Tiêu đề</td>
+                  <td className="p-4">Plus Jakarta Sans – Dứt khoát, executive, hiện đại</td>
+                  <td className="p-4">Playfair Display Serif – Nghệ thuật báo chí, sang trọng, tinh tế</td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-bold text-white">Hồ sơ Vụ việc</td>
-                  <td className="p-4">Gói giải pháp doanh nghiệp thường xuyên nổi bật</td>
-                  <td className="p-4">Tình huống thực tế minh họa đã ẩn danh (Case studies)</td>
+                  <td className="p-4 font-bold text-white">Ngôn ngữ chuyển động</td>
+                  <td className="p-4">Fade-up, stagger cards, subtle underline, counters</td>
+                  <td className="p-4">Text reveal, image mask reveal, subtle parallax, editorial transitions</td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-bold text-white">Form Đặt lịch</td>
-                  <td className="p-4">Form tiếp nhận trực tiếp với kiểm tra lỗi & chống spam</td>
-                  <td className="p-4">Concierge thỉnh ý cơ mật với bảo đảm đặc quyền luật sư</td>
+                  <td className="p-4 font-bold text-white">Bố cục Lĩnh vực & Dịch vụ</td>
+                  <td className="p-4">Lưới 8 thẻ dịch vụ đồng nhất có icon, số liệu và hover nâng cao</td>
+                  <td className="p-4">4 Thẻ lớn bất đối xứng + Bộ tab chuyển đổi tương tác + Case studies</td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-bold text-white">Tối ưu SEO & Sẵn sàng Deploy</td>
-                  <td className="p-4 text-emerald-400">✓ Đầy đủ Metadata, Sitemap, Schema JSON-LD</td>
-                  <td className="p-4 text-emerald-400">✓ Đầy đủ Metadata, Sitemap, Schema JSON-LD</td>
+                  <td className="p-4 font-bold text-white">Quy trình & Đội ngũ</td>
+                  <td className="p-4">Quy trình 4 bước tuần tự, thẻ đội ngũ executive corporate</td>
+                  <td className="p-4">Timeline La Mã I-IV, chân dung editorial nghệ thuật đen trắng đổi màu</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-bold text-white">Hiệu năng & SEO</td>
+                  <td className="p-4 text-emerald-400">✓ 100% Next.js App Router, SSR/SSG, JSON-LD Schema</td>
+                  <td className="p-4 text-emerald-400">✓ 100% Next.js App Router, SSR/SSG, JSON-LD Schema</td>
                 </tr>
               </tbody>
             </table>

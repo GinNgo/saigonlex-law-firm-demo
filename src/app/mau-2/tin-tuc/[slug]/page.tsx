@@ -46,7 +46,7 @@ export default async function BlogPostDetailMau2Page({ params }: PageProps) {
   const relatedPosts = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 2);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#090E17] text-[#FAF8F5]">
+    <div className="min-h-screen flex flex-col bg-[#FDFBF7] text-[#111827]">
       <DemoBanner />
       <JsonLd
         type="BreadcrumbList"
@@ -63,7 +63,7 @@ export default async function BlogPostDetailMau2Page({ params }: PageProps) {
 
       <main className="flex-1">
         {/* Banner */}
-        <section className="py-20 bg-[#05080E] border-b border-white/5">
+        <section className="py-20 bg-[#FAF7F0] border-b border-[#E5DEC9]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
@@ -71,20 +71,20 @@ export default async function BlogPostDetailMau2Page({ params }: PageProps) {
                 { label: "Ấn phẩm", href: "/mau-2/tin-tuc" },
                 { label: post.category }
               ]}
-              theme="dark"
+              theme="editorial"
             />
 
             <div className="space-y-4 pt-4">
-              <span className="font-mono text-xs text-[#D4AF37] uppercase tracking-widest border border-amber-500/30 px-3 py-1 rounded bg-black/40 inline-block">
+              <span className="font-mono text-xs text-[#0C1829] uppercase tracking-widest border border-[#E5DEC9] px-3 py-1 rounded-sm bg-white inline-block shadow-sm">
                 {post.category}
               </span>
 
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#FAF8F5] leading-tight">
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C1829] leading-tight">
                 {post.title}
               </h1>
 
-              <div className="flex flex-wrap items-center gap-6 text-xs text-slate-400 font-sans font-light pt-2 border-t border-white/5">
-                <span className="text-[#D4AF37] font-serif font-medium">{post.author} ({post.authorRole})</span>
+              <div className="flex flex-wrap items-center gap-6 text-xs text-slate-500 font-sans font-light pt-2 border-t border-[#E5DEC9]">
+                <span className="text-[#0C1829] font-serif font-semibold">{post.author} ({post.authorRole})</span>
                 <span>•</span>
                 <span>{post.publishDate}</span>
                 <span>•</span>
@@ -96,7 +96,7 @@ export default async function BlogPostDetailMau2Page({ params }: PageProps) {
 
         {/* Featured Image */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
-          <div className="relative aspect-[16/9] w-full rounded overflow-hidden border border-amber-500/30 shadow-2xl bg-[#05080E]">
+          <div className="relative aspect-[16/9] w-full rounded-sm overflow-hidden border border-[#E5DEC9] shadow-xl bg-white">
             <Image
               src={post.image}
               alt={post.title}
@@ -109,12 +109,12 @@ export default async function BlogPostDetailMau2Page({ params }: PageProps) {
         </div>
 
         {/* Content Body */}
-        <section className="py-20 bg-[#090E17]">
+        <section className="py-20 bg-[#FDFBF7]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             {/* Table of contents */}
-            <div className="p-6 rounded border border-amber-500/20 bg-[#101826]">
-              <div className="font-serif font-bold text-sm text-[#D4AF37] mb-3 flex items-center gap-2">
-                <List className="w-4 h-4 text-[#D4AF37]" />
+            <div className="p-6 rounded-sm border border-[#E5DEC9] bg-white shadow-sm">
+              <div className="font-serif font-bold text-sm text-[#0C1829] mb-3 flex items-center gap-2">
+                <List className="w-4 h-4 text-[#C5A059]" />
                 <span>MỤC LỤC CHUYÊN KHẢO</span>
               </div>
               <ul className="space-y-2 text-xs sm:text-sm font-sans font-light">
@@ -122,9 +122,9 @@ export default async function BlogPostDetailMau2Page({ params }: PageProps) {
                   <li key={toc.id}>
                     <a
                       href={`#${toc.id}`}
-                      className="text-slate-300 hover:text-[#D4AF37] flex items-center gap-2 transition"
+                      className="text-slate-600 hover:text-[#C5A059] flex items-center gap-2 transition"
                     >
-                      <ChevronRight className="w-3.5 h-3.5 text-[#D4AF37]" />
+                      <ChevronRight className="w-3.5 h-3.5 text-[#C5A059]" />
                       <span>{toc.title}</span>
                     </a>
                   </li>
@@ -134,14 +134,14 @@ export default async function BlogPostDetailMau2Page({ params }: PageProps) {
 
             {/* Content html with luxury styling */}
             <div
-              className="prose prose-invert prose-amber max-w-none text-sm sm:text-base leading-relaxed text-slate-300 font-sans font-light"
+              className="prose max-w-none text-sm sm:text-base leading-relaxed text-slate-700 font-sans font-light prose-headings:font-serif prose-headings:text-[#0C1829] prose-a:text-[#C5A059] prose-strong:text-[#0C1829]"
               dangerouslySetInnerHTML={{ __html: post.contentHtml }}
             />
 
             {/* Disclaimer */}
-            <div className="p-6 rounded border border-amber-900/40 bg-[#0A101D] text-xs text-amber-200/90 leading-relaxed space-y-2 font-light">
-              <div className="font-serif font-bold text-[#D4AF37] flex items-center gap-2">
-                <ShieldAlert className="w-4 h-4 text-[#D4AF37]" />
+            <div className="p-6 rounded-sm border border-[#E5DEC9] bg-[#FAF7F0] text-xs text-slate-700 leading-relaxed space-y-2 font-light">
+              <div className="font-serif font-bold text-[#0C1829] flex items-center gap-2">
+                <ShieldAlert className="w-4 h-4 text-[#C5A059]" />
                 <span>Khuyến cáo Về Giá trị Áp dụng Pháp lý:</span>
               </div>
               <p>
@@ -150,42 +150,42 @@ export default async function BlogPostDetailMau2Page({ params }: PageProps) {
             </div>
 
             {/* Author */}
-            <div className="p-6 rounded border border-white/10 bg-[#101826] flex items-center gap-5">
-              <div className="w-14 h-14 rounded-full bg-[#1A2639] border border-amber-500/30 flex items-center justify-center text-[#D4AF37] font-serif text-lg font-bold shrink-0">
-                <User className="w-7 h-7" />
+            <div className="p-6 rounded-sm border border-[#E5DEC9] bg-white shadow-sm flex items-center gap-5">
+              <div className="w-14 h-14 rounded-full bg-[#FAF7F0] border border-[#E5DEC9] flex items-center justify-center text-[#0C1829] font-serif text-lg font-bold shrink-0">
+                <User className="w-7 h-7 text-[#C5A059]" />
               </div>
               <div>
-                <div className="font-serif font-bold text-base text-[#FAF8F5]">
+                <div className="font-serif font-bold text-base text-[#0C1829]">
                   {post.author}
                 </div>
-                <div className="text-xs text-[#D4AF37] mt-0.5 font-serif">
+                <div className="text-xs text-[#C5A059] mt-0.5 font-serif font-medium">
                   {post.authorRole} • Ban Cố vấn SAIGONLEX
                 </div>
               </div>
             </div>
 
             {/* CTA */}
-            <div className="p-10 rounded border border-amber-500/30 bg-[#0F1726] text-center space-y-4">
-              <h3 className="font-serif text-2xl font-bold text-[#FAF8F5]">
+            <div className="p-10 rounded-sm border border-[#E5DEC9] bg-white shadow-md text-center space-y-4">
+              <h3 className="font-serif text-2xl font-bold text-[#0C1829]">
                 Cần Thẩm định Chuyên sâu về Tình huống của Bạn?
               </h3>
-              <p className="text-xs text-slate-400 font-sans font-light max-w-lg mx-auto leading-relaxed">
+              <p className="text-xs text-slate-600 font-sans font-light max-w-lg mx-auto leading-relaxed">
                 Đăng ký hội đàm cơ mật với nhóm luật sư chuyên trách để được rà soát hồ sơ và bảo mật thông tin tuyệt đối.
               </p>
               <div className="pt-2">
                 <Link
                   href="/mau-2/lien-he"
-                  className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#b59227] text-slate-950 font-serif font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded transition"
+                  className="inline-flex items-center gap-2 bg-[#0C1829] hover:bg-[#152338] text-white font-serif font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-sm shadow transition group"
                 >
-                  <span>Đặt lịch thỉnh ý kín</span>
-                  <ArrowUpRight className="w-4 h-4" />
+                  <span className="text-[#DFBF7E]">Đặt lịch thỉnh ý kín</span>
+                  <ArrowUpRight className="w-4 h-4 text-[#DFBF7E] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
             </div>
 
             {/* Related */}
-            <div className="pt-10 border-t border-white/5 space-y-6">
-              <h3 className="font-serif text-xl font-bold text-[#FAF8F5]">
+            <div className="pt-10 border-t border-[#E5DEC9] space-y-6">
+              <h3 className="font-serif text-xl font-bold text-[#0C1829]">
                 Ấn phẩm Liên quan
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -193,19 +193,19 @@ export default async function BlogPostDetailMau2Page({ params }: PageProps) {
                   <Link
                     key={rel.slug}
                     href={`/mau-2/tin-tuc/${rel.slug}`}
-                    className="p-5 rounded border border-white/10 bg-[#101826] hover:border-[#D4AF37] transition flex flex-col justify-between space-y-3"
+                    className="p-5 rounded-sm border border-[#E5DEC9] bg-white hover:border-[#C5A059] hover:shadow-lg transition flex flex-col justify-between space-y-3 shadow-sm"
                   >
                     <div>
-                      <span className="text-[10px] font-mono text-[#D4AF37] uppercase">
+                      <span className="text-[10px] font-mono text-[#C5A059] uppercase font-semibold">
                         {rel.category}
                       </span>
-                      <h4 className="font-serif text-base font-bold text-[#FAF8F5] line-clamp-2 mt-1">
+                      <h4 className="font-serif text-base font-bold text-[#0C1829] line-clamp-2 mt-1">
                         {rel.title}
                       </h4>
                     </div>
-                    <span className="text-xs font-serif text-slate-400 flex items-center gap-1">
+                    <span className="text-xs font-serif text-slate-500 flex items-center gap-1">
                       <span>Đọc bài</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37]" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-[#C5A059]" />
                     </span>
                   </Link>
                 ))}

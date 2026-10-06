@@ -15,29 +15,29 @@ export const metadata: Metadata = {
 
 export default function PrivacyMau2Page() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#090E17] text-[#FAF8F5]">
+    <div className="min-h-screen flex flex-col bg-[#FDFBF7] text-[#111827]">
       <DemoBanner />
       <HeaderMau2 />
 
       <main className="flex-1">
         {/* Banner */}
-        <section className="py-20 bg-[#05080E] border-b border-white/5">
+        <section className="py-20 bg-[#FAF7F0] border-b border-[#E5DEC9]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
                 { label: "Trang chủ Mẫu 2", href: "/mau-2" },
                 { label: "Quy ước bảo mật" }
               ]}
-              theme="dark"
+              theme="editorial"
             />
             <div className="space-y-4 pt-4">
-              <span className="text-xs font-serif text-[#D4AF37] uppercase tracking-[0.25em] block">
+              <span className="text-xs font-serif text-[#C5A059] uppercase tracking-[0.25em] block font-semibold">
                 NGUYÊN TẮC BẢO MẬT TỐI CAO
               </span>
-              <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#FAF8F5]">
+              <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#0C1829]">
                 Quy ước Cơ mật & Đặc quyền Luật sư – Thân chủ
               </h1>
-              <p className="text-slate-300 font-sans text-sm sm:text-base font-light leading-relaxed">
+              <p className="text-slate-600 font-sans text-sm sm:text-base font-light leading-relaxed">
                 Áp dụng đối với mọi giao dịch, trao đổi thông tin và lưu trữ dữ liệu giữa thân chủ và SAIGONLEX Premium Law Firm.
               </p>
             </div>
@@ -45,22 +45,22 @@ export default function PrivacyMau2Page() {
         </section>
 
         {/* Policy Body */}
-        <section className="py-20 bg-[#090E17]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-slate-300 font-sans font-light text-sm sm:text-base leading-relaxed">
-            <div className="p-6 rounded border border-amber-500/30 bg-[#101826] flex items-start gap-4">
-              <Lock className="w-6 h-6 text-[#D4AF37] shrink-0 mt-0.5" />
+        <section className="py-20 bg-[#FDFBF7]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-slate-600 font-sans font-light text-sm sm:text-base leading-relaxed">
+            <div className="p-6 rounded-sm border border-[#E5DEC9] bg-white shadow-sm flex items-start gap-4">
+              <Lock className="w-6 h-6 text-[#C5A059] shrink-0 mt-0.5" />
               <div className="space-y-1">
-                <span className="font-serif font-bold text-base text-[#FAF8F5] block">
+                <span className="font-serif font-bold text-base text-[#0C1829] block">
                   Đặc quyền Bất khả Xâm phạm
                 </span>
-                <p className="text-xs text-slate-400 font-light leading-relaxed">
+                <p className="text-xs text-slate-500 font-light leading-relaxed">
                   Tại SAIGONLEX, bí mật của thân chủ là thành trì không thể xâm phạm. Mọi dữ liệu trao đổi được bảo đảm tuyệt đối theo Điều 25 Luật Luật sư Việt Nam và quy chuẩn đặc quyền luật sư quốc tế.
                 </p>
               </div>
             </div>
 
             <div className="space-y-3">
-              <h2 className="font-serif text-2xl font-bold text-[#FAF8F5]">
+              <h2 className="font-serif text-2xl font-bold text-[#0C1829]">
                 I. Thu thập Dữ liệu có Giới hạn
               </h2>
               <p>
@@ -69,7 +69,7 @@ export default function PrivacyMau2Page() {
             </div>
 
             <div className="space-y-3">
-              <h2 className="font-serif text-2xl font-bold text-[#FAF8F5]">
+              <h2 className="font-serif text-2xl font-bold text-[#0C1829]">
                 II. Tuân thủ Nghị định 13/2023/NĐ-CP & Mã hóa Cấp cao
               </h2>
               <p>
@@ -78,7 +78,7 @@ export default function PrivacyMau2Page() {
             </div>
 
             <div className="space-y-3">
-              <h2 className="font-serif text-2xl font-bold text-[#FAF8F5]">
+              <h2 className="font-serif text-2xl font-bold text-[#0C1829]">
                 III. Cơ chế Ký Cam kết Bảo mật Riêng (NDA)
               </h2>
               <p>
@@ -86,12 +86,12 @@ export default function PrivacyMau2Page() {
               </p>
             </div>
 
-            <div className="space-y-3 pt-6 border-t border-white/10">
-              <h2 className="font-serif text-xl font-bold text-[#FAF8F5]">
+            <div className="space-y-3 pt-6 border-t border-[#E5DEC9]">
+              <h2 className="font-serif text-xl font-bold text-[#0C1829]">
                 IV. Thông tin Liên lạc Bộ phận Cơ mật
               </h2>
-              <div className="p-6 rounded border border-white/5 bg-[#0F1726] text-xs text-slate-400 space-y-1">
-                <div className="font-serif font-bold text-[#D4AF37]">Ban Thư ký Pháp lý & Kiểm toán Tuân thủ SAIGONLEX</div>
+              <div className="p-6 rounded-sm border border-[#E5DEC9] bg-[#FAF7F0] text-xs text-slate-600 space-y-1">
+                <div className="font-serif font-bold text-[#0C1829]">Ban Thư ký Pháp lý & Kiểm toán Tuân thủ SAIGONLEX</div>
                 <div>Địa chỉ: {SITE_CONFIG.address}</div>
                 <div>Hotline: {SITE_CONFIG.hotline} • Email: {SITE_CONFIG.email}</div>
               </div>

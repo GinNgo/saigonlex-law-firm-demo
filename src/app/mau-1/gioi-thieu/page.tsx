@@ -61,24 +61,24 @@ export default function AboutMau1Page() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6 space-y-6">
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0A2540]">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A]">
                   Hơn một thập kỷ cống hiến cho công lý và sự phát triển bền vững
                 </h2>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  Được thành lập tại trung tâm tài chính TP. Hồ Chí Minh, <strong>SAIGONLEX</strong> quy tụ đội ngũ luật sư thành viên, cố vấn cao cấp xuất thân từ các viện nghiên cứu lập pháp, tòa án nhân dân và các tổ chức tư vấn quốc tế.
+                <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
+                  Được thành lập tại trung tâm tài chính TP. Hồ Chí Minh, <strong className="text-[#111827]">SAIGONLEX</strong> quy tụ đội ngũ luật sư thành viên, cố vấn cao cấp xuất thân từ các viện nghiên cứu lập pháp, tòa án nhân dân và các tổ chức tư vấn quốc tế.
                 </p>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
                   Chúng tôi xây dựng uy tín dựa trên sự chuẩn xác tuyệt đối trong từng điều khoản hợp đồng, tư duy phản biện sắc sảo tại phiên tòa và tinh thần tận tâm phục vụ lợi ích hợp pháp của thân chủ.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-100">
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                    <div className="text-2xl font-black text-[#0A2540]">850+ <span className="text-xs text-amber-600">[DEMO]</span></div>
-                    <div className="text-xs text-slate-500 mt-1">Giao dịch & Hợp đồng</div>
+                    <div className="text-2xl font-bold text-[#0F172A]">850+ <span className="text-xs text-amber-600">[DEMO]</span></div>
+                    <div className="text-xs text-[#6B7280] font-medium mt-1">Giao dịch & Hợp đồng</div>
                   </div>
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-                    <div className="text-2xl font-black text-[#0A2540]">98.2% <span className="text-xs text-amber-600">[DEMO]</span></div>
-                    <div className="text-xs text-slate-500 mt-1">Đánh giá hài lòng</div>
+                    <div className="text-2xl font-bold text-[#0F172A]">98.2% <span className="text-xs text-amber-600">[DEMO]</span></div>
+                    <div className="text-xs text-[#6B7280] font-medium mt-1">Đánh giá hài lòng</div>
                   </div>
                 </div>
               </div>
@@ -103,31 +103,31 @@ export default function AboutMau1Page() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-xl border border-slate-200 corporate-card-shadow space-y-4">
-                <div className="w-12 h-12 rounded-lg bg-blue-50 text-[#0A2540] flex items-center justify-center">
+                <div className="w-12 h-12 rounded-lg bg-blue-50 text-[#17365D] flex items-center justify-center">
                   <Target className="w-6 h-6 text-[#C5A880]" />
                 </div>
-                <h3 className="text-lg font-bold text-[#0A2540]">Tầm nhìn Chiến lược</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <h3 className="text-lg font-bold text-[#111827]">Tầm nhìn Chiến lược</h3>
+                <p className="text-xs sm:text-sm text-[#202124] leading-[1.7]">
                   Trở thành hãng luật doanh nghiệp và tranh tụng hàng đầu Việt Nam, được các tập đoàn đa quốc gia và quỹ đầu tư tín nhiệm trong các thương vụ chiến lược.
                 </p>
               </div>
 
               <div className="bg-white p-8 rounded-xl border border-slate-200 corporate-card-shadow space-y-4">
-                <div className="w-12 h-12 rounded-lg bg-blue-50 text-[#0A2540] flex items-center justify-center">
+                <div className="w-12 h-12 rounded-lg bg-blue-50 text-[#17365D] flex items-center justify-center">
                   <Scale className="w-6 h-6 text-[#C5A880]" />
                 </div>
-                <h3 className="text-lg font-bold text-[#0A2540]">Sứ mệnh Hành nghề</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <h3 className="text-lg font-bold text-[#111827]">Sứ mệnh Hành nghề</h3>
+                <p className="text-xs sm:text-sm text-[#202124] leading-[1.7]">
                   Cung cấp các giải pháp pháp lý sáng tạo, khả thi và an toàn tuyệt đối; bảo vệ quyền lợi hợp pháp của thân chủ đồng thời thúc đẩy thượng tôn pháp luật trong xã hội.
                 </p>
               </div>
 
               <div className="bg-white p-8 rounded-xl border border-slate-200 corporate-card-shadow space-y-4">
-                <div className="w-12 h-12 rounded-lg bg-blue-50 text-[#0A2540] flex items-center justify-center">
+                <div className="w-12 h-12 rounded-lg bg-blue-50 text-[#17365D] flex items-center justify-center">
                   <ShieldCheck className="w-6 h-6 text-[#C5A880]" />
                 </div>
-                <h3 className="text-lg font-bold text-[#0A2540]">Đạo đức Nghề nghiệp</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <h3 className="text-lg font-bold text-[#111827]">Đạo đức Nghề nghiệp</h3>
+                <p className="text-xs sm:text-sm text-[#202124] leading-[1.7]">
                   Trung thực, khách quan và bảo mật tuyệt đối thông tin vụ việc. Tuyệt đối không xung đột lợi ích và luôn minh bạch trong mọi thỏa thuận thù lao.
                 </p>
               </div>

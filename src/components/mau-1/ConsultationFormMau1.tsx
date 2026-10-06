@@ -92,11 +92,11 @@ export function ConsultationFormMau1() {
               <span>TIẾP NHẬN YÊU CẦU BẢO MẬT</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight">
               Đặt Lịch Hẹn Tư Vấn Với Luật Sư
             </h2>
 
-            <p className="text-slate-600 text-sm leading-relaxed">
+            <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
               Mọi thông tin ban đầu quý khách chia sẻ đều được bảo vệ nghiêm ngặt theo quy tắc bảo mật bí mật thông tin của khách hàng. Luật sư phụ trách chuyên môn sẽ chủ động liên hệ phản hồi trong vòng 24 giờ.
             </p>
 
@@ -104,8 +104,8 @@ export function ConsultationFormMau1() {
               <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200">
                 <Shield className="w-5 h-5 text-[#C5A880] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-bold text-[#0A2540]">Cam kết Ký NDA trước khi nhận hồ sơ</h4>
-                  <p className="text-[11px] text-slate-500 mt-0.5">
+                  <h4 className="text-sm font-semibold text-[#111827]">Cam kết Ký NDA trước khi nhận hồ sơ</h4>
+                  <p className="text-xs text-[#4B5563] leading-relaxed mt-0.5">
                     Đối với các vụ việc M&A, bí mật công nghệ hoặc tranh chấp cổ đông, chúng tôi luôn chủ động ký thỏa thuận bảo mật trước.
                   </p>
                 </div>
@@ -114,8 +114,8 @@ export function ConsultationFormMau1() {
               <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200">
                 <Clock className="w-5 h-5 text-[#C5A880] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-bold text-[#0A2540]">Đánh giá sơ bộ miễn phí</h4>
-                  <p className="text-[11px] text-slate-500 mt-0.5">
+                  <h4 className="text-sm font-semibold text-[#111827]">Đánh giá sơ bộ miễn phí</h4>
+                  <p className="text-xs text-[#4B5563] leading-relaxed mt-0.5">
                     Luật sư nghiên cứu bước 1 về thẩm quyền thụ lý, thời hiệu khởi kiện và phương án khả thi ban đầu.
                   </p>
                 </div>
@@ -124,9 +124,9 @@ export function ConsultationFormMau1() {
               <div className="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200">
                 <Phone className="w-5 h-5 text-[#C5A880] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-bold text-[#0A2540]">Hỗ trợ khẩn cấp 24/7</h4>
-                  <p className="text-[11px] text-slate-500 mt-0.5">
-                    Trường hợp khẩn cấp, vui lòng gọi trực tiếp hotline: <strong className="text-[#0A2540]">{SITE_CONFIG.hotline}</strong>
+                  <h4 className="text-sm font-semibold text-[#111827]">Hỗ trợ khẩn cấp 24/7</h4>
+                  <p className="text-xs text-[#4B5563] leading-relaxed mt-0.5">
+                    Trường hợp khẩn cấp, vui lòng gọi trực tiếp hotline: <strong className="text-[#17365D]">{SITE_CONFIG.hotline}</strong>
                   </p>
                 </div>
               </div>
@@ -185,7 +185,7 @@ export function ConsultationFormMau1() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Full Name */}
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-semibold text-[#111827] mb-1">
                       Họ và tên của bạn <span className="text-rose-500">*</span>
                     </label>
                     <input
@@ -193,7 +193,7 @@ export function ConsultationFormMau1() {
                       placeholder="Nguyễn Văn A"
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className={`w-full px-3.5 py-2.5 rounded-lg border text-xs text-slate-900 bg-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                      className={`w-full px-3.5 py-2.5 rounded-lg border text-xs sm:text-sm text-[#202124] bg-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#17365D] ${
                         errors.fullName ? "border-rose-400 bg-rose-50/30" : "border-slate-300"
                       }`}
                     />
@@ -204,7 +204,7 @@ export function ConsultationFormMau1() {
 
                   {/* Phone */}
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-semibold text-[#111827] mb-1">
                       Số điện thoại liên hệ <span className="text-rose-500">*</span>
                     </label>
                     <input
@@ -212,7 +212,7 @@ export function ConsultationFormMau1() {
                       placeholder="0901 234 567"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className={`w-full px-3.5 py-2.5 rounded-lg border text-xs text-slate-900 bg-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                      className={`w-full px-3.5 py-2.5 rounded-lg border text-xs sm:text-sm text-[#202124] bg-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#17365D] ${
                         errors.phone ? "border-rose-400 bg-rose-50/30" : "border-slate-300"
                       }`}
                     />
@@ -225,7 +225,7 @@ export function ConsultationFormMau1() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Email */}
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-semibold text-[#111827] mb-1">
                       Địa chỉ Email <span className="text-rose-500">*</span>
                     </label>
                     <input
@@ -233,7 +233,7 @@ export function ConsultationFormMau1() {
                       placeholder="example@company.vn"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className={`w-full px-3.5 py-2.5 rounded-lg border text-xs text-slate-900 bg-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                      className={`w-full px-3.5 py-2.5 rounded-lg border text-xs sm:text-sm text-[#202124] bg-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#17365D] ${
                         errors.email ? "border-rose-400 bg-rose-50/30" : "border-slate-300"
                       }`}
                     />
@@ -244,13 +244,13 @@ export function ConsultationFormMau1() {
 
                   {/* Practice Area Selection */}
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-semibold text-[#111827] mb-1">
                       Lĩnh vực cần tư vấn <span className="text-rose-500">*</span>
                     </label>
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className={`w-full px-3.5 py-2.5 rounded-lg border text-xs text-slate-900 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                      className={`w-full px-3.5 py-2.5 rounded-lg border text-xs sm:text-sm text-[#202124] bg-white focus:outline-none focus:ring-2 focus:ring-[#17365D] ${
                         errors.service ? "border-rose-400 bg-rose-50/30" : "border-slate-300"
                       }`}
                     >
@@ -270,7 +270,7 @@ export function ConsultationFormMau1() {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                  <label className="block text-xs font-semibold text-[#111827] mb-1">
                     Tóm tắt nội dung vụ việc hoặc yêu cầu hỗ trợ <span className="text-rose-500">*</span>
                   </label>
                   <textarea
@@ -278,7 +278,7 @@ export function ConsultationFormMau1() {
                     placeholder="Mô tả sơ lược tình huống pháp lý, các bên liên quan và thời hạn mong muốn..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className={`w-full px-3.5 py-2.5 rounded-lg border text-xs text-slate-900 bg-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                    className={`w-full px-3.5 py-2.5 rounded-lg border text-xs sm:text-sm text-[#202124] bg-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#17365D] ${
                       errors.message ? "border-rose-400 bg-rose-50/30" : "border-slate-300"
                     }`}
                   />
@@ -288,15 +288,15 @@ export function ConsultationFormMau1() {
                 </div>
 
                 {/* Privacy and Terms Notice */}
-                <p className="text-[11px] text-slate-500 leading-relaxed">
-                  Bằng việc gửi thông tin, quý khách đồng ý để SAIGONLEX bảo mật và sử dụng dữ liệu này cho mục đích tiếp nhận, phản hồi và xử lý hồ sơ pháp lý theo <a href="/mau-1/chinh-sach-bao-mat" className="text-[#0A2540] underline font-medium">Chính sách bảo mật</a> của hãng luật.
+                <p className="text-xs text-[#4B5563] leading-relaxed">
+                  Bằng việc gửi thông tin, quý khách đồng ý để SAIGONLEX bảo mật và sử dụng dữ liệu này cho mục đích tiếp nhận, phản hồi và xử lý hồ sơ pháp lý theo <a href="/mau-1/chinh-sach-bao-mat" className="text-[#17365D] underline font-semibold">Chính sách bảo mật</a> của hãng luật.
                 </p>
 
                 {/* Submit button */}
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#0A2540] hover:bg-[#0f3d68] text-white font-bold text-xs sm:text-sm py-3.5 rounded-lg shadow hover:shadow-md transition flex items-center justify-center gap-2 disabled:opacity-60"
+                  className="w-full bg-[#17365D] hover:bg-[#0f2746] text-white font-semibold text-xs sm:text-sm py-3.5 rounded-lg shadow hover:shadow-md transition flex items-center justify-center gap-2 disabled:opacity-60"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">

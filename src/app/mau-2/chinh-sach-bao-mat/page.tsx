@@ -31,13 +31,13 @@ export default function PrivacyMau2Page() {
               theme="editorial"
             />
             <div className="space-y-4 pt-4">
-              <span className="text-xs font-serif text-[#C5A059] uppercase tracking-[0.25em] block font-semibold">
+              <span className="text-xs text-[#997836] uppercase tracking-wider block font-semibold">
                 NGUYÊN TẮC BẢO MẬT TỐI CAO
               </span>
-              <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#0C1829]">
+              <h1 className="text-3xl sm:text-5xl font-bold text-[#0F172A]">
                 Quy ước Cơ mật & Đặc quyền Luật sư – Thân chủ
               </h1>
-              <p className="text-slate-600 font-sans text-sm sm:text-base font-light leading-relaxed">
+              <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
                 Áp dụng đối với mọi giao dịch, trao đổi thông tin và lưu trữ dữ liệu giữa thân chủ và SAIGONLEX Premium Law Firm.
               </p>
             </div>
@@ -46,21 +46,21 @@ export default function PrivacyMau2Page() {
 
         {/* Policy Body */}
         <section className="py-20 bg-[#FDFBF7]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-slate-600 font-sans font-light text-sm sm:text-base leading-relaxed">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-[#202124] text-base leading-[1.72]">
             <div className="p-6 rounded-sm border border-[#E5DEC9] bg-white shadow-sm flex items-start gap-4">
               <Lock className="w-6 h-6 text-[#C5A059] shrink-0 mt-0.5" />
               <div className="space-y-1">
-                <span className="font-serif font-bold text-base text-[#0C1829] block">
+                <span className="font-bold text-base text-[#111827] block">
                   Đặc quyền Bất khả Xâm phạm
                 </span>
-                <p className="text-xs text-slate-500 font-light leading-relaxed">
+                <p className="text-xs sm:text-[13px] text-[#4B5563] leading-relaxed">
                   Tại SAIGONLEX, bí mật của thân chủ là thành trì không thể xâm phạm. Mọi dữ liệu trao đổi được bảo đảm tuyệt đối theo Điều 25 Luật Luật sư Việt Nam và quy chuẩn đặc quyền luật sư quốc tế.
                 </p>
               </div>
             </div>
 
             <div className="space-y-3">
-              <h2 className="font-serif text-2xl font-bold text-[#0C1829]">
+              <h2 className="text-2xl font-bold text-[#0F172A]">
                 I. Thu thập Dữ liệu có Giới hạn
               </h2>
               <p>
@@ -69,7 +69,7 @@ export default function PrivacyMau2Page() {
             </div>
 
             <div className="space-y-3">
-              <h2 className="font-serif text-2xl font-bold text-[#0C1829]">
+              <h2 className="text-2xl font-bold text-[#0F172A]">
                 II. Tuân thủ Nghị định 13/2023/NĐ-CP & Mã hóa Cấp cao
               </h2>
               <p>
@@ -78,7 +78,7 @@ export default function PrivacyMau2Page() {
             </div>
 
             <div className="space-y-3">
-              <h2 className="font-serif text-2xl font-bold text-[#0C1829]">
+              <h2 className="text-2xl font-bold text-[#0F172A]">
                 III. Cơ chế Ký Cam kết Bảo mật Riêng (NDA)
               </h2>
               <p>
@@ -87,11 +87,11 @@ export default function PrivacyMau2Page() {
             </div>
 
             <div className="space-y-3 pt-6 border-t border-[#E5DEC9]">
-              <h2 className="font-serif text-xl font-bold text-[#0C1829]">
+              <h2 className="text-xl font-bold text-[#0F172A]">
                 IV. Thông tin Liên lạc Bộ phận Cơ mật
               </h2>
-              <div className="p-6 rounded-sm border border-[#E5DEC9] bg-[#FAF7F0] text-xs text-slate-600 space-y-1">
-                <div className="font-serif font-bold text-[#0C1829]">Ban Thư ký Pháp lý & Kiểm toán Tuân thủ SAIGONLEX</div>
+              <div className="p-6 rounded-sm border border-[#E5DEC9] bg-[#FAF7F0] text-xs sm:text-sm text-[#202124] space-y-1">
+                <div className="font-bold text-[#111827]">Ban Thư ký Pháp lý & Kiểm toán Tuân thủ SAIGONLEX</div>
                 <div>Địa chỉ: {SITE_CONFIG.address}</div>
                 <div>Hotline: {SITE_CONFIG.hotline} • Email: {SITE_CONFIG.email}</div>
               </div>

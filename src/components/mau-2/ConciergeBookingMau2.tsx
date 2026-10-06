@@ -87,13 +87,13 @@ export function ConciergeBookingMau2() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Description Column */}
           <FadeIn direction="left" className="lg:col-span-5 space-y-6">
-            <span className="text-[#C5A059] font-serif text-xs uppercase tracking-[0.25em] block font-semibold">
+            <span className="text-[#997836] text-xs uppercase tracking-wider block font-semibold">
               HỘI ĐÀM CƠ MẬT
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C1829] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A] tracking-tight">
               Yêu cầu Tư vấn Riêng & Xác lập Lịch hẹn
             </h2>
-            <p className="text-slate-600 font-sans text-sm font-light leading-relaxed">
+            <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
               Mọi dữ liệu trao đổi được bảo đảm tuyệt mật. Văn phòng sẽ sắp xếp buổi diện kiến trực tiếp hoặc trực tuyến cùng Luật sư Thành viên phụ trách chuyên môn trong vòng 24 giờ làm việc.
             </p>
 
@@ -101,10 +101,10 @@ export function ConciergeBookingMau2() {
               <div className="flex items-start gap-3.5 p-4 rounded-sm border border-[#E5DEC9] bg-white shadow-sm">
                 <Lock className="w-5 h-5 text-[#C5A059] shrink-0 mt-0.5" />
                 <div className="space-y-1">
-                  <span className="font-serif text-xs font-bold text-[#0C1829] block">
+                  <span className="text-sm font-semibold text-[#111827] block">
                     Đặc quyền Giữ kín Bí mật Thân chủ
                   </span>
-                  <p className="text-[11px] text-slate-500 font-sans font-light">
+                  <p className="text-xs text-[#4B5563] leading-relaxed">
                     Ký thỏa thuận NDA bảo vệ danh tính và bí mật giao dịch trước khi đi vào chi tiết.
                   </p>
                 </div>
@@ -113,10 +113,10 @@ export function ConciergeBookingMau2() {
               <div className="flex items-start gap-3.5 p-4 rounded-sm border border-[#E5DEC9] bg-white shadow-sm">
                 <ShieldCheck className="w-5 h-5 text-[#C5A059] shrink-0 mt-0.5" />
                 <div className="space-y-1">
-                  <span className="font-serif text-xs font-bold text-[#0C1829] block">
+                  <span className="text-sm font-semibold text-[#111827] block">
                     Báo giá Cố vấn Trọn gói & Minh bạch
                   </span>
-                  <p className="text-[11px] text-slate-500 font-sans font-light">
+                  <p className="text-xs text-[#4B5563] leading-relaxed">
                     Tuyệt đối không phát sinh thù lao ẩn. Dự toán tài chính chuẩn xác ngay từ Thư đề xuất ban đầu.
                   </p>
                 </div>
@@ -131,19 +131,19 @@ export function ConciergeBookingMau2() {
                 <div className="w-14 h-14 rounded-full bg-amber-500/10 border border-[#C5A059] flex items-center justify-center text-[#C5A059] mx-auto">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-[#0C1829]">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#0F172A]">
                   Hồ sơ Yêu cầu đã được Tiếp nhận An toàn
                 </h3>
-                <div className="font-mono text-xs text-[#0C1829] bg-[#E5DEC9]/40 py-1.5 px-3 rounded inline-block border border-[#C5A059]/40 font-semibold">
+                <div className="font-mono text-xs text-[#111827] bg-[#E5DEC9]/40 py-1.5 px-3 rounded inline-block border border-[#C5A059]/40 font-semibold">
                   MÃ HỒ SƠ: {submitSuccess.ticketId}
                 </div>
-                <p className="text-xs text-slate-600 font-sans font-light leading-relaxed max-w-md mx-auto">
+                <p className="text-xs sm:text-sm text-[#202124] leading-[1.7] max-w-md mx-auto">
                   {submitSuccess.message} Luật sư điều hành phụ trách lĩnh vực <strong>{submitSuccess.summary?.service}</strong> sẽ liên lạc bảo mật với bạn ({submitSuccess.consultantResponseEstimate}).
                 </p>
                 <button
                   type="button"
                   onClick={() => setSubmitSuccess(null)}
-                  className="mt-4 bg-[#C5A059] hover:bg-[#b08b43] text-white font-serif font-bold text-xs uppercase tracking-wider py-3 px-6 rounded-sm transition shadow-sm"
+                  className="mt-4 bg-[#17365D] hover:bg-[#0f2746] text-white font-semibold text-xs uppercase tracking-wider py-3 px-6 rounded-sm transition shadow-sm"
                 >
                   Gửi yêu cầu thỉnh ý khác
                 </button>
@@ -171,15 +171,15 @@ export function ConciergeBookingMau2() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-serif uppercase tracking-wider text-[#0C1829] mb-2 font-medium">
-                      Quý danh thân chủ <span className="text-[#C5A059]">*</span>
+                    <label className="block text-xs uppercase tracking-wider text-[#111827] mb-2 font-semibold">
+                      Quý danh thân chủ <span className="text-rose-500">*</span>
                     </label>
                     <input
                       type="text"
                       placeholder="Nguyễn Văn A"
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className="w-full px-4 py-3 rounded-sm bg-[#FAF7F0] border border-[#E5DEC9] text-xs text-[#0C1829] focus:outline-none focus:border-[#C5A059] focus:bg-white transition placeholder:text-slate-400"
+                      className="w-full px-4 py-3 rounded-sm bg-[#FAF7F0] border border-[#E5DEC9] text-xs sm:text-sm text-[#202124] focus:outline-none focus:border-[#17365D] focus:bg-white transition placeholder:text-slate-400"
                     />
                     {errors.fullName && (
                       <p className="text-[11px] text-rose-600 mt-1">{errors.fullName}</p>
@@ -187,15 +187,15 @@ export function ConciergeBookingMau2() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-serif uppercase tracking-wider text-[#0C1829] mb-2 font-medium">
-                      Số điện thoại cơ mật <span className="text-[#C5A059]">*</span>
+                    <label className="block text-xs uppercase tracking-wider text-[#111827] mb-2 font-semibold">
+                      Số điện thoại cơ mật <span className="text-rose-500">*</span>
                     </label>
                     <input
                       type="tel"
                       placeholder="0901 234 567"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-sm bg-[#FAF7F0] border border-[#E5DEC9] text-xs text-[#0C1829] focus:outline-none focus:border-[#C5A059] focus:bg-white transition placeholder:text-slate-400"
+                      className="w-full px-4 py-3 rounded-sm bg-[#FAF7F0] border border-[#E5DEC9] text-xs sm:text-sm text-[#202124] focus:outline-none focus:border-[#17365D] focus:bg-white transition placeholder:text-slate-400"
                     />
                     {errors.phone && (
                       <p className="text-[11px] text-rose-600 mt-1">{errors.phone}</p>
@@ -205,15 +205,15 @@ export function ConciergeBookingMau2() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-serif uppercase tracking-wider text-[#0C1829] mb-2 font-medium">
-                      Địa chỉ Thư điện tử (Email) <span className="text-[#C5A059]">*</span>
+                    <label className="block text-xs uppercase tracking-wider text-[#111827] mb-2 font-semibold">
+                      Địa chỉ Thư điện tử (Email) <span className="text-rose-500">*</span>
                     </label>
                     <input
                       type="email"
                       placeholder="executive@enterprise.vn"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-sm bg-[#FAF7F0] border border-[#E5DEC9] text-xs text-[#0C1829] focus:outline-none focus:border-[#C5A059] focus:bg-white transition placeholder:text-slate-400"
+                      className="w-full px-4 py-3 rounded-sm bg-[#FAF7F0] border border-[#E5DEC9] text-xs sm:text-sm text-[#202124] focus:outline-none focus:border-[#17365D] focus:bg-white transition placeholder:text-slate-400"
                     />
                     {errors.email && (
                       <p className="text-[11px] text-rose-600 mt-1">{errors.email}</p>
@@ -221,13 +221,13 @@ export function ConciergeBookingMau2() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-serif uppercase tracking-wider text-[#0C1829] mb-2 font-medium">
-                      Lĩnh vực Thỉnh ý <span className="text-[#C5A059]">*</span>
+                    <label className="block text-xs uppercase tracking-wider text-[#111827] mb-2 font-semibold">
+                      Lĩnh vực Thỉnh ý <span className="text-rose-500">*</span>
                     </label>
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full px-4 py-3 rounded-sm bg-[#FAF7F0] border border-[#E5DEC9] text-xs text-[#0C1829] focus:outline-none focus:border-[#C5A059] focus:bg-white transition"
+                      className="w-full px-4 py-3 rounded-sm bg-[#FAF7F0] border border-[#E5DEC9] text-xs sm:text-sm text-[#202124] focus:outline-none focus:border-[#17365D] focus:bg-white transition"
                     >
                       <option value="">-- Lựa chọn chuyên môn --</option>
                       {PRACTICE_AREAS.map((svc) => (
@@ -244,36 +244,36 @@ export function ConciergeBookingMau2() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-serif uppercase tracking-wider text-[#0C1829] mb-2 font-medium">
-                    Tóm lược Bối cảnh Vụ việc <span className="text-[#C5A059]">*</span>
+                  <label className="block text-xs uppercase tracking-wider text-[#111827] mb-2 font-semibold">
+                    Tóm lược Bối cảnh Vụ việc <span className="text-rose-500">*</span>
                   </label>
                   <textarea
                     rows={4}
                     placeholder="Khái quát tính chất vụ việc, mốc thời gian và mục tiêu mong đợi..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-sm bg-[#FAF7F0] border border-[#E5DEC9] text-xs text-[#0C1829] focus:outline-none focus:border-[#C5A059] focus:bg-white transition placeholder:text-slate-400"
+                    className="w-full px-4 py-3 rounded-sm bg-[#FAF7F0] border border-[#E5DEC9] text-xs sm:text-sm text-[#202124] focus:outline-none focus:border-[#17365D] focus:bg-white transition placeholder:text-slate-400"
                   />
                   {errors.message && (
                     <p className="text-[11px] text-rose-600 mt-1">{errors.message}</p>
                   )}
                 </div>
 
-                <div className="text-[11px] text-slate-500 font-light leading-relaxed">
+                <div className="text-xs text-[#4B5563] leading-relaxed">
                   Thông tin cung cấp được bảo mật tuyệt đối theo Quy ước Bảo vệ Dữ liệu Cá nhân và Đặc quyền Nghề nghiệp Luật sư.
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-sm bg-[#0C1829] hover:bg-[#152338] text-white font-serif font-bold text-xs uppercase tracking-[0.2em] shadow-lg transition flex items-center justify-center gap-2 disabled:opacity-60 group"
+                  className="w-full py-4 rounded-sm bg-[#17365D] hover:bg-[#0f2746] text-white font-semibold text-xs uppercase tracking-wider shadow-lg transition flex items-center justify-center gap-2 disabled:opacity-60 group"
                 >
                   {isSubmitting ? (
                     <span>ĐANG TIẾP NHẬN BẢO MẬT...</span>
                   ) : (
                     <>
-                      <span className="text-[#DFBF7E]">XÁC LẬP YÊU CẦU CƠ MẬT</span>
-                      <ArrowUpRight className="w-4 h-4 text-[#DFBF7E] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <span className="text-[#EBD59B]">XÁC LẬP YÊU CẦU CƠ MẬT</span>
+                      <ArrowUpRight className="w-4 h-4 text-[#EBD59B] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </>
                   )}
                 </button>

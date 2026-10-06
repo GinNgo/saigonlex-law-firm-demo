@@ -20,10 +20,10 @@ export function InsightsMau1() {
                 <span className="w-6 h-0.5 bg-[#C5A880]" />
                 <span>GÓC NHÌN PHÁP LÝ & ẤN PHẨM</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight">
                 Bài viết Kiến thức Pháp luật Mới nhất
               </h2>
-              <p className="text-slate-600 text-sm leading-relaxed">
+              <p className="text-[#202124] text-[15px] sm:text-[16px] leading-[1.7]">
                 Cập nhật các phân tích chuyên sâu, điểm mới luật định và bài học kinh nghiệm xử lý tranh chấp thực tế từ luật sư SAIGONLEX.
               </p>
             </div>
@@ -31,7 +31,7 @@ export function InsightsMau1() {
             <div>
               <Link
                 href="/mau-1/tin-tuc"
-                className="inline-flex items-center gap-2 text-sm font-bold text-[#0A2540] hover:text-[#0f3d68] group"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#17365D] hover:underline group"
               >
                 <span>Xem tất cả bài viết & ấn phẩm</span>
                 <ArrowRight className="w-4 h-4 text-[#C5A880] group-hover:translate-x-1 transition-transform" />
@@ -62,7 +62,7 @@ export function InsightsMau1() {
 
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div className="space-y-3">
-                    <div className="flex items-center gap-4 text-xs text-slate-400">
+                    <div className="flex items-center gap-4 text-xs text-[#6B7280]">
                       <span className="flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5" />
                         <span>{post.publishDate}</span>
@@ -73,26 +73,26 @@ export function InsightsMau1() {
                       </span>
                     </div>
 
-                    <h3 className="text-base font-bold text-[#0A2540] group-hover:text-blue-700 transition leading-snug line-clamp-2">
+                    <h3 className="text-base font-semibold text-[#111827] group-hover:text-[#17365D] transition leading-snug line-clamp-2">
                       <Link href={`/mau-1/tin-tuc/${post.slug}`}>
                         {post.title}
                       </Link>
                     </h3>
 
-                    <p className="text-xs text-slate-500 leading-relaxed line-clamp-3">
+                    <p className="text-xs sm:text-[13px] text-[#4B5563] leading-relaxed line-clamp-3">
                       {post.excerpt}
                     </p>
                   </div>
 
                   <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-xs text-slate-600 font-medium">
+                    <div className="flex items-center gap-2 text-xs text-[#4B5563] font-medium">
                       <User className="w-3.5 h-3.5 text-[#C5A880]" />
                       <span>{post.author}</span>
                     </div>
 
                     <Link
                       href={`/mau-1/tin-tuc/${post.slug}`}
-                      className="text-xs font-bold text-[#0A2540] hover:text-blue-700 flex items-center gap-1 group/btn"
+                      className="text-xs font-semibold text-[#17365D] hover:underline flex items-center gap-1 group/btn"
                     >
                       <span>Đọc tiếp</span>
                       <ArrowRight className="w-3.5 h-3.5 text-[#C5A880] group-hover/btn:translate-x-1 transition-transform" />

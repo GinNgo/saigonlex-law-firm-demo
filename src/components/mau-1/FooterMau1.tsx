@@ -14,7 +14,7 @@ export function FooterMau1() {
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
               Cần đánh giá hồ sơ pháp lý hoặc bảo vệ quyền lợi doanh nghiệp?
             </h3>
-            <p className="text-slate-400 text-sm max-w-2xl">
+            <p className="text-slate-300 text-sm max-w-2xl">
               Đội ngũ luật sư SAIGONLEX sẵn sàng tiếp nhận, phân tích rủi ro và phản hồi phương án sơ bộ trong vòng 24 giờ làm việc.
             </p>
           </div>
@@ -28,7 +28,7 @@ export function FooterMau1() {
             </Link>
             <a
               href={`tel:${SITE_CONFIG.hotline.replace(/[^0-9]/g, "")}`}
-              className="bg-slate-800/80 hover:bg-slate-800 text-white font-medium px-5 py-3 rounded text-sm border border-slate-700 transition"
+              className="bg-slate-800/80 hover:bg-slate-800 text-white font-semibold px-5 py-3 rounded text-sm border border-slate-700 transition"
             >
               Gọi {SITE_CONFIG.hotline}
             </a>
@@ -49,13 +49,13 @@ export function FooterMau1() {
                 <span className="text-2xl font-extrabold text-white tracking-tight">
                   SAIGON<span className="text-[#C5A880]">LEX</span>
                 </span>
-                <p className="text-[11px] text-slate-400 uppercase tracking-widest font-medium">
+                <p className="text-[11px] text-slate-300 uppercase tracking-widest font-medium">
                   Corporate Law Firm • DEMO
                 </p>
               </div>
             </div>
 
-            <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
+            <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
               Hãng luật chuyên sâu về tư vấn quản trị doanh nghiệp, M&A, hợp đồng thương mại, đầu tư FDI và giải quyết tranh chấp kinh doanh tại Việt Nam.
             </p>
 
@@ -64,7 +64,7 @@ export function FooterMau1() {
                 <ShieldCheck className="w-4 h-4" />
                 <span>Thông tin pháp lý công ty [DEMO]</span>
               </div>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-slate-300 leading-relaxed">
                 {SITE_CONFIG.licensePlaceholder}
               </p>
             </div>
@@ -80,7 +80,7 @@ export function FooterMau1() {
                 <li key={svc.slug}>
                   <Link
                     href={`/mau-1/linh-vuc/${svc.slug}`}
-                    className="text-slate-400 hover:text-white transition flex items-center gap-1.5"
+                    className="text-slate-300 hover:text-white transition flex items-center gap-1.5"
                   >
                     <span className="text-[#C5A880]">›</span>
                     <span>{svc.shortTitle}</span>
@@ -90,7 +90,7 @@ export function FooterMau1() {
               <li>
                 <Link
                   href="/mau-1/linh-vuc"
-                  className="text-[#C5A880] hover:underline font-medium inline-block pt-1"
+                  className="text-[#C5A880] hover:underline font-semibold inline-block pt-1"
                 >
                   Xem tất cả 8 lĩnh vực →
                 </Link>
@@ -105,27 +105,27 @@ export function FooterMau1() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/mau-1/gioi-thieu" className="text-slate-400 hover:text-white transition">
+                <Link href="/mau-1/gioi-thieu" className="text-slate-300 hover:text-white transition">
                   Giới thiệu SAIGONLEX
                 </Link>
               </li>
               <li>
-                <Link href="/mau-1/doi-ngu" className="text-slate-400 hover:text-white transition">
+                <Link href="/mau-1/doi-ngu" className="text-slate-300 hover:text-white transition">
                   Đội ngũ luật sư & chuyên gia
                 </Link>
               </li>
               <li>
-                <Link href="/mau-1/tin-tuc" className="text-slate-400 hover:text-white transition">
+                <Link href="/mau-1/tin-tuc" className="text-slate-300 hover:text-white transition">
                   Bài viết kiến thức pháp luật
                 </Link>
               </li>
               <li>
-                <Link href="/mau-1/lien-he" className="text-slate-400 hover:text-white transition">
+                <Link href="/mau-1/lien-he" className="text-slate-300 hover:text-white transition">
                   Đặt lịch hẹn & Liên hệ
                 </Link>
               </li>
               <li>
-                <Link href="/mau-1/chinh-sach-bao-mat" className="text-slate-400 hover:text-white transition">
+                <Link href="/mau-1/chinh-sach-bao-mat" className="text-slate-300 hover:text-white transition">
                   Chính sách bảo mật & Điều khoản
                 </Link>
               </li>
@@ -143,7 +143,7 @@ export function FooterMau1() {
             <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-4 border-l-2 border-[#C5A880] pl-2.5">
               Trụ sở SAIGONLEX
             </h4>
-            <div className="space-y-3 text-xs text-slate-400">
+            <div className="space-y-3 text-xs text-slate-300">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
                 <span>{SITE_CONFIG.address}</span>
@@ -165,15 +165,15 @@ export function FooterMau1() {
         </div>
 
         {/* Disclaimer & Copyright */}
-        <div className="mt-12 pt-8 border-t border-slate-800 text-xs text-slate-500 space-y-3">
-          <p className="leading-relaxed bg-slate-900/50 p-4 rounded text-slate-400 border border-slate-800/80">
+        <div className="mt-12 pt-8 border-t border-slate-800 text-xs text-slate-400 space-y-3">
+          <p className="leading-relaxed bg-slate-900/50 p-4 rounded text-slate-300 border border-slate-800/80">
             <strong className="text-amber-400">Tuyên bố miễn trừ trách nhiệm pháp lý (Bản DEMO):</strong> {SITE_CONFIG.disclaimer}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 pt-2">
             <div>
               © 2026 SAIGONLEX Law Firm – Bản quyền thử nghiệm giao diện (DEMO). All rights reserved.
             </div>
-            <div className="flex items-center gap-4 text-slate-400">
+            <div className="flex items-center gap-4 text-slate-300">
               <Link href="/mau-1/chinh-sach-bao-mat" className="hover:text-white transition">
                 Bảo mật thông tin
               </Link>

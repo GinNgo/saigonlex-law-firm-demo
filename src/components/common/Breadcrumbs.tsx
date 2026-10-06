@@ -35,8 +35,8 @@ export function Breadcrumbs({ items, theme = "light" }: BreadcrumbsProps) {
               isDark
                 ? "hover:text-amber-300 text-slate-400"
                 : isEditorial
-                ? "hover:text-[#C5A059] text-slate-500"
-                : "hover:text-blue-900 text-slate-500"
+                ? "hover:text-[#C5A059] text-[#4B5563]"
+                : "hover:text-[#17365D] text-[#4B5563]"
             }`}
           >
             <Home className="w-3.5 h-3.5" />
@@ -56,24 +56,24 @@ export function Breadcrumbs({ items, theme = "light" }: BreadcrumbsProps) {
               {item.href && !isLast ? (
                 <Link
                   href={item.href}
-                  className={`transition ${
+                  className={`transition font-medium ${
                     isDark
-                      ? "hover:text-amber-300 text-slate-400"
+                      ? "hover:text-amber-300 text-slate-300"
                       : isEditorial
-                      ? "hover:text-[#C5A059] text-slate-600 font-sans"
-                      : "hover:text-blue-900 text-slate-600"
+                      ? "hover:text-[#C5A059] text-[#202124] font-sans"
+                      : "hover:text-[#17365D] text-[#202124]"
                   }`}
                 >
                   {item.label}
                 </Link>
               ) : (
                 <span
-                  className={`font-medium ${
+                  className={`font-semibold ${
                     isDark
                       ? "text-amber-400 font-serif"
                       : isEditorial
-                      ? "text-[#0C1829] font-serif font-semibold"
-                      : "text-slate-900"
+                      ? "text-[#0F172A] font-serif"
+                      : "text-[#0F172A]"
                   }`}
                   aria-current={isLast ? "page" : undefined}
                 >

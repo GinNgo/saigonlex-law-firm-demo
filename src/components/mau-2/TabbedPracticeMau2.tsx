@@ -17,13 +17,13 @@ export function TabbedPracticeMau2() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn direction="up">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <span className="text-[#997836] font-serif text-xs uppercase tracking-[0.25em]">
+            <span className="text-[#997836] text-xs uppercase tracking-wider font-semibold">
               DANH MỤC THẨM QUYỀN
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C1829]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A]">
               Lĩnh vực Cố vấn Chuyên sâu
             </h2>
-            <p className="text-slate-600 font-sans text-sm font-light leading-relaxed">
+            <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
               Chọn từng lĩnh vực để xem phạm vi tư vấn, rủi ro cần kiểm soát và phương pháp tiếp cận của SAIGONLEX.
             </p>
           </div>
@@ -38,10 +38,10 @@ export function TabbedPracticeMau2() {
                 key={svc.slug}
                 type="button"
                 onClick={() => setSelectedSlug(svc.slug)}
-                className={`px-4 py-2.5 rounded-sm text-xs font-serif uppercase tracking-wider transition-all duration-200 border cursor-pointer ${
+                className={`px-4 py-2.5 rounded-sm text-xs uppercase tracking-wider transition-all duration-200 border cursor-pointer ${
                   isSelected
-                    ? "bg-[#0C1829] text-[#F5E6BE] font-bold border-[#0C1829] shadow-md -translate-y-0.5"
-                    : "bg-white text-slate-700 border-[#E5DEC9] hover:text-[#0C1829] hover:border-[#C5A059]"
+                    ? "bg-[#17365D] text-white font-semibold border-[#17365D] shadow-md -translate-y-0.5"
+                    : "bg-white text-[#202124] border-[#E5DEC9] hover:text-[#17365D] hover:border-[#17365D] font-medium"
                 }`}
               >
                 {svc.shortTitle}
@@ -73,7 +73,7 @@ export function TabbedPracticeMau2() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0C1829]/60 via-transparent to-transparent" />
                 
-                <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-sm border border-[#E5DEC9] text-[11px] font-serif text-[#0C1829] font-bold">
+                <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-sm border border-[#E5DEC9] text-[11px] text-[#0F172A] font-bold">
                   {currentService.category}
                 </div>
               </div>
@@ -82,25 +82,25 @@ export function TabbedPracticeMau2() {
             {/* Info Column */}
             <div className="lg:col-span-7 space-y-6">
               <div>
-                <span className="text-[11px] font-mono text-[#997836] uppercase tracking-widest block mb-1 font-semibold">
+                <span className="text-[11px] font-mono text-[#997836] uppercase tracking-wider block mb-1 font-bold">
                   ĐẶC TẢ PHẠM VI DỊCH VỤ
                 </span>
-                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#0C1829] leading-snug">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#0F172A] leading-snug">
                   {currentService.title}
                 </h3>
               </div>
 
-              <p className="text-slate-600 font-sans text-xs sm:text-sm leading-relaxed font-light">
+              <p className="text-[#202124] text-sm leading-[1.7] font-normal">
                 {currentService.overview}
               </p>
 
               {/* Service Scope Bullets */}
               <div className="space-y-2.5 pt-2">
-                <div className="text-xs font-serif uppercase tracking-wider text-[#997836] font-semibold">
+                <div className="text-xs uppercase tracking-wider text-[#997836] font-bold">
                   Phạm vi thực hiện tiêu biểu:
                 </div>
                 {currentService.serviceScope.slice(0, 3).map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-700">
+                  <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#202124] font-medium">
                     <CheckCircle2 className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
@@ -110,7 +110,7 @@ export function TabbedPracticeMau2() {
               <div className="pt-4 border-t border-[#EFE9D9] flex flex-wrap items-center justify-between gap-4">
                 <Link
                   href={`/mau-2/linh-vuc/${currentService.slug}`}
-                  className="inline-flex items-center gap-2 bg-[#0C1829] hover:bg-[#152740] text-[#F5E6BE] font-serif font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-sm transition"
+                  className="inline-flex items-center gap-2 bg-[#17365D] hover:bg-[#0f2746] text-white font-semibold text-xs uppercase tracking-wider px-6 py-3 rounded-sm transition"
                 >
                   <span>Xem chuyên trang chi tiết</span>
                   <ArrowUpRight className="w-4 h-4 text-[#C5A059]" />
@@ -118,7 +118,7 @@ export function TabbedPracticeMau2() {
 
                 <Link
                   href="/mau-2/lien-he"
-                  className="text-xs font-serif uppercase tracking-wider text-slate-600 hover:text-[#0C1829] transition font-medium"
+                  className="text-xs uppercase tracking-wider text-[#17365D] hover:text-[#0f2746] transition font-semibold"
                 >
                   Yêu cầu phân tích hồ sơ riêng →
                 </Link>

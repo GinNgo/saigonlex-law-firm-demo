@@ -43,13 +43,13 @@ export default function BlogListMau2Page() {
               theme="editorial"
             />
             <div className="max-w-3xl space-y-4 pt-4">
-              <span className="text-xs font-serif text-[#C5A059] uppercase tracking-[0.25em] block font-semibold">
+              <span className="text-xs text-[#997836] uppercase tracking-wider block font-semibold">
                 DIỄN ĐÀN CHUYÊN KHẢO
               </span>
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0C1829]">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A]">
                 Ấn phẩm & Phân tích Độc quyền
               </h1>
-              <p className="text-slate-600 font-sans text-sm sm:text-base font-light leading-relaxed">
+              <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
                 Những góc nhìn học thuật và thực tiễn chuẩn xác về các chuyển dịch của hành lang pháp lý thương mại tại Việt Nam.
               </p>
             </div>
@@ -74,38 +74,38 @@ export default function BlogListMau2Page() {
                         className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100"
                         sizes="(max-width: 1024px) 100vw, 33vw"
                       />
-                      <div className="absolute top-3 left-3 bg-[#0C1829]/90 px-2.5 py-1 text-[10px] font-mono tracking-wider text-[#DFBF7E] border border-[#C5A059]/30 uppercase rounded-sm">
+                      <div className="absolute top-3 left-3 bg-[#0C1829]/90 px-2.5 py-1 text-[10px] font-mono tracking-wider text-[#DFBF7E] border border-[#C5A059]/30 uppercase rounded-sm font-bold">
                         {post.category}
                       </div>
                     </div>
 
                     <div className="p-6 space-y-3">
-                      <div className="flex items-center gap-3 text-[11px] text-slate-500 font-mono">
+                      <div className="flex items-center gap-3 text-[11px] text-[#6B7280] font-mono">
                         <span>{post.publishDate}</span>
                         <span>•</span>
                         <span>{post.readTime}</span>
                       </div>
 
-                      <h2 className="font-serif text-xl font-bold text-[#0C1829] group-hover:text-[#C5A059] transition leading-snug line-clamp-2">
+                    <h2 className="text-lg sm:text-xl font-bold text-[#111827] group-hover:text-[#17365D] transition leading-snug line-clamp-2">
                         <Link href={`/mau-2/tin-tuc/${post.slug}`}>
                           {post.title}
                         </Link>
                       </h2>
 
-                      <p className="text-xs text-slate-600 font-sans font-light leading-relaxed line-clamp-3">
+                      <p className="text-xs sm:text-[13px] text-[#4B5563] leading-[1.7] line-clamp-3 font-normal">
                         {post.excerpt}
                       </p>
                     </div>
                   </div>
 
                   <div className="p-6 pt-0 border-t border-[#E5DEC9]/60 flex items-center justify-between mt-4">
-                    <span className="text-[11px] text-slate-500 font-serif">
+                    <span className="text-xs text-[#6B7280] font-medium">
                       Tác giả: {post.author}
                     </span>
 
                     <Link
                       href={`/mau-2/tin-tuc/${post.slug}`}
-                      className="text-xs font-serif text-[#0C1829] group-hover:text-[#C5A059] flex items-center gap-1 transition font-medium"
+                      className="text-xs uppercase tracking-wider text-[#17365D] group-hover:text-[#0f2746] flex items-center gap-1 transition font-semibold"
                     >
                       <span>Khảo cứu</span>
                       <ArrowUpRight className="w-3.5 h-3.5 text-[#C5A059]" />

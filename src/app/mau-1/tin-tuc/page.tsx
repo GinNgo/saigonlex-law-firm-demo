@@ -80,24 +80,24 @@ export default function BlogListMau1Page() {
 
                   <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                     <div className="space-y-3">
-                      <div className="flex items-center gap-4 text-xs text-slate-400">
-                        <span className="flex items-center gap-1">
+                      <div className="flex items-center gap-4 text-xs text-[#6B7280]">
+                        <span className="flex items-center gap-1 font-medium">
                           <Calendar className="w-3.5 h-3.5" />
                           <span>{post.publishDate}</span>
                         </span>
-                        <span className="flex items-center gap-1">
+                        <span className="flex items-center gap-1 font-medium">
                           <Clock className="w-3.5 h-3.5" />
                           <span>{post.readTime}</span>
                         </span>
                       </div>
 
-                      <h2 className="text-base font-bold text-[#0A2540] group-hover:text-blue-700 transition leading-snug line-clamp-2">
+                      <h2 className="text-base font-bold text-[#0F172A] group-hover:text-[#17365D] transition leading-snug line-clamp-2">
                         <Link href={`/mau-1/tin-tuc/${post.slug}`}>
                           {post.title}
                         </Link>
                       </h2>
 
-                      <p className="text-xs text-slate-500 leading-relaxed line-clamp-3">
+                      <p className="text-xs text-[#202124] leading-[1.7] line-clamp-3">
                         {post.excerpt}
                       </p>
 
@@ -105,7 +105,7 @@ export default function BlogListMau1Page() {
                         {post.tags.slice(0, 3).map((t, idx) => (
                           <span
                             key={idx}
-                            className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded"
+                            className="text-[10px] bg-slate-100 text-[#4B5563] font-medium px-2 py-0.5 rounded"
                           >
                             #{t}
                           </span>
@@ -114,14 +114,14 @@ export default function BlogListMau1Page() {
                     </div>
 
                     <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-xs text-slate-600 font-medium">
+                      <div className="flex items-center gap-2 text-xs text-[#202124] font-medium">
                         <User className="w-3.5 h-3.5 text-[#C5A880]" />
                         <span>{post.author}</span>
                       </div>
 
                       <Link
                         href={`/mau-1/tin-tuc/${post.slug}`}
-                        className="text-xs font-bold text-[#0A2540] hover:text-blue-700 flex items-center gap-1 group/btn"
+                        className="text-xs font-semibold text-[#17365D] hover:text-[#0f2746] flex items-center gap-1 group/btn"
                       >
                         <span>Đọc tiếp</span>
                         <ArrowRight className="w-3.5 h-3.5 text-[#C5A880] group-hover/btn:translate-x-1 transition-transform" />

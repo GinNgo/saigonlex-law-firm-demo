@@ -18,13 +18,13 @@ export function AccordionFaqMau2() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn direction="up">
           <div className="text-center mb-16 space-y-3">
-            <span className="text-[#997836] font-serif text-xs uppercase tracking-[0.25em]">
+            <span className="text-[#997836] text-xs uppercase tracking-wider font-semibold">
               GIẢI ĐÁP QUY CHUẨN
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C1829]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A]">
               Những Câu hỏi Thường Gặp
             </h2>
-            <p className="text-slate-600 font-sans text-sm font-light leading-relaxed">
+            <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
               Quy trình tiếp nhận vụ việc cơ mật, chính sách tính thù lao luật sư và cam kết bảo vệ quyền lợi thân chủ.
             </p>
           </div>
@@ -42,7 +42,7 @@ export function AccordionFaqMau2() {
                   <button
                     type="button"
                     onClick={() => toggle(idx)}
-                    className="w-full text-left p-6 flex items-center justify-between gap-4 font-serif text-base sm:text-lg text-[#0C1829] hover:text-[#997836] transition cursor-pointer"
+                    className="w-full text-left p-6 flex items-center justify-between gap-4 font-semibold text-base sm:text-[17px] text-[#111827] hover:text-[#17365D] transition cursor-pointer"
                     aria-expanded={isOpen}
                   >
                     <span className="flex items-center gap-3">
@@ -65,7 +65,7 @@ export function AccordionFaqMau2() {
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 pb-6 pt-1 text-slate-600 text-xs sm:text-sm font-sans font-light leading-relaxed border-t border-[#F0EAD8] bg-[#FAF7F0]">
+                        <div className="px-6 pb-6 pt-1 text-[#202124] text-sm leading-[1.72] border-t border-[#F0EAD8] bg-[#FAF7F0]">
                           <p className="mt-2">{faq.answer}</p>
                         </div>
                       </motion.div>

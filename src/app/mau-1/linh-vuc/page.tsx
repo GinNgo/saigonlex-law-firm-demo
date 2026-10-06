@@ -81,16 +81,16 @@ export default function ServicesMau1Page() {
 
                   <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                     <div>
-                      <h2 className="text-base font-bold text-[#0A2540] group-hover:text-blue-700 transition leading-snug line-clamp-2">
+                      <h2 className="text-base font-bold text-[#0F172A] group-hover:text-[#17365D] transition leading-snug line-clamp-2">
                         {svc.shortTitle}
                       </h2>
-                      <p className="text-xs text-slate-500 mt-2 line-clamp-3 leading-relaxed">
+                      <p className="text-xs text-[#202124] mt-2 line-clamp-3 leading-[1.7]">
                         {svc.shortDesc}
                       </p>
 
                       <div className="mt-4 space-y-1.5 pt-3 border-t border-slate-100">
                         {svc.highlights.slice(0, 2).map((hl, i) => (
-                          <div key={i} className="flex items-center gap-1.5 text-[11px] text-slate-600">
+                          <div key={i} className="flex items-center gap-1.5 text-[11px] text-[#4B5563]">
                             <CheckCircle2 className="w-3.5 h-3.5 text-[#C5A880] shrink-0" />
                             <span className="truncate">{hl}</span>
                           </div>
@@ -101,7 +101,7 @@ export default function ServicesMau1Page() {
                     <div className="pt-4 border-t border-slate-100">
                       <Link
                         href={`/mau-1/linh-vuc/${svc.slug}`}
-                        className="w-full bg-slate-100 hover:bg-[#0A2540] text-[#0A2540] hover:text-white text-xs font-bold py-2.5 px-3 rounded flex items-center justify-center gap-1.5 transition"
+                        className="w-full bg-slate-100 hover:bg-[#17365D] text-[#17365D] hover:text-white text-xs font-semibold py-2.5 px-3 rounded flex items-center justify-center gap-1.5 transition"
                       >
                         <span>Chi tiết dịch vụ & FAQ</span>
                         <ArrowRight className="w-3.5 h-3.5" />

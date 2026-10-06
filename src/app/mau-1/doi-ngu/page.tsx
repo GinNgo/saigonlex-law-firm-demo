@@ -88,27 +88,27 @@ export default function TeamMau1Page() {
 
                   <div className="space-y-4 flex-1">
                     <div>
-                      <h2 className="text-xl font-bold text-[#0A2540]">
+                      <h2 className="text-xl font-bold text-[#0F172A]">
                         {lawyer.name}
                       </h2>
                       <div className="text-xs font-semibold text-[#C5A880] mt-0.5">
                         {lawyer.role}
                       </div>
-                      <div className="text-xs text-slate-500 font-medium mt-0.5">
+                      <div className="text-xs text-[#6B7280] font-medium mt-0.5">
                         {lawyer.department}
                       </div>
                     </div>
 
-                    <p className="text-xs text-slate-600 leading-relaxed">
+                    <p className="text-xs text-[#202124] leading-[1.7]">
                       {lawyer.bio}
                     </p>
 
                     <div className="space-y-2 pt-2 border-t border-slate-100 text-xs">
-                      <div className="flex items-start gap-2 text-slate-700">
+                      <div className="flex items-start gap-2 text-[#202124]">
                         <GraduationCap className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
                         <div>
-                          <strong>Học vấn:</strong>
-                          <ul className="list-disc pl-4 mt-0.5 space-y-0.5 text-slate-500 text-[11px]">
+                          <strong className="text-[#111827]">Học vấn:</strong>
+                          <ul className="list-disc pl-4 mt-0.5 space-y-0.5 text-[#4B5563] text-[11px]">
                             {lawyer.education.map((e, idx) => (
                               <li key={idx}>{e}</li>
                             ))}
@@ -116,21 +116,21 @@ export default function TeamMau1Page() {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-2 text-slate-700">
+                      <div className="flex items-center gap-2 text-[#202124]">
                         <Scale className="w-4 h-4 text-[#C5A880] shrink-0" />
-                        <span><strong>Đoàn luật sư:</strong> {lawyer.barAssociation}</span>
+                        <span><strong className="text-[#111827]">Đoàn luật sư:</strong> {lawyer.barAssociation}</span>
                       </div>
 
-                      <div className="flex items-center gap-2 text-slate-700">
+                      <div className="flex items-center gap-2 text-[#202124]">
                         <Globe className="w-4 h-4 text-[#C5A880] shrink-0" />
-                        <span><strong>Ngôn ngữ:</strong> {lawyer.languages.join(", ")}</span>
+                        <span><strong className="text-[#111827]">Ngôn ngữ:</strong> {lawyer.languages.join(", ")}</span>
                       </div>
                     </div>
 
                     <div className="pt-2">
                       <Link
                         href="/mau-1/lien-he"
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0A2540] hover:text-blue-700"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#17365D] hover:text-[#0f2746]"
                       >
                         <span>Đặt lịch tư vấn với luật sư này</span>
                         <ArrowRight className="w-3.5 h-3.5 text-[#C5A880]" />

@@ -15,10 +15,10 @@ export function HeroMau2() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Top Editorial Index Header */}
-        <div className="flex items-center justify-between pb-8 mb-8 border-b border-[#E8E1CE] text-xs font-serif text-[#8C7A58]">
-          <span className="uppercase tracking-[0.25em]">SAIGONLEX / EDITORIAL EDITION</span>
-          <span className="font-mono text-[11px] hidden sm:inline text-slate-500">PRIVATE ADVISORY & LITIGATION COUNSEL</span>
-          <span className="uppercase tracking-widest font-mono text-[11px] text-[#0C1829]">TP. HỒ CHÍ MINH</span>
+        <div className="flex items-center justify-between pb-8 mb-8 border-b border-[#E8E1CE] text-xs text-[#8C7A58]">
+          <span className="uppercase tracking-wider font-semibold">SAIGONLEX / EDITORIAL EDITION</span>
+          <span className="font-mono text-[11px] hidden sm:inline text-[#4B5563] font-medium">PRIVATE ADVISORY & LITIGATION COUNSEL</span>
+          <span className="uppercase tracking-wider font-mono text-[11px] text-[#111827] font-semibold">TP. HỒ CHÍ MINH</span>
         </div>
 
         {/* Main Grid: Headline + Photographic Frame */}
@@ -30,21 +30,21 @@ export function HeroMau2() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 space-y-6"
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-[#FAF7F0] border border-[#E0D7BE] text-[#997836] text-xs font-serif tracking-[0.2em] uppercase">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-[#FAF7F0] border border-[#E0D7BE] text-[#997836] text-xs tracking-wider uppercase font-semibold">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059]" />
               <span>BOUTIQUE LEGAL ADVISORY FOR LEADERS</span>
             </div>
 
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0C1829] leading-[1.12]">
-              Kiến tạo <span className="italic font-normal text-[#C5A059]">Lợi thế Pháp lý</span> & Bảo toàn Di sản Thân chủ
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] leading-[1.15]">
+              Kiến tạo <span className="italic font-semibold text-[#997836]">Lợi thế Pháp lý</span> & Bảo toàn Di sản Thân chủ
             </h1>
 
-            <p className="text-slate-600 font-sans text-base sm:text-lg font-light leading-relaxed max-w-2xl">
+            <p className="text-[#202124] text-base sm:text-[17px] font-normal leading-[1.72] max-w-2xl">
               Cố vấn pháp lý chiến lược cấp cao cho các thương vụ M&A quy mô lớn, tái cấu trúc tập đoàn và đại diện tranh tụng trọng tài thương mại quốc tế với cam kết bảo mật tuyệt đối.
             </p>
 
             {/* Editorial Feature List */}
-            <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-serif text-slate-700">
+            <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-[#202124] font-medium">
               <div className="flex items-center gap-2.5 p-3 rounded-sm bg-[#FAF7F0] border border-[#EFE9D9]">
                 <span className="w-2 h-2 rotate-45 bg-[#C5A059] shrink-0" />
                 <span>Đặc quyền Thân chủ – Bảo mật vô thời hạn</span>
@@ -59,14 +59,14 @@ export function HeroMau2() {
             <div className="flex flex-wrap items-center gap-4 pt-4">
               <Link
                 href="/mau-2/lien-he"
-                className="bg-[#0C1829] hover:bg-[#152740] text-[#F5E6BE] font-serif font-bold text-xs uppercase tracking-[0.18em] px-8 py-4 rounded-sm shadow-md hover:shadow-lg transition flex items-center gap-2 group"
+                className="bg-[#17365D] hover:bg-[#0f2746] text-white font-semibold text-xs uppercase tracking-wider px-8 py-4 rounded-sm shadow-md hover:shadow-lg transition flex items-center gap-2 group"
               >
                 <span>Yêu cầu Hội đàm Cơ mật</span>
-                <ArrowUpRight className="w-4 h-4 text-[#C5A059] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <ArrowUpRight className="w-4 h-4 text-[#EBD59B] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
               <Link
                 href="#triet-ly"
-                className="border border-[#D1C7B2] hover:border-[#0C1829] text-[#0C1829] font-serif text-xs uppercase tracking-[0.18em] px-7 py-4 rounded-sm transition hover:bg-[#FAF7F0]"
+                className="border border-[#D1C7B2] hover:border-[#17365D] text-[#17365D] font-semibold text-xs uppercase tracking-wider px-7 py-4 rounded-sm transition hover:bg-[#FAF7F0]"
               >
                 Khám phá Triết lý Hành nghề
               </Link>
@@ -96,10 +96,10 @@ export function HeroMau2() {
               <div className="absolute bottom-4 left-4 right-4 bg-[#FDFBF7]/95 backdrop-blur-md p-4 rounded-sm border border-[#E5DEC9] text-[#0C1829] shadow-lg">
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="font-serif font-bold text-xs text-[#0C1829]">
+                    <div className="font-bold text-xs sm:text-sm text-[#0F172A]">
                       Quy chuẩn Lập luận Tinh hoa
                     </div>
-                    <div className="text-[11px] text-slate-600 font-sans mt-0.5 font-light">
+                    <div className="text-xs text-[#4B5563] mt-0.5 font-normal">
                       Nghệ thuật pháp lý phục vụ các quyết định trọng yếu
                     </div>
                   </div>

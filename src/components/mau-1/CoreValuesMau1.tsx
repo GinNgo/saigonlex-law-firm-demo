@@ -32,22 +32,22 @@ export function CoreValuesMau1() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Title & Strategy */}
           <FadeIn direction="right" className="lg:col-span-5 space-y-5">
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C5A880] uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 text-xs font-bold text-[#C5A880] uppercase tracking-wide">
               <span className="w-6 h-0.5 bg-[#C5A880]" />
               <span>NGUYÊN TẮC HÀNH NGHỀ</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0A2540] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F172A] tracking-tight">
               Giá trị cốt lõi và Phương pháp tiếp cận vụ việc
             </h2>
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p className="text-[#202124] text-[15px] sm:text-[16px] leading-[1.7]">
               Chúng tôi tin rằng niềm tin của khách hàng không được xây dựng bằng những lời hứa hoa mỹ, mà bằng tính kỷ luật, sự chuẩn xác trong từng điều khoản và phong cách làm việc chuyên nghiệp, minh bạch.
             </p>
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 space-y-2">
-              <div className="font-bold text-[#0A2540] flex items-center gap-1.5">
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-[#202124] space-y-2">
+              <div className="font-semibold text-[#111827] flex items-center gap-1.5">
                 <Shield className="w-4 h-4 text-[#C5A880]" />
                 <span>Tiêu chuẩn Đạo đức Nghề nghiệp Luật sư Việt Nam</span>
               </div>
-              <p className="text-slate-500 leading-relaxed">
+              <p className="text-[#4B5563] leading-relaxed">
                 SAIGONLEX tuân thủ nghiêm ngặt Bộ Quy tắc Đạo đức và Ứng xử nghề nghiệp Luật sư Việt Nam do Liên đoàn Luật sư Việt Nam ban hành.
               </p>
             </div>
@@ -58,13 +58,13 @@ export function CoreValuesMau1() {
             {values.map((v, i) => (
               <StaggerItem key={i}>
                 <div className="p-6 rounded-xl border border-slate-200 bg-white hover:border-[#C5A880] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 space-y-3 group h-full">
-                  <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center group-hover:bg-[#0A2540] transition">
+                  <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center group-hover:bg-[#17365D] transition">
                     {v.icon}
                   </div>
-                  <h3 className="text-base font-bold text-[#0A2540]">
+                  <h3 className="text-base font-semibold text-[#111827]">
                     {v.title}
                   </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-[13px] text-[#4B5563] leading-relaxed">
                     {v.desc}
                   </p>
                 </div>

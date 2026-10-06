@@ -42,13 +42,13 @@ export default function ContactMau2Page() {
               theme="editorial"
             />
             <div className="max-w-3xl space-y-4 pt-4">
-              <span className="text-xs font-serif text-[#C5A059] uppercase tracking-[0.25em] block font-semibold">
+              <span className="text-xs text-[#997836] uppercase tracking-wider block font-semibold">
                 TIẾP NHẬN BẢO MẬT
               </span>
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0C1829]">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A]">
                 Xác lập Lịch Hội đàm Cơ mật
               </h1>
-              <p className="text-slate-600 font-sans text-sm sm:text-base font-light leading-relaxed">
+              <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
                 Văn phòng tiếp đón thân chủ tại tòa nhà Saigon Centre Tower 2, trung tâm Quận 1 hoặc sắp xếp buổi trao đổi trực tuyến mã hóa riêng tư.
               </p>
             </div>
@@ -60,22 +60,22 @@ export default function ContactMau2Page() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="p-6 rounded-sm border border-[#E5DEC9] bg-white shadow-sm space-y-2">
-                <div className="font-serif text-xs text-[#C5A059] uppercase tracking-wider font-semibold">Đường dây nóng Cố vấn</div>
-                <div className="text-base font-serif font-bold text-[#0C1829]">{SITE_CONFIG.hotline}</div>
+                <div className="text-xs text-[#997836] uppercase tracking-wider font-bold">Đường dây nóng Cố vấn</div>
+                <div className="text-base font-bold text-[#111827]">{SITE_CONFIG.hotline}</div>
               </div>
 
               <div className="p-6 rounded-sm border border-[#E5DEC9] bg-white shadow-sm space-y-2">
-                <div className="font-serif text-xs text-[#C5A059] uppercase tracking-wider font-semibold">Email Tiếp nhận</div>
-                <div className="text-xs font-mono font-bold text-slate-700 truncate">{SITE_CONFIG.email}</div>
+                <div className="text-xs text-[#997836] uppercase tracking-wider font-bold">Email Tiếp nhận</div>
+                <div className="text-xs font-mono font-bold text-[#111827] truncate">{SITE_CONFIG.email}</div>
               </div>
 
               <div className="p-6 rounded-sm border border-[#E5DEC9] bg-white shadow-sm space-y-2">
-                <div className="font-serif text-xs text-[#C5A059] uppercase tracking-wider font-semibold">Thời gian Tiếp khách</div>
-                <div className="text-xs text-slate-600 font-light">T2 – T6: 08:30 – 18:00</div>
+                <div className="text-xs text-[#997836] uppercase tracking-wider font-bold">Thời gian Tiếp khách</div>
+                <div className="text-xs text-[#4B5563] font-normal">T2 – T6: 08:30 – 18:00</div>
               </div>
 
               <div className="p-6 rounded-sm border border-[#E5DEC9] bg-white shadow-sm space-y-2">
-                <div className="font-serif text-xs text-[#C5A059] uppercase tracking-wider font-semibold">Tiêu chuẩn An ninh</div>
+                <div className="text-xs text-[#997836] uppercase tracking-wider font-bold">Tiêu chuẩn An ninh</div>
                 <div className="text-xs text-emerald-700 font-bold">Ký NDA trước hội đàm</div>
               </div>
             </div>
@@ -91,18 +91,18 @@ export default function ContactMau2Page() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
               <div className="lg:col-span-5 p-8 rounded-sm border border-[#E5DEC9] bg-white flex flex-col justify-between space-y-6 shadow-md">
                 <div className="space-y-4">
-                  <span className="text-xs font-serif text-[#C5A059] uppercase tracking-widest block font-semibold">
+                  <span className="text-xs text-[#997836] uppercase tracking-wider block font-semibold">
                     VỊ TRÍ TRỤ SỞ
                   </span>
-                  <h3 className="font-serif text-2xl font-bold text-[#0C1829]">
+                  <h3 className="text-2xl font-bold text-[#0F172A]">
                     Văn phòng SAIGONLEX Private Office
                   </h3>
-                  <p className="text-slate-600 font-sans text-xs sm:text-sm font-light leading-relaxed">
+                  <p className="text-[#202124] text-xs sm:text-sm leading-[1.7]">
                     Không gian tiếp khách riêng tư, sang trọng, đảm bảo không gian yên tĩnh tuyệt đối cho các buổi hội đàm đàm phán cấp cao.
                   </p>
                 </div>
 
-                <div className="space-y-3 text-xs text-slate-600 font-sans font-light">
+                <div className="space-y-3 text-xs sm:text-sm text-[#202124]">
                   <div className="flex items-start gap-3 p-3.5 rounded-sm bg-[#FAF7F0] border border-[#E5DEC9]">
                     <MapPin className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
                     <span>{SITE_CONFIG.address}</span>
@@ -117,7 +117,7 @@ export default function ContactMau2Page() {
                   href="https://maps.google.com/?q=Saigon+Centre+Tower+2+Ho+Chi+Minh+City"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-sm border border-[#0C1829] text-[#0C1829] hover:bg-[#0C1829] hover:text-[#DFBF7E] font-serif font-bold text-xs uppercase tracking-wider transition shadow-sm"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-sm border border-[#17365D] text-[#17365D] hover:bg-[#17365D] hover:text-white font-semibold text-xs uppercase tracking-wider transition shadow-sm"
                 >
                   <Navigation className="w-4 h-4 text-[#C5A059]" />
                   <span>Mở Google Maps chỉ dẫn</span>

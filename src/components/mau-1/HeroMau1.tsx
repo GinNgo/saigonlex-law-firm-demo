@@ -29,17 +29,17 @@ export function HeroMau1() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0A2540] tracking-tight leading-[1.18]">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A] tracking-tight leading-[1.18]">
               Giải pháp pháp lý <span className="text-[#C5A880]">đáng tin cậy</span> cho cá nhân và doanh nghiệp
             </h1>
 
             {/* Subheading */}
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-[17px] text-[#202124] leading-[1.7] max-w-2xl">
               Đồng hành cùng doanh nghiệp từ thành lập, đàm phán hợp đồng thương mại đến xử lý các tranh chấp phức tạp. Chúng tôi cung cấp giải pháp pháp lý sắc bén, bảo vệ an toàn tối đa cho tài sản và thương hiệu của bạn.
             </p>
 
             {/* Key trust bullets */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm text-slate-700 font-medium">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-[15px] text-[#202124] font-medium">
               {[
                 "Bảo mật thông tin tuyệt đối (NDA)",
                 "Phản hồi sơ bộ trong vòng 24 giờ",
@@ -68,16 +68,16 @@ export function HeroMau1() {
             >
               <Link
                 href="/mau-1/lien-he"
-                className="bg-[#0A2540] hover:bg-[#0f3d68] text-white text-base font-semibold px-7 py-3.5 rounded shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-2 group"
+                className="bg-[#17365D] hover:bg-[#102744] text-white text-base font-semibold px-7 py-3.5 rounded shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-2 group"
               >
                 <span>Yêu cầu tư vấn ngay</span>
                 <ArrowRight className="w-4 h-4 text-[#C5A880] group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
                 href={`tel:${SITE_CONFIG.hotline.replace(/[^0-9]/g, "")}`}
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded border border-slate-300 text-slate-800 font-semibold hover:bg-slate-100 transition"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded border border-slate-300 text-[#111827] font-semibold hover:bg-slate-100 transition"
               >
-                <PhoneCall className="w-4 h-4 text-[#0A2540]" />
+                <PhoneCall className="w-4 h-4 text-[#17365D]" />
                 <span>Hotline: {SITE_CONFIG.hotline}</span>
               </a>
             </motion.div>
@@ -85,18 +85,18 @@ export function HeroMau1() {
             {/* Trust Metrics with Animated Counters */}
             <div className="pt-6 border-t border-slate-200 grid grid-cols-3 gap-4 text-left">
               <div>
-                <div className="text-2xl font-bold text-[#0A2540] flex items-baseline">
+                <div className="text-2xl font-bold text-[#0F172A] flex items-baseline">
                   <span>15+</span>
                   <span className="text-[10px] text-amber-600 font-semibold ml-1.5">[DEMO]</span>
                 </div>
-                <div className="text-xs text-slate-500 font-medium">Năm chuyên sâu</div>
+                <div className="text-xs text-[#4B5563] font-medium">Năm chuyên sâu</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-[#0A2540] flex items-baseline">
+                <div className="text-2xl font-bold text-[#0F172A] flex items-baseline">
                   <span>850+</span>
                   <span className="text-[10px] text-amber-600 font-semibold ml-1.5">[DEMO]</span>
                 </div>
-                <div className="text-xs text-slate-500 font-medium">Vụ việc doanh nghiệp</div>
+                <div className="text-xs text-[#4B5563] font-medium">Vụ việc doanh nghiệp</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-[#0A2540] flex items-baseline">

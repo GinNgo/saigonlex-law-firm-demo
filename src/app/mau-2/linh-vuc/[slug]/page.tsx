@@ -83,20 +83,20 @@ export default async function ServiceDetailMau2Page({ params }: PageProps) {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-4">
               <div className="lg:col-span-7 space-y-4">
-                <span className="font-serif text-xs uppercase tracking-[0.25em] text-[#C5A059] block font-semibold">
+                <span className="text-xs uppercase tracking-wider text-[#997836] block font-semibold">
                   ĐẶC TẢ CHUYÊN MÔN: {svc.category}
                 </span>
-                <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0C1829] leading-tight">
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A] leading-tight">
                   {svc.title}
                 </h1>
-                <p className="text-slate-600 font-sans text-sm sm:text-base font-light leading-relaxed">
+                <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
                   {svc.shortDesc}
                 </p>
                 <div className="flex flex-wrap gap-2 pt-2">
                   {svc.highlights.map((hl, i) => (
                     <span
                       key={i}
-                      className="text-xs font-serif text-[#0C1829] border border-[#E5DEC9] bg-white px-3 py-1 rounded-sm shadow-sm"
+                      className="text-xs text-[#111827] border border-[#E5DEC9] bg-white px-3 py-1 rounded-sm shadow-sm font-medium"
                     >
                       {hl}
                     </span>
@@ -128,17 +128,17 @@ export default async function ServiceDetailMau2Page({ params }: PageProps) {
               <div className="lg:col-span-8 space-y-14">
                 {/* 1. Tổng quan */}
                 <div className="space-y-4">
-                  <h2 className="font-serif text-2xl font-bold text-[#0C1829] border-b border-[#E5DEC9] pb-3">
+                  <h2 className="text-2xl font-bold text-[#0F172A] border-b border-[#E5DEC9] pb-3">
                     I. Bối cảnh & Mục tiêu Chiến lược
                   </h2>
-                  <p className="text-slate-600 font-sans text-sm sm:text-base font-light leading-relaxed">
+                  <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
                     {svc.overview}
                   </p>
                 </div>
 
                 {/* 2. Các rủi ro tiềm ẩn */}
                 <div className="space-y-4">
-                  <h2 className="font-serif text-2xl font-bold text-[#0C1829] border-b border-[#E5DEC9] pb-3">
+                  <h2 className="text-2xl font-bold text-[#0F172A] border-b border-[#E5DEC9] pb-3">
                     II. Những Rủi ro Trọng yếu Cần Kiểm soát
                   </h2>
                   <div className="space-y-4">
@@ -147,11 +147,11 @@ export default async function ServiceDetailMau2Page({ params }: PageProps) {
                         key={idx}
                         className="p-6 rounded-sm border border-[#E5DEC9] bg-white space-y-2 shadow-sm"
                       >
-                        <div className="font-serif font-bold text-base text-[#0C1829] flex items-center gap-2">
+                        <div className="font-bold text-base text-[#111827] flex items-center gap-2">
                           <AlertCircle className="w-4 h-4 text-[#C5A059] shrink-0" />
                           <span>{issue.title}</span>
                         </div>
-                        <p className="text-xs text-slate-600 font-sans font-light leading-relaxed pl-6">
+                        <p className="text-xs sm:text-[13px] text-[#202124] leading-[1.7] pl-6">
                           {issue.desc}
                         </p>
                       </div>
@@ -161,14 +161,14 @@ export default async function ServiceDetailMau2Page({ params }: PageProps) {
 
                 {/* 3. Phạm vi can thiệp */}
                 <div className="space-y-4">
-                  <h2 className="font-serif text-2xl font-bold text-[#0C1829] border-b border-[#E5DEC9] pb-3">
+                  <h2 className="text-2xl font-bold text-[#0F172A] border-b border-[#E5DEC9] pb-3">
                     III. Phạm vi Cố vấn Chuyên môn
                   </h2>
                   <div className="space-y-3">
                     {svc.serviceScope.map((scope, idx) => (
                       <div
                         key={idx}
-                        className="p-4 rounded-sm border border-[#E5DEC9] bg-white flex items-start gap-3 text-xs sm:text-sm text-slate-600 font-sans font-light leading-relaxed shadow-sm"
+                        className="p-4 rounded-sm border border-[#E5DEC9] bg-white flex items-start gap-3 text-xs sm:text-sm text-[#202124] leading-[1.7] shadow-sm font-medium"
                       >
                         <CheckCircle2 className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
                         <span>{scope}</span>
@@ -179,7 +179,7 @@ export default async function ServiceDetailMau2Page({ params }: PageProps) {
 
                 {/* 4. Quy trình xử lý */}
                 <div className="space-y-4">
-                  <h2 className="font-serif text-2xl font-bold text-[#0C1829] border-b border-[#E5DEC9] pb-3">
+                  <h2 className="text-2xl font-bold text-[#0F172A] border-b border-[#E5DEC9] pb-3">
                     IV. Lộ trình Thực thi Chuẩn hóa
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -188,11 +188,11 @@ export default async function ServiceDetailMau2Page({ params }: PageProps) {
                         key={st.step}
                         className="p-6 rounded-sm border border-[#E5DEC9] bg-white space-y-2 shadow-sm"
                       >
-                        <span className="font-mono text-xs text-[#C5A059] uppercase tracking-widest block font-semibold">
+                        <span className="font-mono text-xs text-[#C5A059] uppercase tracking-wider block font-bold">
                           BƯỚC 0{st.step}
                         </span>
-                        <h4 className="font-serif font-bold text-base text-[#0C1829]">{st.title}</h4>
-                        <p className="text-xs text-slate-600 font-sans font-light leading-relaxed">{st.desc}</p>
+                        <h4 className="font-bold text-base text-[#111827]">{st.title}</h4>
+                        <p className="text-xs sm:text-[13px] text-[#202124] leading-[1.7]">{st.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -200,7 +200,7 @@ export default async function ServiceDetailMau2Page({ params }: PageProps) {
 
                 {/* 5. FAQ */}
                 <div className="space-y-4">
-                  <h2 className="font-serif text-2xl font-bold text-[#0C1829] border-b border-[#E5DEC9] pb-3">
+                  <h2 className="text-2xl font-bold text-[#0F172A] border-b border-[#E5DEC9] pb-3">
                     V. Giải đáp về {svc.shortTitle}
                   </h2>
                   <div className="space-y-3">
@@ -209,11 +209,11 @@ export default async function ServiceDetailMau2Page({ params }: PageProps) {
                         key={i}
                         className="p-6 rounded-sm border border-[#E5DEC9] bg-white space-y-2 shadow-sm"
                       >
-                        <h4 className="font-serif font-bold text-sm text-[#0C1829] flex items-center gap-2">
+                        <h4 className="font-bold text-sm text-[#111827] flex items-center gap-2">
                           <HelpCircle className="w-4 h-4 text-[#C5A059] shrink-0" />
                           <span>{f.question}</span>
                         </h4>
-                        <p className="text-xs text-slate-600 font-sans font-light leading-relaxed pl-6">
+                        <p className="text-xs sm:text-[13px] text-[#202124] leading-[1.7] pl-6">
                           {f.answer}
                         </p>
                       </div>
@@ -226,28 +226,28 @@ export default async function ServiceDetailMau2Page({ params }: PageProps) {
               <div className="lg:col-span-4 space-y-8">
                 {/* Concierge Widget */}
                 <div className="p-6 rounded-sm border border-[#E5DEC9] bg-white space-y-4 sticky top-24 shadow-xl">
-                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#C5A059] block font-semibold">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#997836] block font-bold">
                     ĐẶC QUYỀN THÂN CHỦ
                   </span>
-                  <h3 className="font-serif text-xl font-bold text-[#0C1829]">
+                  <h3 className="text-xl font-bold text-[#0F172A]">
                     Thỉnh ý Luật sư Trưởng về {svc.shortTitle}
                   </h3>
-                  <p className="text-xs text-slate-600 font-sans font-light leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#202124] leading-[1.7]">
                     Sắp xếp buổi hội đàm trực tiếp cơ mật cùng Luật sư Thành viên phụ trách trong 24 giờ.
                   </p>
 
                   <div className="pt-2">
                     <a
                       href="#dat-lich-kin"
-                      className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-sm bg-[#0C1829] hover:bg-[#152338] text-white font-serif font-bold text-xs uppercase tracking-wider transition group shadow"
+                      className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-sm bg-[#17365D] hover:bg-[#0f2746] text-white font-semibold text-xs uppercase tracking-wider transition group shadow"
                     >
-                      <span className="text-[#DFBF7E]">Yêu cầu hội đàm kín</span>
-                      <ArrowUpRight className="w-4 h-4 text-[#DFBF7E] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <span className="text-[#EBD59B]">Yêu cầu hội đàm kín</span>
+                      <ArrowUpRight className="w-4 h-4 text-[#EBD59B] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </a>
                   </div>
 
-                  <div className="pt-3 border-t border-[#E5DEC9] text-[11px] text-slate-500 font-sans font-light space-y-1.5">
-                    <div className="flex items-center gap-2 text-[#C5A059] font-medium">
+                  <div className="pt-3 border-t border-[#E5DEC9] text-xs text-[#4B5563] space-y-1.5">
+                    <div className="flex items-center gap-2 text-[#997836] font-semibold">
                       <Lock className="w-3.5 h-3.5" />
                       <span>Ký NDA trước khi nhận hồ sơ</span>
                     </div>

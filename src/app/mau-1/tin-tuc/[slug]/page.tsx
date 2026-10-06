@@ -130,7 +130,7 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Table of Contents */}
             <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 mb-10">
-              <div className="flex items-center gap-2 font-bold text-sm text-[#0A2540] mb-3">
+              <div className="flex items-center gap-2 font-bold text-sm text-[#0F172A] mb-3">
                 <List className="w-4 h-4 text-[#C5A880]" />
                 <span>MỤC LỤC NỘI DUNG CHÍNH</span>
               </div>
@@ -139,7 +139,7 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
                   <li key={toc.id}>
                     <a
                       href={`#${toc.id}`}
-                      className="text-slate-700 hover:text-blue-700 hover:underline flex items-center gap-1.5"
+                      className="text-[#202124] hover:text-[#17365D] hover:underline flex items-center gap-1.5 font-medium"
                     >
                       <ChevronRight className="w-3.5 h-3.5 text-[#C5A880]" />
                       <span>{toc.title}</span>
@@ -151,12 +151,12 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
 
             {/* Article Content */}
             <div
-              className="prose prose-slate max-w-none text-sm sm:text-base leading-relaxed text-slate-700"
+              className="prose prose-slate max-w-none text-sm sm:text-base leading-[1.75] text-[#202124]"
               dangerouslySetInnerHTML={{ __html: post.contentHtml }}
             />
 
             {/* Legal Disclaimer Box */}
-            <div className="mt-12 p-5 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs leading-relaxed space-y-2">
+            <div className="mt-12 p-5 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs leading-[1.7] space-y-2">
               <div className="flex items-center gap-2 font-bold text-amber-950">
                 <ShieldAlert className="w-4 h-4 text-amber-700" />
                 <span>Khuyến cáo pháp lý quan trọng:</span>
@@ -168,17 +168,17 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
 
             {/* Author Box */}
             <div className="mt-10 p-6 rounded-xl border border-slate-200 bg-slate-50 flex items-center gap-4">
-              <div className="w-14 h-14 rounded-full bg-[#0A2540] text-[#C5A880] flex items-center justify-center font-bold text-lg shrink-0">
+              <div className="w-14 h-14 rounded-full bg-[#17365D] text-[#C5A880] flex items-center justify-center font-bold text-lg shrink-0">
                 <User className="w-7 h-7" />
               </div>
               <div>
-                <h4 className="font-bold text-[#0A2540] text-sm">
+                <h4 className="font-bold text-[#0F172A] text-sm">
                   Tác giả: {post.author}
                 </h4>
-                <p className="text-xs text-slate-500 mt-0.5">
+                <p className="text-xs text-[#6B7280] font-medium mt-0.5">
                   {post.authorRole} • Hãng luật SAIGONLEX
                 </p>
-                <p className="text-xs text-slate-600 mt-1">
+                <p className="text-xs text-[#202124] mt-1 leading-[1.6]">
                   Chuyên trách tư vấn giải quyết tranh chấp kinh doanh thương mại và đầu tư doanh nghiệp.
                 </p>
               </div>
@@ -205,7 +205,7 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
 
             {/* Related Articles */}
             <div className="mt-16 pt-10 border-t border-slate-200 space-y-6">
-              <h3 className="text-lg font-bold text-[#0A2540]">
+              <h3 className="text-lg font-bold text-[#0F172A]">
                 Bài viết liên quan
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -213,17 +213,17 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
                   <Link
                     key={rel.slug}
                     href={`/mau-1/tin-tuc/${rel.slug}`}
-                    className="p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-md transition flex flex-col justify-between space-y-2 group"
+                    className="p-4 rounded-xl border border-slate-200 hover:border-[#17365D] hover:shadow-md transition flex flex-col justify-between space-y-2 group"
                   >
                     <div>
                       <span className="text-[10px] font-bold text-[#C5A880] uppercase">
                         {rel.category}
                       </span>
-                      <h4 className="text-sm font-bold text-[#0A2540] group-hover:text-blue-700 transition line-clamp-2 mt-1">
+                      <h4 className="text-sm font-bold text-[#111827] group-hover:text-[#17365D] transition line-clamp-2 mt-1">
                         {rel.title}
                       </h4>
                     </div>
-                    <span className="text-xs text-slate-400 flex items-center gap-1 font-medium">
+                    <span className="text-xs text-[#17365D] flex items-center gap-1 font-semibold">
                       <span>Đọc bài viết</span>
                       <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                     </span>

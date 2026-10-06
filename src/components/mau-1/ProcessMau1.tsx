@@ -42,10 +42,10 @@ export function ProcessMau1() {
               <span>QUY TRÌNH LÀM VIỆC CHUẨN MỰC</span>
               <span className="w-6 h-0.5 bg-[#C5A880]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight">
               4 Bước Tư vấn Pháp lý Chuẩn hóa
             </h2>
-            <p className="text-slate-600 text-sm leading-relaxed">
+            <p className="text-[#202124] text-[15px] sm:text-[16px] leading-[1.7]">
               Mỗi khách hàng đến với SAIGONLEX đều được áp dụng quy trình tiếp nhận và xử lý hồ sơ khoa học, bảo mật và chuẩn xác theo quy chuẩn nghề nghiệp.
             </p>
           </div>
@@ -67,10 +67,10 @@ export function ProcessMau1() {
                       {item.step}
                     </span>
                   </div>
-                  <h3 className="text-base font-bold text-[#0A2540] mb-2">
+                  <h3 className="text-base font-semibold text-[#111827] mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-[13px] text-[#4B5563] leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

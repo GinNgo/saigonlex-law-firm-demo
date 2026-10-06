@@ -42,41 +42,41 @@ export function IntroMau1() {
               <span>VỀ CHÚNG TÔI – SAIGONLEX</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0A2540] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F172A] tracking-tight">
               Đồng hành pháp lý chiến lược, bảo vệ tối đa lợi ích của thân chủ
             </h2>
 
-            <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+            <p className="text-[#202124] leading-[1.7] text-[15px] sm:text-[16px]">
               Được thành lập bởi đội ngũ luật sư giàu kinh nghiệm thực chiến từ các tổ chức tư vấn quốc tế và cơ quan tư pháp, <strong>SAIGONLEX</strong> định vị là hãng luật cung cấp dịch vụ pháp lý chuẩn mực, chuyên sâu và tận tâm tại Việt Nam.
             </p>
 
-            <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+            <p className="text-[#202124] leading-[1.7] text-[15px] sm:text-[16px]">
               Chúng tôi không chỉ trả lời câu hỏi <em>“Pháp luật quy định như thế nào?”</em> mà luôn nỗ lực giải đáp <em>“Đâu là giải pháp tối ưu và an toàn nhất cho bài toán kinh doanh của khách hàng?”</em>. Mỗi ý kiến tư vấn đều được xây dựng dựa trên sự thấu hiểu môi trường kinh doanh nội địa và tiêu chuẩn quản trị rủi ro quốc tế.
             </p>
 
             {/* Value Pillars */}
             <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <StaggerItem className="border border-slate-200 p-4 rounded-xl hover:border-blue-400 hover:shadow-md transition bg-slate-50/50">
-                <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#0A2540] flex items-center justify-center mb-2">
-                  <Scale className="w-4 h-4 text-[#0A2540]" />
+                <div className="w-8 h-8 rounded-lg bg-blue-100 text-[#17365D] flex items-center justify-center mb-2">
+                  <Scale className="w-4 h-4 text-[#17365D]" />
                 </div>
-                <h3 className="text-sm font-bold text-[#0A2540] mb-1">Thượng tôn Pháp luật</h3>
-                <p className="text-xs text-slate-500">Mọi giải pháp đều đảm bảo tính hợp pháp, bền vững và chống chịu rủi ro lâu dài.</p>
+                <h3 className="text-sm font-semibold text-[#111827] mb-1">Thượng tôn Pháp luật</h3>
+                <p className="text-xs text-[#4B5563] leading-relaxed">Mọi giải pháp đều đảm bảo tính hợp pháp, bền vững và chống chịu rủi ro lâu dài.</p>
               </StaggerItem>
 
               <StaggerItem className="border border-slate-200 p-4 rounded-xl hover:border-blue-400 hover:shadow-md transition bg-slate-50/50">
                 <div className="w-8 h-8 rounded-lg bg-amber-100 text-[#C5A880] flex items-center justify-center mb-2">
                   <ShieldCheck className="w-4 h-4 text-amber-800" />
                 </div>
-                <h3 className="text-sm font-bold text-[#0A2540] mb-1">Bảo mật Nghiêm ngặt</h3>
-                <p className="text-xs text-slate-500">Thông tin vụ việc và chiến lược của thân chủ là tài sản vô giá cần được bảo vệ tuyệt đối.</p>
+                <h3 className="text-sm font-semibold text-[#111827] mb-1">Bảo mật Nghiêm ngặt</h3>
+                <p className="text-xs text-[#4B5563] leading-relaxed">Thông tin vụ việc và chiến lược của thân chủ là tài sản vô giá cần được bảo vệ tuyệt đối.</p>
               </StaggerItem>
             </StaggerContainer>
 
             <div className="pt-2">
               <Link
                 href="/mau-1/gioi-thieu"
-                className="text-[#0A2540] hover:text-[#0f3d68] font-bold text-sm inline-flex items-center gap-1.5 group"
+                className="text-[#17365D] hover:text-[#0f2847] font-semibold text-sm inline-flex items-center gap-1.5 group hover:underline"
               >
                 <span>Xem thêm chi tiết lịch sử và sứ mệnh SAIGONLEX</span>
                 <ArrowRight className="w-4 h-4 text-[#C5A880] group-hover:translate-x-1 transition-transform" />

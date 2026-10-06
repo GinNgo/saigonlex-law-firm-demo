@@ -46,7 +46,7 @@ export default function PrivacyMau1Page() {
 
         {/* Policy Body */}
         <section className="py-16 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate text-sm sm:text-base leading-relaxed text-slate-700 space-y-8">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate text-sm sm:text-base leading-[1.75] text-[#202124] space-y-8">
             <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-950 flex items-start gap-3">
               <ShieldCheck className="w-5 h-5 text-blue-700 shrink-0 mt-0.5" />
               <div>
@@ -55,7 +55,7 @@ export default function PrivacyMau1Page() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-[#0A2540] mb-3">
+              <h2 className="text-xl font-bold text-[#0F172A] mb-3">
                 1. Mục đích thu thập dữ liệu cá nhân
               </h2>
               <p>
@@ -69,7 +69,7 @@ export default function PrivacyMau1Page() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-[#0A2540] mb-3">
+              <h2 className="text-xl font-bold text-[#0F172A] mb-3">
                 2. Tuân thủ Nghị định 13/2023/NĐ-CP về Bảo vệ dữ liệu cá nhân
               </h2>
               <p>
@@ -83,7 +83,7 @@ export default function PrivacyMau1Page() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-[#0A2540] mb-3">
+              <h2 className="text-xl font-bold text-[#0F172A] mb-3">
                 3. Cam kết ký Thỏa thuận bảo mật riêng (Non-Disclosure Agreement - NDA)
               </h2>
               <p>
@@ -92,14 +92,14 @@ export default function PrivacyMau1Page() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-[#0A2540] mb-3">
+              <h2 className="text-xl font-bold text-[#0F172A] mb-3">
                 4. Thông tin liên hệ về công tác bảo mật
               </h2>
               <p>
                 Mọi thắc mắc hoặc yêu cầu liên quan đến chính sách bảo mật dữ liệu, quý khách vui lòng liên hệ:
               </p>
-              <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs text-slate-700 space-y-1">
-                <div><strong>Bộ phận Tuân thủ & Bảo mật SAIGONLEX</strong></div>
+              <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs text-[#202124] space-y-1">
+                <div><strong className="text-[#111827]">Bộ phận Tuân thủ & Bảo mật SAIGONLEX</strong></div>
                 <div>Địa chỉ: {SITE_CONFIG.address}</div>
                 <div>Điện thoại: {SITE_CONFIG.phone} • Email: {SITE_CONFIG.email}</div>
               </div>

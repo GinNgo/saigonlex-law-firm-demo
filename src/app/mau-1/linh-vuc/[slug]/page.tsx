@@ -129,17 +129,17 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <div className="lg:col-span-8 space-y-12">
                 {/* 1. Tổng quan lĩnh vực */}
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-bold text-[#0A2540] border-b border-slate-200 pb-3">
+                  <h2 className="text-2xl font-bold text-[#0F172A] border-b border-slate-200 pb-3">
                     1. Tổng quan & Bối cảnh Pháp lý
                   </h2>
-                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
                     {svc.overview}
                   </p>
                 </div>
 
                 {/* 2. Các vấn đề thường gặp */}
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-bold text-[#0A2540] border-b border-slate-200 pb-3">
+                  <h2 className="text-2xl font-bold text-[#0F172A] border-b border-slate-200 pb-3">
                     2. Các Vấn đề & Rủi ro Thường gặp
                   </h2>
                   <div className="grid grid-cols-1 gap-4">
@@ -148,11 +148,11 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                         key={idx}
                         className="p-5 rounded-xl bg-amber-50/70 border border-amber-200 space-y-1.5"
                       >
-                        <div className="flex items-center gap-2 font-bold text-sm text-amber-950">
+                        <div className="flex items-center gap-2 font-bold text-sm text-[#0F172A]">
                           <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
                           <span>{issue.title}</span>
                         </div>
-                        <p className="text-xs text-amber-900 leading-relaxed pl-6">
+                        <p className="text-xs text-[#202124] leading-[1.7] pl-6">
                           {issue.desc}
                         </p>
                       </div>
@@ -162,17 +162,17 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
                 {/* 3. Phạm vi hỗ trợ của SAIGONLEX */}
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-bold text-[#0A2540] border-b border-slate-200 pb-3">
+                  <h2 className="text-2xl font-bold text-[#0F172A] border-b border-slate-200 pb-3">
                     3. Phạm vi Dịch vụ Hỗ trợ của SAIGONLEX
                   </h2>
                   <ul className="space-y-3">
                     {svc.serviceScope.map((scope, idx) => (
                       <li
                         key={idx}
-                        className="flex items-start gap-3 p-3.5 rounded-lg border border-slate-100 bg-slate-50 text-xs sm:text-sm text-slate-700"
+                        className="flex items-start gap-3 p-3.5 rounded-lg border border-slate-100 bg-slate-50 text-xs sm:text-sm text-[#202124]"
                       >
                         <CheckCircle2 className="w-5 h-5 text-[#C5A880] shrink-0 mt-0.5" />
-                        <span className="leading-relaxed">{scope}</span>
+                        <span className="leading-[1.7]">{scope}</span>
                       </li>
                     ))}
                   </ul>
@@ -180,7 +180,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
                 {/* 4. Quy trình tiếp nhận */}
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-bold text-[#0A2540] border-b border-slate-200 pb-3">
+                  <h2 className="text-2xl font-bold text-[#0F172A] border-b border-slate-200 pb-3">
                     4. Quy trình Tiếp nhận & Xử lý Vụ việc
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -189,11 +189,11 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                         key={st.step}
                         className="p-5 rounded-xl border border-slate-200 bg-white corporate-card-shadow space-y-2"
                       >
-                        <span className="w-7 h-7 rounded-full bg-[#0A2540] text-white text-xs font-bold flex items-center justify-center">
+                        <span className="w-7 h-7 rounded-full bg-[#17365D] text-white text-xs font-bold flex items-center justify-center">
                           {st.step}
                         </span>
-                        <h4 className="text-sm font-bold text-[#0A2540]">{st.title}</h4>
-                        <p className="text-xs text-slate-600 leading-relaxed">{st.desc}</p>
+                        <h4 className="text-sm font-bold text-[#111827]">{st.title}</h4>
+                        <p className="text-xs text-[#202124] leading-[1.7]">{st.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -201,7 +201,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
                 {/* 5. FAQ chi tiết */}
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-bold text-[#0A2540] border-b border-slate-200 pb-3">
+                  <h2 className="text-2xl font-bold text-[#0F172A] border-b border-slate-200 pb-3">
                     5. Câu hỏi Thường gặp về {svc.shortTitle}
                   </h2>
                   <div className="space-y-3">
@@ -210,11 +210,11 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                         key={i}
                         className="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2"
                       >
-                        <h4 className="text-sm font-bold text-[#0A2540] flex items-center gap-2">
+                        <h4 className="text-sm font-bold text-[#111827] flex items-center gap-2">
                           <HelpCircle className="w-4 h-4 text-[#C5A880] shrink-0" />
                           <span>{f.question}</span>
                         </h4>
-                        <p className="text-xs text-slate-600 leading-relaxed pl-6">
+                        <p className="text-xs text-[#202124] leading-[1.7] pl-6">
                           {f.answer}
                         </p>
                       </div>
@@ -264,7 +264,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
                 {/* Other services list */}
                 <div className="border border-slate-200 rounded-xl p-5 bg-white space-y-3">
-                  <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                  <h4 className="text-xs font-bold text-[#6B7280] uppercase tracking-wider">
                     Các lĩnh vực khác:
                   </h4>
                   <ul className="space-y-1.5 text-xs">
@@ -272,10 +272,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                       <li key={s.slug}>
                         <Link
                           href={`/mau-1/linh-vuc/${s.slug}`}
-                          className="py-1.5 px-2 rounded hover:bg-slate-50 text-slate-700 hover:text-[#0A2540] flex items-center justify-between transition"
+                          className="py-1.5 px-2 rounded hover:bg-slate-50 text-[#202124] hover:text-[#17365D] font-medium flex items-center justify-between transition"
                         >
                           <span>{s.shortTitle}</span>
-                          <ArrowRight className="w-3 h-3 text-slate-400" />
+                          <ArrowRight className="w-3 h-3 text-[#6B7280]" />
                         </Link>
                       </li>
                     ))}

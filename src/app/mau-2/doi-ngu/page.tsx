@@ -43,13 +43,13 @@ export default function TeamMau2Page() {
               theme="editorial"
             />
             <div className="max-w-3xl space-y-4 pt-4">
-              <span className="text-xs font-serif text-[#C5A059] uppercase tracking-[0.25em] block font-semibold">
+              <span className="text-xs text-[#997836] uppercase tracking-wider block font-semibold">
                 HỘI ĐỒNG THÀNH VIÊN
               </span>
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0C1829]">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A]">
                 Đội ngũ Luật sư Trưởng & Cố vấn
               </h1>
-              <p className="text-slate-600 font-sans text-sm sm:text-base font-light leading-relaxed">
+              <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
                 Nơi quy tụ những luật sư tranh tụng và cố vấn chiến lược bản lĩnh, thấu triệt sâu sắc hệ thống pháp lý Việt Nam và thông lệ thương mại toàn cầu.
               </p>
             </div>
@@ -59,8 +59,8 @@ export default function TeamMau2Page() {
         {/* Team List */}
         <section className="py-24 bg-[#FDFBF7]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-            <div className="p-4 rounded-sm border border-[#E5DEC9] bg-[#FAF7F0] text-xs text-slate-700 font-light">
-              <strong className="font-serif text-[#0C1829]">Lưu ý về hồ sơ nhân sự (DEMO):</strong> Dữ liệu và hình ảnh nhân sự trên website phục vụ mục đích trình bày bản thiết kế giao diện theo quy định nghề nghiệp.
+            <div className="p-4 rounded-sm border border-[#E5DEC9] bg-[#FAF7F0] text-xs text-[#202124] leading-[1.7]">
+              <strong className="text-[#0F172A] font-bold">Lưu ý về hồ sơ nhân sự (DEMO):</strong> Dữ liệu và hình ảnh nhân sự trên website phục vụ mục đích trình bày bản thiết kế giao diện theo quy định nghề nghiệp.
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -84,27 +84,27 @@ export default function TeamMau2Page() {
 
                   <div className="space-y-4 flex-1">
                     <div>
-                      <h2 className="font-serif text-2xl font-bold text-[#0C1829]">
+                      <h2 className="text-xl sm:text-2xl font-bold text-[#111827]">
                         {lawyer.name}
                       </h2>
-                      <div className="text-xs font-serif text-[#C5A059] tracking-wider mt-0.5 font-semibold">
+                      <div className="text-xs text-[#997836] tracking-wide mt-0.5 font-bold">
                         {lawyer.role}
                       </div>
-                      <div className="text-xs text-slate-500 font-sans font-light mt-0.5">
+                      <div className="text-xs text-[#4B5563] mt-0.5">
                         {lawyer.department}
                       </div>
                     </div>
 
-                    <p className="text-xs text-slate-600 font-sans font-light leading-relaxed">
+                    <p className="text-xs sm:text-[13px] text-[#202124] leading-[1.7]">
                       {lawyer.bio}
                     </p>
 
-                    <div className="space-y-2 pt-3 border-t border-[#E5DEC9] text-xs text-slate-600 font-sans font-light">
+                    <div className="space-y-2 pt-3 border-t border-[#E5DEC9] text-xs text-[#202124]">
                       <div className="flex items-start gap-2">
                         <GraduationCap className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
                         <div>
-                          <strong className="text-[#0C1829]">Học vị & Đào tạo:</strong>
-                          <ul className="list-disc pl-4 mt-0.5 space-y-0.5 text-slate-500 text-[11px]">
+                          <strong className="text-[#111827] font-semibold">Học vị & Đào tạo:</strong>
+                          <ul className="list-disc pl-4 mt-0.5 space-y-0.5 text-[#4B5563] text-xs">
                             {lawyer.education.map((e, idx) => (
                               <li key={idx}>{e}</li>
                             ))}
@@ -114,7 +114,7 @@ export default function TeamMau2Page() {
 
                       <div className="flex items-center gap-2">
                         <Scale className="w-4 h-4 text-[#C5A059] shrink-0" />
-                        <span><strong className="text-[#0C1829]">Đoàn Luật sư:</strong> {lawyer.barAssociation}</span>
+                        <span><strong className="text-[#111827] font-semibold">Đoàn Luật sư:</strong> {lawyer.barAssociation}</span>
                       </div>
 
                       <div className="flex items-center gap-2">

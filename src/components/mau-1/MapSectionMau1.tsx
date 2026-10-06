@@ -17,19 +17,19 @@ export function MapSectionMau1() {
                 <span className="w-6 h-0.5 bg-[#C5A880]" />
                 <span>VỊ TRÍ TRỤ SỞ CHÍNH</span>
               </div>
-              <h3 className="text-2xl font-extrabold text-[#0A2540]">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#0F172A]">
                 Văn phòng SAIGONLEX tại Trung tâm Quận 1
               </h3>
-              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              <p className="text-[#202124] text-sm leading-[1.7]">
                 Tọa lạc tại tòa nhà tài chính hàng đầu khu trung tâm TP. Hồ Chí Minh, thuận tiện cho các buổi tiếp đón thân chủ, đàm phán hợp đồng thương mại và làm việc cùng các cơ quan tố tụng.
               </p>
             </div>
 
-            <div className="space-y-3.5 text-xs text-slate-700">
+            <div className="space-y-3.5 text-xs sm:text-sm text-[#202124]">
               <div className="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-100">
                 <MapPin className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-[#0A2540] block">Địa chỉ:</strong>
+                  <strong className="text-[#111827] block font-semibold">Địa chỉ:</strong>
                   <span>{SITE_CONFIG.address}</span>
                 </div>
               </div>
@@ -37,7 +37,7 @@ export function MapSectionMau1() {
               <div className="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-100">
                 <Clock className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-[#0A2540] block">Thời gian làm việc:</strong>
+                  <strong className="text-[#111827] block font-semibold">Thời gian làm việc:</strong>
                   <span>{SITE_CONFIG.workingHours}</span>
                 </div>
               </div>
@@ -45,7 +45,7 @@ export function MapSectionMau1() {
               <div className="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-100">
                 <Phone className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-[#0A2540] block">Điện thoại / Hotline:</strong>
+                  <strong className="text-[#111827] block font-semibold">Điện thoại / Hotline:</strong>
                   <span>{SITE_CONFIG.phone} • Hotline: {SITE_CONFIG.hotline}</span>
                 </div>
               </div>
@@ -55,7 +55,7 @@ export function MapSectionMau1() {
               href="https://maps.google.com/?q=Saigon+Centre+Tower+2+Ho+Chi+Minh+City"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-[#0A2540] text-white text-xs font-semibold hover:bg-[#0f3d68] transition"
+              className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-[#17365D] text-white text-xs sm:text-sm font-semibold hover:bg-[#0f2746] transition"
             >
               <Navigation className="w-3.5 h-3.5 text-[#C5A880]" />
               <span>Chỉ đường trên Google Maps</span>

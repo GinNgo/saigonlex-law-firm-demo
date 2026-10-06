@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
+import { Be_Vietnam_Pro, Roboto } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
-const sansFont = Plus_Jakarta_Sans({
+const headingFont = Be_Vietnam_Pro({
   subsets: ["latin", "vietnamese"],
   weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-sans",
+  variable: "--font-heading",
   display: "swap"
 });
 
-const serifFont = Playfair_Display({
+const bodyFont = Roboto({
   subsets: ["latin", "vietnamese"],
-  weight: ["500", "600", "700", "800", "900"],
-  variable: "--font-serif",
+  weight: ["400", "500", "700"],
+  variable: "--font-body",
   display: "swap"
 });
 
@@ -76,8 +76,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className={`${sansFont.variable} ${serifFont.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-sans bg-white text-slate-900 selection:bg-amber-100 selection:text-amber-900">
+    <html lang="vi" className={`${headingFont.variable} ${bodyFont.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col font-sans bg-white text-[#202124] selection:bg-amber-100 selection:text-amber-900">
         {children}
         <SpeedInsights />
         <Analytics />

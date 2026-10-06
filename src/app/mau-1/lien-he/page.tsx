@@ -61,34 +61,34 @@ export default function ContactMau1Page() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                <div className="w-9 h-9 rounded-lg bg-blue-100 text-[#0A2540] flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-[#0A2540]" />
+                <div className="w-9 h-9 rounded-lg bg-blue-100 text-[#17365D] flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-[#17365D]" />
                 </div>
-                <div className="text-xs font-bold text-slate-500 uppercase">Hotline 24/7</div>
-                <div className="text-base font-bold text-[#0A2540]">{SITE_CONFIG.hotline}</div>
+                <div className="text-xs font-bold text-[#6B7280] uppercase">Hotline 24/7</div>
+                <div className="text-base font-bold text-[#0F172A]">{SITE_CONFIG.hotline}</div>
               </div>
 
               <div className="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                <div className="w-9 h-9 rounded-lg bg-blue-100 text-[#0A2540] flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-[#0A2540]" />
+                <div className="w-9 h-9 rounded-lg bg-blue-100 text-[#17365D] flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-[#17365D]" />
                 </div>
-                <div className="text-xs font-bold text-slate-500 uppercase">Hòm thư điện tử</div>
-                <div className="text-sm font-bold text-[#0A2540] truncate">{SITE_CONFIG.email}</div>
+                <div className="text-xs font-bold text-[#6B7280] uppercase">Hòm thư điện tử</div>
+                <div className="text-sm font-bold text-[#0F172A] truncate">{SITE_CONFIG.email}</div>
               </div>
 
               <div className="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                <div className="w-9 h-9 rounded-lg bg-blue-100 text-[#0A2540] flex items-center justify-center">
-                  <Clock className="w-5 h-5 text-[#0A2540]" />
+                <div className="w-9 h-9 rounded-lg bg-blue-100 text-[#17365D] flex items-center justify-center">
+                  <Clock className="w-5 h-5 text-[#17365D]" />
                 </div>
-                <div className="text-xs font-bold text-slate-500 uppercase">Giờ làm việc</div>
-                <div className="text-xs font-bold text-[#0A2540]">T2 – T6: 8:30 – 18:00</div>
+                <div className="text-xs font-bold text-[#6B7280] uppercase">Giờ làm việc</div>
+                <div className="text-xs font-bold text-[#0F172A]">T2 – T6: 8:30 – 18:00</div>
               </div>
 
               <div className="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
-                <div className="w-9 h-9 rounded-lg bg-blue-100 text-[#0A2540] flex items-center justify-center">
+                <div className="w-9 h-9 rounded-lg bg-blue-100 text-[#17365D] flex items-center justify-center">
                   <ShieldCheck className="w-5 h-5 text-[#C5A880]" />
                 </div>
-                <div className="text-xs font-bold text-slate-500 uppercase">Cam kết bảo mật</div>
+                <div className="text-xs font-bold text-[#6B7280] uppercase">Cam kết bảo mật</div>
                 <div className="text-xs font-bold text-emerald-700">Ký NDA trước thụ lý</div>
               </div>
             </div>

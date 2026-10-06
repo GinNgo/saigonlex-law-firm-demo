@@ -207,8 +207,8 @@ export default function GatewayPage() {
 
               {/* Content Description */}
               <div className="p-6 sm:p-8 space-y-5">
-                <p className="text-sm text-slate-300 leading-relaxed font-light">
-                  Thiết kế theo phong cách Modern Boutique Advisory Firm. Bề mặt sáng ấm (75% Ivory & Alabaster), điểm xuyết 15-20% Midnight Navy và 5-10% Champagne Gold. Typography serif cỡ lớn, cinematic reveal và bố cục bất đối xứng.
+                <p className="text-sm text-slate-300 leading-relaxed font-normal">
+                  Thiết kế theo phong cách Modern Boutique Advisory Firm. Bề mặt sáng ấm (75% Ivory & Alabaster), điểm xuyết 15-20% Midnight Navy và 5-10% Champagne Gold. Typography Be Vietnam Pro chuẩn mực, cinematic reveal và bố cục bất đối xứng.
                 </p>
 
                 {/* Characteristic Bullets */}
@@ -237,7 +237,7 @@ export default function GatewayPage() {
             <div className="p-6 sm:p-8 pt-0 border-t border-white/5 mt-4">
               <Link
                 href="/mau-2"
-                className="w-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 text-slate-950 font-serif font-bold py-4 rounded-xl text-center text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-amber-500/25 transition group/btn"
+                className="w-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 text-slate-950 font-bold py-4 rounded-xl text-center text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-amber-500/25 transition group/btn"
               >
                 <span>Trải nghiệm Demo Mẫu 2 (Editorial Premium)</span>
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -284,8 +284,8 @@ export default function GatewayPage() {
                 </tr>
                 <tr>
                   <td className="p-4 font-bold text-white">Typography & Tiêu đề</td>
-                  <td className="p-4">Plus Jakarta Sans – Dứt khoát, executive, hiện đại</td>
-                  <td className="p-4">Playfair Display Serif – Nghệ thuật báo chí, sang trọng, tinh tế</td>
+                  <td className="p-4">Be Vietnam Pro (700) & Roboto – Chuẩn mực công sở, dứt khoát, dễ đọc</td>
+                  <td className="p-4">Be Vietnam Pro (700) & Roboto – Đậm nét, trang trọng, tối ưu dấu tiếng Việt</td>
                 </tr>
                 <tr>
                   <td className="p-4 font-bold text-white">Ngôn ngữ chuyển động</td>

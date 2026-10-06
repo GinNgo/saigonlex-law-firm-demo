@@ -43,13 +43,13 @@ export default function ServicesMau2Page() {
               theme="editorial"
             />
             <div className="max-w-3xl space-y-4 pt-4">
-              <span className="text-xs font-serif text-[#C5A059] uppercase tracking-[0.25em] block font-semibold">
+              <span className="text-xs text-[#997836] uppercase tracking-wider block font-semibold">
                 DANH MỤC CỐ VẤN CHIẾN LƯỢC
               </span>
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0C1829]">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A]">
                 Lĩnh vực Hành nghề Chuyên sâu
               </h1>
-              <p className="text-slate-600 font-sans text-sm sm:text-base font-light leading-relaxed">
+              <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
                 Tập trung vào các lĩnh vực pháp lý then chốt của giới kinh doanh và thân chủ tư nhân. Giải pháp mang tính chiến lược dài hạn và tính thực thi vượt trội.
               </p>
             </div>
@@ -74,17 +74,17 @@ export default function ServicesMau2Page() {
                       sizes="(max-width: 768px) 100vw, 25vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                    <span className="absolute top-3 left-3 font-mono text-[10px] text-[#DFBF7E] bg-[#0C1829]/90 px-2.5 py-0.5 rounded-sm border border-[#C5A059]/30">
+                    <span className="absolute top-3 left-3 font-mono text-[10px] text-[#DFBF7E] bg-[#0C1829]/90 px-2.5 py-0.5 rounded-sm border border-[#C5A059]/30 font-bold">
                       0{idx + 1}
                     </span>
                   </div>
 
                   <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                     <div>
-                      <h2 className="font-serif text-lg font-bold text-[#0C1829] group-hover:text-[#C5A059] transition leading-snug line-clamp-2">
+                      <h2 className="text-lg font-bold text-[#111827] group-hover:text-[#17365D] transition leading-snug line-clamp-2">
                         {svc.shortTitle}
                       </h2>
-                      <p className="text-xs text-slate-600 font-sans font-light mt-2 line-clamp-3 leading-relaxed">
+                      <p className="text-xs text-[#4B5563] mt-2 line-clamp-3 leading-[1.7] font-normal">
                         {svc.shortDesc}
                       </p>
                     </div>
@@ -92,7 +92,7 @@ export default function ServicesMau2Page() {
                     <div className="pt-4 border-t border-[#E5DEC9]/60">
                       <Link
                         href={`/mau-2/linh-vuc/${svc.slug}`}
-                        className="w-full inline-flex items-center justify-between text-xs font-serif uppercase tracking-wider text-[#0C1829] group-hover:text-[#C5A059] transition"
+                        className="w-full inline-flex items-center justify-between text-xs uppercase tracking-wider text-[#17365D] group-hover:text-[#0f2746] transition font-semibold"
                       >
                         <span>Chi tiết đặc tả</span>
                         <ArrowUpRight className="w-3.5 h-3.5 text-[#C5A059]" />

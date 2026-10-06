@@ -39,10 +39,10 @@ export function ServicesGridMau1() {
             <span>NĂNG LỰC HÀNH NGHỀ CHUYÊN MÔN</span>
             <span className="w-6 h-0.5 bg-[#C5A880]" />
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight">
             8 Lĩnh vực Pháp luật Chuyên sâu
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-[#202124] text-[15px] sm:text-[16px] leading-[1.7]">
             Chúng tôi tập trung nguồn lực chuyên môn cao nhất vào các lĩnh vực pháp luật then chốt phục vụ doanh nghiệp, nhà đầu tư và cá nhân.
           </p>
         </FadeIn>
@@ -76,10 +76,10 @@ export function ServicesGridMau1() {
                 {/* Card Content */}
                 <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    <h3 className="text-base font-bold text-[#0A2540] group-hover:text-blue-700 transition leading-snug line-clamp-2">
+                    <h3 className="text-base font-semibold text-[#111827] group-hover:text-[#17365D] transition leading-snug line-clamp-2">
                       {svc.shortTitle}
                     </h3>
-                    <p className="text-xs text-slate-500 mt-2 leading-relaxed line-clamp-3">
+                    <p className="text-xs sm:text-[13px] text-[#4B5563] mt-2 leading-relaxed line-clamp-3">
                       {svc.shortDesc}
                     </p>
                   </div>
@@ -87,7 +87,7 @@ export function ServicesGridMau1() {
                   <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
                     <Link
                       href={`/mau-1/linh-vuc/${svc.slug}`}
-                      className="text-xs font-bold text-[#0A2540] group-hover:text-blue-800 flex items-center gap-1 transition"
+                      className="text-xs font-semibold text-[#17365D] group-hover:underline flex items-center gap-1 transition"
                     >
                       <span>Xem chi tiết dịch vụ</span>
                       <ArrowRight className="w-3.5 h-3.5 text-[#C5A880] group-hover:translate-x-1 transition-transform" />

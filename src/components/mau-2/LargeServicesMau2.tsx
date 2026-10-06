@@ -17,13 +17,13 @@ export function LargeServicesMau2() {
         <FadeIn direction="up">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 border-b border-[#E8E1CE] pb-8">
             <div className="space-y-3 max-w-2xl">
-              <span className="text-[#997836] font-serif text-xs uppercase tracking-[0.25em] block">
+              <span className="text-[#997836] text-xs uppercase tracking-wider font-semibold block">
                 TRỌNG TÂM CHIẾN LƯỢC
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C1829]">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A]">
                 Năng lực Cố vấn Tuyển chọn
               </h2>
-              <p className="text-slate-600 font-sans text-sm font-light">
+              <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
                 Những lĩnh vực phức tạp nhất, đòi hỏi sự phối hợp đa ngành giữa luật pháp, tài chính doanh nghiệp và nghệ thuật điều đình.
               </p>
             </div>
@@ -31,7 +31,7 @@ export function LargeServicesMau2() {
             <div>
               <Link
                 href="/mau-2/linh-vuc"
-                className="inline-flex items-center gap-2 text-xs font-serif uppercase tracking-[0.2em] text-[#0C1829] hover:text-[#997836] transition font-semibold"
+                className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[#17365D] hover:text-[#0f2746] transition font-semibold"
               >
                 <span>Xem toàn bộ 8 lĩnh vực</span>
                 <ArrowUpRight className="w-4 h-4 text-[#C5A059]" />
@@ -61,20 +61,20 @@ export function LargeServicesMau2() {
 
                 {/* Card Top Pill */}
                 <div className="p-8 relative z-10 flex items-center justify-between">
-                  <span className="font-mono text-xs text-[#0C1829] tracking-widest uppercase bg-[#FAF7F0] px-3 py-1 rounded-sm border border-[#E0D7BE] font-bold">
+                  <span className="font-mono text-xs text-[#111827] tracking-wider uppercase bg-[#FAF7F0] px-3 py-1 rounded-sm border border-[#E0D7BE] font-bold">
                     SECTOR 0{idx + 1}
                   </span>
-                  <span className="text-[11px] text-[#8C7A58] font-serif uppercase tracking-widest font-semibold">
+                  <span className="text-[11px] text-[#8C7A58] uppercase tracking-wider font-semibold">
                     {svc.category}
                   </span>
                 </div>
 
                 {/* Card Bottom Body */}
                 <div className="p-8 relative z-10 space-y-4">
-                  <h3 className="font-serif text-2xl font-bold text-[#0C1829] group-hover:text-[#997836] transition">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#111827] group-hover:text-[#17365D] transition">
                     {svc.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed line-clamp-3 font-light">
+                  <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed line-clamp-3 font-normal">
                     {svc.overview}
                   </p>
 
@@ -83,7 +83,7 @@ export function LargeServicesMau2() {
                       {svc.highlights.slice(0, 2).map((h, i) => (
                         <span
                           key={i}
-                          className="text-[10px] text-slate-600 border border-[#E5DEC9] px-2 py-0.5 rounded-sm bg-[#FAF7F0]"
+                          className="text-[10px] text-[#4B5563] border border-[#E5DEC9] px-2 py-0.5 rounded-sm bg-[#FAF7F0]"
                         >
                           {h}
                         </span>
@@ -92,7 +92,7 @@ export function LargeServicesMau2() {
 
                     <Link
                       href={`/mau-2/linh-vuc/${svc.slug}`}
-                      className="inline-flex items-center gap-1.5 text-xs font-serif uppercase tracking-wider text-[#0C1829] group-hover:text-[#997836] transition font-bold"
+                      className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-[#17365D] group-hover:text-[#0f2746] transition font-semibold"
                     >
                       <span>Khảo sát</span>
                       <ArrowUpRight className="w-3.5 h-3.5 text-[#C5A059]" />

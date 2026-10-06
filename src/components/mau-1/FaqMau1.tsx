@@ -23,10 +23,10 @@ export function FaqMau1() {
               <span>GIẢI ĐÁP THẮC MẮC PHỔ BIẾN</span>
               <span className="w-6 h-0.5 bg-[#C5A880]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight">
               Câu hỏi Thường gặp (FAQ)
             </h2>
-            <p className="text-slate-600 text-sm leading-relaxed">
+            <p className="text-[#202124] text-sm sm:text-base leading-[1.7]">
               Các câu hỏi mà doanh nghiệp và thân chủ thường quan tâm nhất trước khi ký kết hợp đồng dịch vụ pháp lý tại SAIGONLEX.
             </p>
           </div>
@@ -44,7 +44,7 @@ export function FaqMau1() {
                   <button
                     type="button"
                     onClick={() => toggle(idx)}
-                    className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#0A2540] hover:text-blue-700 transition"
+                    className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-semibold text-base sm:text-[17px] text-[#111827] hover:text-[#17365D] transition"
                     aria-expanded={isOpen}
                   >
                     <div className="flex items-center gap-3">
@@ -52,8 +52,8 @@ export function FaqMau1() {
                       <span>{faq.question}</span>
                     </div>
                     <ChevronDown
-                      className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300 ${
-                        isOpen ? "rotate-180 text-[#0A2540]" : ""
+                      className={`w-5 h-5 text-[#6B7280] shrink-0 transition-transform duration-300 ${
+                        isOpen ? "rotate-180 text-[#17365D]" : ""
                       }`}
                     />
                   </button>
@@ -67,7 +67,7 @@ export function FaqMau1() {
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                         className="overflow-hidden"
                       >
-                        <div className="px-5 pb-6 sm:px-6 pt-1 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                        <div className="px-5 pb-6 sm:px-6 pt-1 text-[#202124] text-sm sm:text-[15px] leading-[1.72] border-t border-slate-100 bg-slate-50/50">
                           <p className="mt-2">{faq.answer}</p>
                         </div>
                       </motion.div>

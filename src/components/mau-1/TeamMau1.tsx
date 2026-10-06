@@ -17,10 +17,10 @@ export function TeamMau1() {
               <span className="w-6 h-0.5 bg-[#C5A880]" />
               <span>ĐỘI NGŨ LUẬT SƯ CHỦ CHỐT</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight">
               Luật sư Thành viên & Cố vấn Cấp cao
             </h2>
-            <p className="text-slate-600 text-sm leading-relaxed">
+            <p className="text-[#202124] text-[15px] sm:text-[16px] leading-[1.7]">
               Các luật sư tại SAIGONLEX sở hữu tư duy sắc bén, am hiểu sâu rộng thị trường nội địa cùng kỹ năng tranh tụng thực chiến.
             </p>
           </div>
@@ -28,7 +28,7 @@ export function TeamMau1() {
           <div>
             <Link
               href="/mau-1/doi-ngu"
-              className="inline-flex items-center gap-2 text-sm font-bold text-[#0A2540] hover:text-[#0f3d68] group"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#17365D] hover:underline group"
             >
               <span>Xem toàn bộ đội ngũ & hồ sơ năng lực</span>
               <ArrowRight className="w-4 h-4 text-[#C5A880] group-hover:translate-x-1 transition-transform" />
@@ -66,13 +66,13 @@ export function TeamMau1() {
                 {/* Info */}
                 <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    <h3 className="text-base font-bold text-[#0A2540] group-hover:text-blue-700 transition">
+                    <h3 className="text-base font-semibold text-[#111827] group-hover:text-[#17365D] transition">
                       {lawyer.name}
                     </h3>
                     <div className="text-xs font-semibold text-[#C5A880] mt-0.5">
                       {lawyer.role}
                     </div>
-                    <p className="text-[11px] text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-[#4B5563] mt-2 line-clamp-2 leading-relaxed">
                       {lawyer.department}
                     </p>
                   </div>

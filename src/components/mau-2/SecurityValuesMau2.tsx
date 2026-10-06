@@ -36,13 +36,13 @@ export function SecurityValuesMau2() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <FadeIn direction="up">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <span className="text-[#C5A059] font-serif text-xs uppercase tracking-[0.25em]">
+            <span className="text-[#EBD59B] text-xs uppercase tracking-wider font-semibold">
               CAM KẾT CƠ MẬT
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
               Bảo mật Thông tin & Tính Minh bạch
             </h2>
-            <p className="text-slate-300 font-sans text-sm font-light leading-relaxed">
+            <p className="text-slate-200 text-sm sm:text-base leading-[1.7] font-normal">
               Uy tín của một hãng luật được tôi luyện qua năng lực giữ trọn bí mật kinh doanh cho thân chủ trước mọi biến động thị trường.
             </p>
           </div>
@@ -58,10 +58,10 @@ export function SecurityValuesMau2() {
                 <div className="w-12 h-12 rounded-sm bg-[#0C1829] border border-[#C5A059]/40 flex items-center justify-center group-hover:scale-105 transition-transform">
                   {c.icon}
                 </div>
-                <h3 className="font-serif text-lg font-bold text-white">
+                <h3 className="text-lg font-bold text-white">
                   {c.title}
                 </h3>
-                <p className="text-xs text-slate-300 font-sans font-light leading-relaxed">
+                <p className="text-xs sm:text-[13px] text-slate-200 leading-[1.7] font-normal">
                   {c.desc}
                 </p>
               </div>

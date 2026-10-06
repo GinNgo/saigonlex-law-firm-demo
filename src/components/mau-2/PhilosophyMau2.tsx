@@ -31,33 +31,33 @@ export function PhilosophyMau2() {
           {/* Right Column: Editorial Creed */}
           <FadeIn direction="right" className="lg:col-span-7 space-y-8">
             <div className="space-y-3">
-              <span className="text-[#997836] font-serif text-xs uppercase tracking-[0.25em] block">
+              <span className="text-[#997836] text-xs uppercase tracking-wider font-semibold block">
                 TRIẾT LÝ HÀNH NGHỀ & TÔN CHỈ
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0C1829] leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A] leading-tight">
                 Pháp luật không phải là sự gò bó, mà là công cụ kiến tạo quyền lực
               </h2>
             </div>
 
-            <p className="text-slate-600 font-sans text-sm sm:text-base leading-relaxed font-light">
+            <p className="text-[#202124] text-[15px] sm:text-base leading-[1.72]">
               Tại SAIGONLEX, chúng tôi nhìn nhận mỗi văn bản luật như một tác phẩm cấu trúc hoàn chỉnh. Sứ mệnh của luật sư không chỉ dừng lại ở việc tuân thủ thụ động, mà là vận dụng sự am hiểu tường tận hệ thống tư pháp để thiết kế những hành lang an toàn nhất cho thân chủ vươn tầm.
             </p>
 
             {/* Managing Partner Quote Card (Bright Luxury with Gold Accent) */}
             <div className="p-8 rounded-sm bg-white border-l-4 border-[#C5A059] border-t border-r border-b border-[#EAE3D2] relative space-y-4 editorial-card-shadow hover:-translate-y-1 transition-all duration-300">
               <Quote className="w-8 h-8 text-[#C5A059]/30 absolute top-4 right-4" />
-              <p className="font-serif italic text-base sm:text-lg text-[#0C1829] leading-relaxed">
+              <p className="italic text-base sm:text-lg text-[#0F172A] leading-relaxed font-medium">
                 “Một vụ việc pháp lý thành công không đo đếm bằng số lượng văn bản được ký kết, mà bằng sự an tâm tuyệt đối của thân chủ khi đối diện với các ngã rẽ định mệnh.”
               </p>
               <div className="flex items-center gap-3.5 pt-2 border-t border-[#F0EAD8]">
-                <div className="w-10 h-10 rounded-sm bg-[#0C1829] border border-[#C5A059]/40 flex items-center justify-center font-serif text-sm text-[#F5E6BE] font-bold">
+                <div className="w-10 h-10 rounded-sm bg-[#17365D] border border-[#C5A059]/40 flex items-center justify-center text-sm text-[#F5E6BE] font-bold">
                   NT
                 </div>
                 <div>
-                  <div className="font-serif font-bold text-sm text-[#0C1829]">
+                  <div className="font-bold text-sm text-[#111827]">
                     Luật sư Nguyễn Văn Thành
                   </div>
-                  <div className="text-[11px] text-slate-500 font-sans">
+                  <div className="text-xs text-[#4B5563]">
                     Luật sư Điều hành (Managing Partner) • SAIGONLEX [DEMO]
                   </div>
                 </div>
@@ -67,7 +67,7 @@ export function PhilosophyMau2() {
             <div className="pt-2">
               <Link
                 href="/mau-2/gioi-thieu"
-                className="inline-flex items-center gap-2 text-xs font-serif uppercase tracking-[0.2em] text-[#0C1829] hover:text-[#997836] transition group font-semibold"
+                className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[#17365D] hover:text-[#0f2746] transition group font-semibold"
               >
                 <span>Đọc bản tuyên ngôn triết lý đầy đủ</span>
                 <ArrowUpRight className="w-4 h-4 text-[#C5A059] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

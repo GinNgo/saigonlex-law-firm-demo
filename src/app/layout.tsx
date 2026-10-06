@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { DemoThemeProvider } from "@/context/DemoThemeContext";
 import { TemplateTransitionOverlay } from "@/components/common/TemplateTransitionOverlay";
 import { DemoToolbar } from "@/components/common/DemoToolbar";
+import { ScrollToTop } from "@/components/common/ScrollToTop";
 import "./globals.css";
 
 const headingFont = Be_Vietnam_Pro({
@@ -103,6 +104,7 @@ export default function RootLayout({
           <TemplateTransitionOverlay />
           {children}
           <DemoToolbar />
+          <ScrollToTop />
         </DemoThemeProvider>
         <SpeedInsights />
         <Analytics />

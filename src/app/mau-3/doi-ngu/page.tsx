@@ -103,7 +103,7 @@ export default function TeamMau3Page() {
 
       <main className="flex-1">
         {/* Banner */}
-        <section className="bg-gradient-to-r from-[#17365D] via-[#0E2945] to-[#17365D] text-white py-14 lg:py-16 border-b border-[#E5E7EB]">
+        <section className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--bg-dark)] to-[var(--color-primary)] text-white py-14 lg:py-16 border-b border-[var(--color-border)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
@@ -113,7 +113,7 @@ export default function TeamMau3Page() {
               theme="dark"
             />
             <div className="max-w-3xl mt-4 space-y-3">
-              <span className="text-xs font-bold text-[#AD8B55] uppercase tracking-widest block">
+              <span className="text-xs font-bold text-[var(--color-accent)] uppercase tracking-widest block">
                 CON NGƯỜI & TRÍ TUỆ SAIGONLEX
               </span>
               <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
@@ -128,19 +128,19 @@ export default function TeamMau3Page() {
         </section>
 
         {/* Team Members List */}
-        <section className="py-16 sm:py-20 bg-white">
+        <section className="py-16 sm:py-20 bg-[var(--bg-section)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
             {fullTeam.map((lawyer, idx) => (
               <div
                 key={idx}
-                className={`bg-[#F8F9FA] rounded-2xl p-7 sm:p-10 border border-[#E5E7EB] shadow-sm ${
-                  lawyer.featured ? "ring-2 ring-[#AD8B55]/40" : ""
+                className={`bg-[var(--bg-section-alt)] rounded-2xl p-7 sm:p-10 border border-[var(--color-border)] shadow-sm ${
+                  lawyer.featured ? "ring-2 ring-[var(--color-accent)]/40" : ""
                 }`}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                   {/* Photo Column (4 cols) */}
                   <div className="lg:col-span-4">
-                    <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-md border border-[#E5E7EB]">
+                    <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-md border border-[var(--color-border)]">
                       <Image
                         src={lawyer.image}
                         alt={lawyer.name}
@@ -149,19 +149,19 @@ export default function TeamMau3Page() {
                         className="object-cover object-top"
                       />
                       {lawyer.featured && (
-                        <div className="absolute top-4 left-4 bg-[#AD8B55] text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded shadow">
+                        <div className="absolute top-4 left-4 bg-[var(--color-accent)] text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded shadow">
                           Luật sư Sáng lập
                         </div>
                       )}
                     </div>
 
-                    <div className="mt-5 space-y-2 text-xs text-[#5F6368]">
+                    <div className="mt-5 space-y-2 text-xs text-[var(--color-text-muted)]">
                       <div className="flex items-start gap-2">
-                        <Award className="w-4 h-4 text-[#AD8B55] shrink-0 mt-0.5" />
+                        <Award className="w-4 h-4 text-[var(--color-accent)] shrink-0 mt-0.5" />
                         <span>{lawyer.bar}</span>
                       </div>
                       <div className="flex items-start gap-2">
-                        <GraduationCap className="w-4 h-4 text-[#AD8B55] shrink-0 mt-0.5" />
+                        <GraduationCap className="w-4 h-4 text-[var(--color-accent)] shrink-0 mt-0.5" />
                         <span>{lawyer.education}</span>
                       </div>
                     </div>
@@ -170,10 +170,10 @@ export default function TeamMau3Page() {
                   {/* Bio Column (8 cols) */}
                   <div className="lg:col-span-8 space-y-6">
                     <div>
-                      <span className="text-xs font-bold text-[#AD8B55] uppercase tracking-wider block mb-1">
+                      <span className="text-xs font-bold text-[var(--color-accent)] uppercase tracking-wider block mb-1">
                         {lawyer.role}
                       </span>
-                      <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[#17365D]">
+                      <h2 className="font-heading text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">
                         {lawyer.name}
                       </h2>
                       <div className="text-xs font-semibold text-[#10B981] mt-1">
@@ -181,19 +181,19 @@ export default function TeamMau3Page() {
                       </div>
                     </div>
 
-                    <p className="text-sm sm:text-base text-[#4B5563] leading-relaxed font-body">
+                    <p className="text-sm sm:text-base text-[var(--color-text)] leading-relaxed font-body">
                       {lawyer.bio}
                     </p>
 
                     <div>
-                      <h4 className="text-xs font-bold text-[#17365D] uppercase tracking-wider mb-3">
+                      <h4 className="text-xs font-bold text-[var(--color-primary)] uppercase tracking-wider mb-3">
                         Lĩnh vực chuyên môn trọng tâm:
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {lawyer.specialties.map((spec, sIdx) => (
                           <span
                             key={sIdx}
-                            className="px-3 py-1.5 rounded-lg bg-white border border-[#E5E7EB] text-xs font-semibold text-[#17365D]"
+                            className="px-3 py-1.5 rounded-lg bg-[var(--surface)] border border-[var(--color-border)] text-xs font-semibold text-[var(--color-primary)]"
                           >
                             {spec}
                           </span>
@@ -201,18 +201,18 @@ export default function TeamMau3Page() {
                       </div>
                     </div>
 
-                    <div className="pt-6 border-t border-[#E5E7EB] flex flex-wrap gap-4">
+                    <div className="pt-6 border-t border-[var(--color-border)] flex flex-wrap gap-4">
                       <Link
                         href="/mau-3/lien-he"
-                        className="px-6 py-2.5 rounded-md bg-[#17365D] hover:bg-[#0E2945] text-white text-xs font-bold transition-colors shadow-sm"
+                        className="px-6 py-2.5 rounded-md bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-xs font-bold transition-colors shadow-sm"
                       >
                         Đặt lịch làm việc cùng {lawyer.name.split(" ").slice(-2).join(" ")}
                       </Link>
                       <a
                         href="tel:0908033115"
-                        className="px-5 py-2.5 rounded-md bg-white border border-[#E5E7EB] text-[#17365D] text-xs font-bold hover:bg-[#F5F1E9] transition-colors inline-flex items-center gap-1.5"
+                        className="px-5 py-2.5 rounded-md bg-[var(--surface)] border border-[var(--color-border)] text-[var(--color-primary)] text-xs font-bold hover:bg-[var(--bg-section-alt)] transition-colors inline-flex items-center gap-1.5"
                       >
-                        <Phone className="w-3.5 h-3.5 text-[#AD8B55]" />
+                        <Phone className="w-3.5 h-3.5 text-[var(--color-accent)]" />
                         <span>0908 033 115</span>
                       </a>
                     </div>

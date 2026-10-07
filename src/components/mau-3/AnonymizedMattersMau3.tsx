@@ -7,18 +7,18 @@ import { ANONYMIZED_CASES_MAU3 } from "@/data/mau3Data";
 
 export function AnonymizedMattersMau3() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#F8F9FA] border-b border-[#E5E7EB]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[var(--bg-section-alt)] border-b border-[var(--color-border)] transition-colors duration-250">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#AD8B55]/10 text-[#AD8B55] text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)] text-xs font-bold uppercase tracking-wider mb-3">
             <Briefcase className="w-3.5 h-3.5" />
             <span>KINH NGHIỆM THỰC CHIẾN</span>
           </div>
-          <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#17365D] tracking-tight mb-4">
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--color-primary)] tracking-tight mb-4">
             Vụ Việc Tiêu Biểu & Giải Pháp Pháp Lý
           </h2>
-          <p className="text-[#5F6368] text-sm sm:text-base font-body leading-relaxed">
+          <p className="text-[var(--color-text-secondary)] text-sm sm:text-base font-body leading-relaxed">
             Các trường hợp điển hình đã được SaigonLex tư vấn và giải quyết thành công. Nhằm bảo đảm
             quy tắc bảo mật thông tin thân chủ, tên các bên và dữ liệu định danh đã được ẩn danh.
           </p>
@@ -33,21 +33,21 @@ export function AnonymizedMattersMau3() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.35, delay: idx * 0.06 }}
-              className="bg-white rounded-xl p-6 border border-[#E5E7EB] shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+              className="bg-[var(--surface)] rounded-xl p-6 border border-[var(--color-border)] shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
             >
               <div>
                 {/* Sector Badge & ID */}
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-[11px] font-bold text-[#AD8B55] uppercase tracking-wider">
+                  <span className="text-[11px] font-bold text-[var(--color-accent)] uppercase tracking-wider">
                     {item.sector}
                   </span>
-                  <span className="text-xs font-mono text-[#9CA3AF] bg-[#F3F4F6] px-2 py-0.5 rounded">
+                  <span className="text-xs font-mono text-slate-500 bg-[var(--bg-section-alt)] border border-[var(--color-border)] px-2 py-0.5 rounded">
                     {item.id}
                   </span>
                 </div>
 
                 {/* Matter (Title) */}
-                <h3 className="font-heading text-base font-bold text-[#17365D] mb-4 leading-snug">
+                <h3 className="font-heading text-base font-bold text-[var(--color-primary)] mb-4 leading-snug">
                   {item.matter}
                 </h3>
 
@@ -61,14 +61,14 @@ export function AnonymizedMattersMau3() {
                 </div>
 
                 {/* Approach (Solution) */}
-                <div className="mb-4 text-xs leading-relaxed text-[#4B5563]">
-                  <div className="font-bold text-[#17365D] mb-1">Phương án SaigonLex:</div>
+                <div className="mb-4 text-xs leading-relaxed text-[var(--color-text-secondary)]">
+                  <div className="font-bold text-[var(--color-primary)] mb-1">Phương án SaigonLex:</div>
                   <p>{item.approach}</p>
                 </div>
               </div>
 
               {/* ResultSummary (Outcome) */}
-              <div className="pt-3 border-t border-[#F3F4F6] text-xs text-[#065F46] bg-[#ECFDF5] p-3 rounded-lg border border-[#D1FAE5]">
+              <div className="pt-3 border-t border-[var(--color-border)] text-xs text-[#065F46] bg-[#ECFDF5] p-3 rounded-lg border border-[#D1FAE5]">
                 <div className="flex items-center gap-1.5 font-bold text-[#047857] mb-0.5">
                   <CheckCircle className="w-3.5 h-3.5" />
                   <span>Kết quả thực tế:</span>
@@ -80,8 +80,8 @@ export function AnonymizedMattersMau3() {
         </div>
 
         {/* Confidentiality Disclaimer */}
-        <div className="mt-10 p-4 rounded-lg bg-white border border-[#E5E7EB] flex items-center justify-center gap-3 text-xs text-[#6B7280] text-center">
-          <ShieldCheck className="w-4 h-4 text-[#AD8B55] shrink-0" />
+        <div className="mt-10 p-4 rounded-lg bg-[var(--surface)] border border-[var(--color-border)] flex items-center justify-center gap-3 text-xs text-[var(--color-text-secondary)] text-center">
+          <ShieldCheck className="w-4 h-4 text-[var(--color-accent)] shrink-0" />
           <span>
             Thông tin trên mang tính chất minh họa phương pháp xử lý vụ việc. Mọi vụ việc pháp lý có
             tình tiết riêng biệt và được nghiên cứu độc lập.

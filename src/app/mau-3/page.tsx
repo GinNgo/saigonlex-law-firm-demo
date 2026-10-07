@@ -36,7 +36,7 @@ export default function Mau3HomePage() {
   return (
     <TemplatePageWrapper
       templateId="mau-c"
-      className="min-h-screen flex flex-col bg-white text-[#202124] font-body selection:bg-[#AD8B55]/20 selection:text-[#17365D]"
+      className="min-h-screen flex flex-col bg-[var(--bg-page)] text-[var(--color-text)] font-body selection:bg-[var(--color-accent)]/20 selection:text-[var(--color-primary)] transition-colors duration-250"
     >
       {/* Sticky Demo Selector Banner */}
       <DemoBanner />

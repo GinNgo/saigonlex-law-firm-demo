@@ -6,12 +6,12 @@ import { PhoneCall, Calendar, ShieldCheck, ArrowRight } from "lucide-react";
 
 export function FinalCtaMau3() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[#17365D] via-[#0E2945] to-[#17365D] text-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[var(--bg-dark)] text-white relative overflow-hidden transition-colors duration-250">
       {/* Background architectural geometric watermark */}
       <div
         className="absolute inset-0 pointer-events-none opacity-5"
         style={{
-          backgroundImage: `radial-gradient(#AD8B55 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(var(--color-accent) 1px, transparent 1px)`,
           backgroundSize: "28px 28px"
         }}
       />
@@ -24,7 +24,7 @@ export function FinalCtaMau3() {
           transition={{ duration: 0.5 }}
         >
           {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#AD8B55] text-xs font-bold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-[var(--color-accent)] text-xs font-bold uppercase tracking-wider mb-6">
             <ShieldCheck className="w-4 h-4" />
             <span>ĐỒNG HÀNH PHÁP LÝ UY TÍN TẠI TP. HỒ CHÍ MINH</span>
           </div>
@@ -35,7 +35,7 @@ export function FinalCtaMau3() {
           </h2>
 
           {/* Subheading */}
-          <p className="text-sm sm:text-base lg:text-lg text-[#D1D5DB] max-w-3xl mx-auto leading-relaxed font-body mb-10">
+          <p className="text-sm sm:text-base lg:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-body mb-10">
             Hãy để đội ngũ Luật sư giàu kinh nghiệm của SaigonLex đồng hành cùng quý vị: nhận diện rủi
             ro, xây dựng hàng rào pháp lý an toàn và giải quyết triệt để mọi vướng mắc phát sinh.
           </p>
@@ -44,7 +44,7 @@ export function FinalCtaMau3() {
           <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
             <a
               href="#dat-lich-tu-van"
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-md bg-[#AD8B55] hover:bg-[#92723E] text-white font-bold text-sm sm:text-base transition-colors shadow-lg hover:shadow-xl group"
+              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-md bg-[var(--color-accent)] hover:opacity-90 text-[var(--color-primary-dark)] font-bold text-sm sm:text-base transition-all shadow-lg hover:shadow-xl group"
             >
               <span>Đặt Lịch Tư Vấn Trực Tiếp</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -54,7 +54,7 @@ export function FinalCtaMau3() {
               href="tel:0908033115"
               className="inline-flex items-center gap-2.5 px-7 py-4 rounded-md bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-sm sm:text-base transition-colors"
             >
-              <PhoneCall className="w-4 h-4 text-[#AD8B55]" />
+              <PhoneCall className="w-4 h-4 text-[var(--color-accent)]" />
               <span>Hotline 24/7: 0908 033 115</span>
             </a>
           </div>

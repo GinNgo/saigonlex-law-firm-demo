@@ -56,7 +56,7 @@ export default function ServicesMau3Page() {
 
       <main className="flex-1">
         {/* Banner Section */}
-        <section className="bg-gradient-to-r from-[#17365D] via-[#0E2945] to-[#17365D] text-white py-14 lg:py-16 border-b border-[#E5E7EB]">
+        <section className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--bg-dark)] to-[var(--color-primary)] text-white py-14 lg:py-16 border-b border-[var(--color-border)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
@@ -66,7 +66,7 @@ export default function ServicesMau3Page() {
               theme="dark"
             />
             <div className="max-w-3xl mt-4 space-y-3">
-              <span className="text-xs font-bold text-[#AD8B55] uppercase tracking-widest block">
+              <span className="text-xs font-bold text-[var(--color-accent)] uppercase tracking-widest block">
                 GIẢI PHÁP ĐÓNG GÓI THỰC TIỄN
               </span>
               <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
@@ -81,65 +81,65 @@ export default function ServicesMau3Page() {
         </section>
 
         {/* Services List */}
-        <section className="py-16 sm:py-20 bg-white">
+        <section className="py-16 sm:py-20 bg-[var(--bg-section)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             {FEATURED_SERVICES_MAU3.map((svc) => {
               const Icon = serviceIcons[svc.iconName] || Briefcase;
               return (
                 <div
                   key={svc.id}
-                  className="bg-[#F8F9FA] rounded-2xl p-7 sm:p-9 border border-[#E5E7EB] hover:border-[#AD8B55] transition-all duration-300 shadow-sm"
+                  className="bg-[var(--bg-section-alt)] rounded-2xl p-7 sm:p-9 border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-all duration-300 shadow-sm"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     <div className="lg:col-span-7">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="w-12 h-12 rounded-xl bg-[#17365D] text-white flex items-center justify-center">
-                          <Icon className="w-6 h-6 text-[#AD8B55]" />
+                        <div className="w-12 h-12 rounded-xl bg-[var(--color-primary)] text-white flex items-center justify-center">
+                          <Icon className="w-6 h-6 text-[var(--color-accent)]" />
                         </div>
                         <div>
-                          <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-[#17365D]/10 text-[#17365D]">
+                          <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
                             {svc.subtitle}
                           </span>
-                          <h2 className="font-heading text-xl sm:text-2xl font-bold text-[#17365D] mt-1">
+                          <h2 className="font-heading text-xl sm:text-2xl font-bold text-[var(--color-primary)] mt-1">
                             {svc.title}
                           </h2>
                         </div>
                       </div>
 
-                      <p className="text-sm sm:text-base text-[#4B5563] leading-relaxed mb-6 font-body">
+                      <p className="text-sm sm:text-base text-[var(--color-text-muted)] leading-relaxed mb-6 font-body">
                         {svc.description}
                       </p>
 
                       <div className="flex flex-wrap gap-4">
                         <Link
                           href="/mau-3/lien-he"
-                          className="px-6 py-2.5 rounded-md bg-[#17365D] hover:bg-[#0E2945] text-white text-xs font-bold transition-colors shadow-sm"
+                          className="px-6 py-2.5 rounded-md bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-xs font-bold transition-colors shadow-sm"
                         >
                           Yêu cầu báo phí dịch vụ
                         </Link>
                         <a
                           href="tel:0908033115"
-                          className="px-5 py-2.5 rounded-md bg-white border border-[#E5E7EB] text-[#17365D] text-xs font-bold hover:bg-[#F5F1E9] transition-colors inline-flex items-center gap-1.5"
+                          className="px-5 py-2.5 rounded-md bg-[var(--surface)] border border-[var(--color-border)] text-[var(--color-primary)] text-xs font-bold hover:bg-[var(--bg-section-alt)] transition-colors inline-flex items-center gap-1.5"
                         >
-                          <PhoneCall className="w-3.5 h-3.5 text-[#AD8B55]" />
+                          <PhoneCall className="w-3.5 h-3.5 text-[var(--color-accent)]" />
                           <span>0908 033 115</span>
                         </a>
                       </div>
                     </div>
 
-                    <div className="lg:col-span-5 bg-white p-6 rounded-xl border border-[#E5E7EB]">
-                      <h4 className="font-heading text-xs font-bold text-[#17365D] uppercase tracking-wider mb-3">
+                    <div className="lg:col-span-5 bg-[var(--surface)] p-6 rounded-xl border border-[var(--color-border)]">
+                      <h4 className="font-heading text-xs font-bold text-[var(--color-primary)] uppercase tracking-wider mb-3">
                         Sản phẩm bàn giao cụ thể:
                       </h4>
                       <ul className="space-y-2 mb-4">
                         {svc.deliverables.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2.5 text-xs text-[#374151]">
+                          <li key={i} className="flex items-start gap-2.5 text-xs text-[var(--color-text)]">
                             <CheckCircle2 className="w-4 h-4 text-[#10B981] shrink-0 mt-0.5" />
                             <span>{item}</span>
                           </li>
                         ))}
                       </ul>
-                      <div className="pt-3 border-t border-[#F3F4F6] text-[11px] text-[#6B7280]">
+                      <div className="pt-3 border-t border-[var(--color-border)]/50 text-[11px] text-[var(--color-text-muted)]">
                         ✓ Cam kết ký thỏa thuận bảo mật thông tin (NDA) trước khi nhận tài liệu.
                       </div>
                     </div>

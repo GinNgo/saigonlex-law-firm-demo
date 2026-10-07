@@ -71,7 +71,7 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
 
       <main className="flex-1">
         {/* Banner */}
-        <section className="bg-gradient-to-r from-[#17365D] via-[#0E2945] to-[#17365D] text-white py-14 lg:py-16 border-b border-[#E5E7EB]">
+        <section className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--bg-dark)] to-[var(--color-primary)] text-white py-14 lg:py-16 border-b border-[var(--color-border)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
@@ -82,7 +82,7 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
               theme="dark"
             />
             <div className="max-w-3xl mt-4 space-y-3">
-              <span className="text-xs font-bold text-[#AD8B55] uppercase tracking-widest block">
+              <span className="text-xs font-bold text-[var(--color-accent)] uppercase tracking-widest block">
                 DỊCH VỤ TƯ VẤN PHÁP LÝ CHUYÊN SÂU
               </span>
               <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
@@ -96,33 +96,33 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
         </section>
 
         {/* Content Layout */}
-        <section className="py-16 sm:py-20 bg-white">
+        <section className="py-16 sm:py-20 bg-[var(--bg-section)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               {/* Main Content (8 cols) */}
               <div className="lg:col-span-8 space-y-10">
                 {/* Description */}
                 <div>
-                  <h2 className="font-heading text-2xl font-bold text-[#17365D] mb-4">
+                  <h2 className="font-heading text-2xl font-bold text-[var(--color-primary)] mb-4">
                     Tổng Quan & Phương Thức Tiếp Cận
                   </h2>
-                  <p className="text-base text-[#4B5563] leading-relaxed font-body">
+                  <p className="text-base text-[var(--color-text)] leading-relaxed font-body">
                     {area.overview}
                   </p>
                 </div>
 
                 {/* Common Issues Solved */}
-                <div className="bg-[#F8F9FA] rounded-xl p-6 sm:p-8 border border-[#E5E7EB]">
-                  <h3 className="font-heading text-lg font-bold text-[#17365D] mb-4">
+                <div className="bg-[var(--bg-section-alt)] rounded-xl p-6 sm:p-8 border border-[var(--color-border)]">
+                  <h3 className="font-heading text-lg font-bold text-[var(--color-primary)] mb-4">
                     Các Vấn Đề Thường Gặp SaigonLex Hỗ Trợ Giải Quyết
                   </h3>
                   <div className="space-y-3">
                     {area.commonIssues.map((issue, idx) => (
-                      <div key={idx} className="flex items-start gap-3 text-sm text-[#374151]">
+                      <div key={idx} className="flex items-start gap-3 text-sm text-[var(--color-text)]">
                         <CheckCircle2 className="w-4 h-4 text-[#10B981] shrink-0 mt-0.5" />
                         <div>
-                          <strong className="text-[#17365D] block mb-0.5">{issue.title}</strong>
-                          <span className="text-xs text-[#5F6368]">{issue.desc}</span>
+                          <strong className="text-[var(--color-primary)] block mb-0.5">{issue.title}</strong>
+                          <span className="text-xs text-[var(--color-text-muted)]">{issue.desc}</span>
                         </div>
                       </div>
                     ))}
@@ -131,23 +131,23 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
 
                 {/* Process Steps */}
                 <div>
-                  <h3 className="font-heading text-2xl font-bold text-[#17365D] mb-6">
+                  <h3 className="font-heading text-2xl font-bold text-[var(--color-primary)] mb-6">
                     Quy Trình Triển Khai Hồ Sơ
                   </h3>
                   <div className="space-y-4">
                     {area.processSteps.map((step, idx) => (
                       <div
                         key={idx}
-                        className="flex items-start gap-4 p-4 rounded-xl border border-[#E5E7EB] hover:border-[#AD8B55] transition-colors"
+                        className="flex items-start gap-4 p-4 rounded-xl border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-colors bg-[var(--surface)]"
                       >
-                        <div className="w-8 h-8 rounded-full bg-[#17365D] text-white flex items-center justify-center font-bold text-xs shrink-0">
+                        <div className="w-8 h-8 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center font-bold text-xs shrink-0">
                           0{step.step}
                         </div>
                         <div>
-                          <div className="text-xs font-bold text-[#AD8B55] uppercase tracking-wider mb-0.5">
+                          <div className="text-xs font-bold text-[var(--color-accent)] uppercase tracking-wider mb-0.5">
                             Bước {step.step}: {step.title}
                           </div>
-                          <div className="text-xs text-[#5F6368]">
+                          <div className="text-xs text-[var(--color-text-muted)]">
                             {step.desc}
                           </div>
                         </div>
@@ -159,13 +159,13 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
                 {/* Scope of service */}
                 {area.serviceScope && area.serviceScope.length > 0 && (
                   <div>
-                    <h3 className="font-heading text-2xl font-bold text-[#17365D] mb-4">
+                    <h3 className="font-heading text-2xl font-bold text-[var(--color-primary)] mb-4">
                       Phạm Vi Công Việc Luật Sư Đảm Nhận
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {area.serviceScope.map((scope, sIdx) => (
-                        <div key={sIdx} className="flex items-start gap-2.5 p-3 rounded-lg bg-[#F8F9FA] text-xs text-[#374151]">
-                          <CheckCircle2 className="w-4 h-4 text-[#AD8B55] shrink-0 mt-0.5" />
+                        <div key={sIdx} className="flex items-start gap-2.5 p-3 rounded-lg bg-[var(--bg-section-alt)] text-xs text-[var(--color-text)] border border-[var(--color-border)]">
+                          <CheckCircle2 className="w-4 h-4 text-[var(--color-accent)] shrink-0 mt-0.5" />
                           <span>{scope}</span>
                         </div>
                       ))}
@@ -175,20 +175,20 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
 
                 {/* FAQs for this area */}
                 <div>
-                  <h3 className="font-heading text-2xl font-bold text-[#17365D] mb-6">
+                  <h3 className="font-heading text-2xl font-bold text-[var(--color-primary)] mb-6">
                     Câu Hỏi Thường Gặp Về {area.title}
                   </h3>
                   <div className="space-y-4">
                     {area.faqs.map((faq, idx) => (
                       <div
                         key={idx}
-                        className="p-5 rounded-xl border border-[#E5E7EB] bg-[#F8F9FA]"
+                        className="p-5 rounded-xl border border-[var(--color-border)] bg-[var(--bg-section-alt)]"
                       >
-                        <div className="flex items-start gap-2.5 font-bold text-sm text-[#17365D] mb-2">
-                          <HelpCircle className="w-4 h-4 text-[#AD8B55] shrink-0 mt-0.5" />
+                        <div className="flex items-start gap-2.5 font-bold text-sm text-[var(--color-primary)] mb-2">
+                          <HelpCircle className="w-4 h-4 text-[var(--color-accent)] shrink-0 mt-0.5" />
                           <span>{faq.question}</span>
                         </div>
-                        <p className="text-xs sm:text-sm text-[#5F6368] leading-relaxed pl-6">
+                        <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed pl-6">
                           {faq.answer}
                         </p>
                       </div>
@@ -200,34 +200,34 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
               {/* Sidebar (4 cols) */}
               <div className="lg:col-span-4 space-y-6">
                 {/* Consultation Card */}
-                <div className="bg-[#17365D] text-white rounded-2xl p-6 sm:p-7 shadow-lg">
-                  <div className="w-10 h-10 rounded-lg bg-[#AD8B55]/20 text-[#AD8B55] flex items-center justify-center mb-4">
+                <div className="bg-[var(--bg-dark)] text-white rounded-2xl p-6 sm:p-7 shadow-lg border border-[var(--color-accent)]/20">
+                  <div className="w-10 h-10 rounded-lg bg-[var(--color-accent)]/20 text-[var(--color-accent)] flex items-center justify-center mb-4">
                     <PhoneCall className="w-5 h-5" />
                   </div>
                   <h4 className="font-heading text-lg font-bold mb-2">
                     Cần Tư Vấn Trực Tiếp Về {area.title}?
                   </h4>
-                  <p className="text-xs text-[#D1D5DB] leading-relaxed mb-6 font-body">
+                  <p className="text-xs text-slate-300 leading-relaxed mb-6 font-body">
                     Luật sư chuyên trách sẽ trực tiếp liên hệ và tư vấn hướng xử lý phù hợp cho hồ sơ của bạn.
                   </p>
                   <a
                     href="tel:0908033115"
-                    className="w-full py-3 rounded bg-[#AD8B55] hover:bg-[#92723E] text-white text-xs font-bold flex items-center justify-center gap-2 transition-colors mb-3"
+                    className="w-full py-3 rounded bg-[var(--color-accent)] hover:opacity-90 text-[var(--color-primary-dark)] text-xs font-bold flex items-center justify-center gap-2 transition-opacity mb-3"
                   >
                     <PhoneCall className="w-4 h-4" />
                     <span>Hotline: 0908 033 115</span>
                   </a>
                   <Link
                     href="/mau-3/lien-he"
-                    className="w-full py-2.5 rounded bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center justify-center transition-colors"
+                    className="w-full py-2.5 rounded bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center justify-center transition-colors border border-white/10"
                   >
                     Đặt Lịch Hẹn Tư Vấn
                   </Link>
                 </div>
 
                 {/* Other Practice Areas */}
-                <div className="bg-[#F8F9FA] rounded-2xl p-6 border border-[#E5E7EB]">
-                  <h4 className="font-heading text-sm font-bold text-[#17365D] uppercase tracking-wider mb-4">
+                <div className="bg-[var(--bg-section-alt)] rounded-2xl p-6 border border-[var(--color-border)]">
+                  <h4 className="font-heading text-sm font-bold text-[var(--color-primary)] uppercase tracking-wider mb-4">
                     Lĩnh Vực Khác
                   </h4>
                   <div className="space-y-2">
@@ -235,7 +235,7 @@ export default async function PracticeAreaDetailPage({ params }: Props) {
                       <Link
                         key={item.id}
                         href={`/mau-3/linh-vuc/${item.slug}`}
-                        className="block p-2.5 rounded-lg text-xs font-semibold text-[#4B5563] hover:text-[#17365D] hover:bg-white transition-colors"
+                        className="block p-2.5 rounded-lg text-xs font-semibold text-[var(--color-text)] hover:text-[var(--color-primary)] hover:bg-[var(--surface)] transition-colors"
                       >
                         {item.title}
                       </Link>

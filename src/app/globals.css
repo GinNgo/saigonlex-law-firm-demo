@@ -251,7 +251,7 @@
   }
 
   p {
-    color: #202124;
+    color: inherit;
     line-height: 1.7;
   }
 }

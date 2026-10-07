@@ -28,7 +28,7 @@ export function TrustBarMau3() {
   ];
 
   return (
-    <section className="bg-[#F8F9FA] border-b border-[#E5E7EB] py-7 sm:py-8">
+    <section className="bg-[var(--bg-section-alt)] border-b border-[var(--color-border)] py-7 sm:py-8 transition-colors duration-250">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {trustItems.map((item, idx) => {
@@ -36,16 +36,16 @@ export function TrustBarMau3() {
             return (
               <div
                 key={idx}
-                className="flex items-start gap-3.5 p-3 rounded-lg hover:bg-white/80 transition-colors duration-200"
+                className="flex items-start gap-3.5 p-3 rounded-lg hover:bg-[var(--surface)] transition-colors duration-200"
               >
-                <div className="w-10 h-10 rounded-lg bg-[#17365D]/5 border border-[#17365D]/10 flex items-center justify-center shrink-0 text-[#17365D]">
-                  <Icon className="w-5 h-5 text-[#AD8B55]" />
+                <div className="w-10 h-10 rounded-lg bg-[var(--color-primary)]/10 border border-[var(--color-primary)]/15 flex items-center justify-center shrink-0 text-[var(--color-primary)]">
+                  <Icon className="w-5 h-5 text-[var(--color-accent)]" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-sm font-bold text-[#17365D] mb-0.5">
+                  <h3 className="font-heading text-sm font-bold text-[var(--color-primary)] mb-0.5">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-[#5F6368] leading-relaxed font-body">
+                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed font-body">
                     {item.description}
                   </p>
                 </div>

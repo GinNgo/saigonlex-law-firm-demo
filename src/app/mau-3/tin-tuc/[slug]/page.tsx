@@ -63,7 +63,7 @@ export default async function NewsDetailPage({ params }: Props) {
 
       <main className="flex-1">
         {/* Banner */}
-        <section className="bg-gradient-to-r from-[#17365D] via-[#0E2945] to-[#17365D] text-white py-12 lg:py-14 border-b border-[#E5E7EB]">
+        <section className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--bg-dark)] to-[var(--color-primary)] text-white py-12 lg:py-14 border-b border-[var(--color-border)]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
@@ -74,7 +74,7 @@ export default async function NewsDetailPage({ params }: Props) {
               theme="dark"
             />
             <div className="mt-4">
-              <span className="px-3 py-1 rounded bg-[#AD8B55] text-white text-xs font-bold uppercase tracking-wider inline-block mb-3">
+              <span className="px-3 py-1 rounded bg-[var(--color-accent)] text-white text-xs font-bold uppercase tracking-wider inline-block mb-3">
                 {item.category}
               </span>
               <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-snug">
@@ -82,7 +82,7 @@ export default async function NewsDetailPage({ params }: Props) {
               </h1>
               <div className="flex items-center gap-4 text-xs text-[#D1D5DB] mt-4 pt-4 border-t border-white/10">
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-[#AD8B55]" />
+                  <Calendar className="w-3.5 h-3.5 text-[var(--color-accent)]" />
                   Ngày đăng: {item.publishDate}
                 </span>
                 <span>•</span>
@@ -93,10 +93,10 @@ export default async function NewsDetailPage({ params }: Props) {
         </section>
 
         {/* Content Area */}
-        <section className="py-12 sm:py-16 bg-white">
+        <section className="py-12 sm:py-16 bg-[var(--bg-section)]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Image */}
-            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-md border border-[#E5E7EB] mb-8">
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-md border border-[var(--color-border)] mb-8">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -108,34 +108,34 @@ export default async function NewsDetailPage({ params }: Props) {
             </div>
 
             {/* Lead text */}
-            <p className="text-base sm:text-lg font-medium text-[#17365D] leading-relaxed mb-6 font-heading">
+            <p className="text-base sm:text-lg font-medium text-[var(--color-primary)] leading-relaxed mb-6 font-heading">
               {item.excerpt}
             </p>
 
             {/* Content HTML */}
             <div
-              className="prose prose-slate max-w-none text-[#4B5563] text-sm sm:text-base leading-relaxed space-y-4 font-body"
+              className="prose prose-slate max-w-none text-[var(--color-text)] text-sm sm:text-base leading-relaxed space-y-4 font-body"
               dangerouslySetInnerHTML={{ __html: item.contentHtml }}
             />
 
             {/* Other News */}
-            <div className="mt-14 pt-10 border-t border-[#E5E7EB]">
-              <h3 className="font-heading text-lg font-bold text-[#17365D] mb-6">
+            <div className="mt-14 pt-10 border-t border-[var(--color-border)]">
+              <h3 className="font-heading text-lg font-bold text-[var(--color-primary)] mb-6">
                 Bản Tin Khác
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {otherNews.slice(0, 3).map((n) => (
                   <div
                     key={n.id}
-                    className="bg-[#F8F9FA] rounded-xl p-4 border border-[#E5E7EB] hover:border-[#AD8B55] transition-colors"
+                    className="bg-[var(--bg-section-alt)] rounded-xl p-4 border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-colors"
                   >
-                    <span className="text-[10px] font-bold text-[#AD8B55] block mb-1">
+                    <span className="text-[10px] font-bold text-[var(--color-accent)] block mb-1">
                       {n.category}
                     </span>
-                    <h4 className="font-heading text-xs font-bold text-[#17365D] hover:underline line-clamp-2 mb-2">
+                    <h4 className="font-heading text-xs font-bold text-[var(--color-primary)] hover:underline line-clamp-2 mb-2">
                       <Link href={`/mau-3/tin-tuc/${n.slug}`}>{n.title}</Link>
                     </h4>
-                    <span className="text-[10px] text-[#9CA3AF]">{n.publishDate}</span>
+                    <span className="text-[10px] text-[var(--color-text-muted)]">{n.publishDate}</span>
                   </div>
                 ))}
               </div>

@@ -32,17 +32,17 @@ export function CredentialsMau3() {
   ];
 
   return (
-    <section className="py-14 sm:py-16 bg-[#17365D] text-white">
+    <section className="py-14 sm:py-16 bg-[var(--bg-dark)] text-white transition-colors duration-250">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#AD8B55]/20 text-[#AD8B55] text-xs font-bold uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[var(--color-accent)]/20 text-[var(--color-accent)] text-xs font-bold uppercase tracking-wider mb-2">
             <Award className="w-3.5 h-3.5" />
             <span>TÍNH CHÍNH DANH PHÁP LÝ</span>
           </div>
           <h2 className="font-heading text-2xl sm:text-3xl font-bold tracking-tight mb-3">
             Năng Lực Hành Nghề & Pháp Lý Minh Bạch
           </h2>
-          <p className="text-[#D1D5DB] text-xs sm:text-sm font-body">
+          <p className="text-slate-300 text-xs sm:text-sm font-body">
             Cam kết hành nghề hợp pháp, đạo đức chuẩn mực và đặt trách nhiệm pháp lý lên vị trí cao nhất.
           </p>
         </div>
@@ -53,19 +53,19 @@ export function CredentialsMau3() {
             return (
               <div
                 key={idx}
-                className="bg-[#0E2945]/70 border border-white/10 rounded-xl p-6 flex flex-col justify-between hover:border-[#AD8B55]/60 transition-colors"
+                className="bg-black/25 border border-white/10 rounded-xl p-6 flex flex-col justify-between hover:border-[var(--color-accent)]/60 transition-colors"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-[#AD8B55]/20 text-[#AD8B55] flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-[var(--color-accent)]/20 text-[var(--color-accent)] flex items-center justify-center mb-4">
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="font-heading text-base font-bold text-white mb-1">
                     {cred.title}
                   </h3>
-                  <div className="text-xs font-semibold text-[#AD8B55] mb-3">
+                  <div className="text-xs font-semibold text-[var(--color-accent)] mb-3">
                     {cred.subtitle}
                   </div>
-                  <p className="text-xs text-[#9CA3AF] leading-relaxed">
+                  <p className="text-xs text-slate-300 leading-relaxed">
                     {cred.detail}
                   </p>
                 </div>

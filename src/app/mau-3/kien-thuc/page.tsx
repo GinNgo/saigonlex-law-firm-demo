@@ -37,7 +37,7 @@ export default function KnowledgeListMau3Page() {
 
       <main className="flex-1">
         {/* Banner */}
-        <section className="bg-gradient-to-r from-[#17365D] via-[#0E2945] to-[#17365D] text-white py-14 lg:py-16 border-b border-[#E5E7EB]">
+        <section className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--bg-dark)] to-[var(--color-primary)] text-white py-14 lg:py-16 border-b border-[var(--color-border)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
@@ -47,7 +47,7 @@ export default function KnowledgeListMau3Page() {
               theme="dark"
             />
             <div className="max-w-3xl mt-4 space-y-3">
-              <span className="text-xs font-bold text-[#AD8B55] uppercase tracking-widest block">
+              <span className="text-xs font-bold text-[var(--color-accent)] uppercase tracking-widest block">
                 BÌNH LUẬN & HƯỚNG DẪN THỰC TIỄN
               </span>
               <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
@@ -62,13 +62,13 @@ export default function KnowledgeListMau3Page() {
         </section>
 
         {/* Blog Posts Grid */}
-        <section className="py-16 sm:py-20 bg-white">
+        <section className="py-16 sm:py-20 bg-[var(--bg-section)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {BLOG_POSTS.map((post) => (
                 <div
                   key={post.id}
-                  className="bg-[#F8F9FA] rounded-2xl overflow-hidden border border-[#E5E7EB] hover:border-[#AD8B55] transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-md"
+                  className="bg-[var(--surface)] rounded-2xl overflow-hidden border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-md"
                 >
                   <div>
                     <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
@@ -79,44 +79,44 @@ export default function KnowledgeListMau3Page() {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute top-3 left-3 bg-[#17365D] text-white text-[11px] font-bold px-2.5 py-1 rounded">
+                      <div className="absolute top-3 left-3 bg-[var(--color-primary)] text-white text-[11px] font-bold px-2.5 py-1 rounded">
                         {post.category}
                       </div>
                     </div>
 
                     <div className="p-6">
-                      <div className="flex items-center gap-3 text-xs text-[#6B7280] mb-3">
+                      <div className="flex items-center gap-3 text-xs text-[var(--color-text-muted)] mb-3">
                         <span className="flex items-center gap-1">
-                          <Calendar className="w-3.5 h-3.5 text-[#AD8B55]" />
+                          <Calendar className="w-3.5 h-3.5 text-[var(--color-accent)]" />
                           {post.publishDate}
                         </span>
                         <span className="flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5 text-[#AD8B55]" />
+                          <Clock className="w-3.5 h-3.5 text-[var(--color-accent)]" />
                           {post.readTime}
                         </span>
                       </div>
 
-                      <h2 className="font-heading text-lg font-bold text-[#17365D] group-hover:text-[#AD8B55] transition-colors leading-snug mb-3 line-clamp-2">
+                      <h2 className="font-heading text-lg font-bold text-[var(--color-primary)] group-hover:text-[var(--color-accent)] transition-colors leading-snug mb-3 line-clamp-2">
                         <Link href={`/mau-3/kien-thuc/${post.slug}`}>
                           {post.title}
                         </Link>
                       </h2>
 
-                      <p className="text-xs sm:text-sm text-[#5F6368] leading-relaxed line-clamp-3 mb-4">
+                      <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-3 mb-4">
                         {post.excerpt}
                       </p>
                     </div>
                   </div>
 
-                  <div className="p-6 pt-0 border-t border-[#E5E7EB] flex items-center justify-between mt-auto">
-                    <span className="text-xs text-[#17365D] font-medium flex items-center gap-1.5">
-                      <User className="w-3.5 h-3.5 text-[#AD8B55]" />
+                  <div className="p-6 pt-0 border-t border-[var(--color-border)]/50 flex items-center justify-between mt-auto">
+                    <span className="text-xs text-[var(--color-primary)] font-medium flex items-center gap-1.5">
+                      <User className="w-3.5 h-3.5 text-[var(--color-accent)]" />
                       <span>{post.author}</span>
                     </span>
 
                     <Link
                       href={`/mau-3/kien-thuc/${post.slug}`}
-                      className="text-xs font-bold text-[#17365D] group-hover:text-[#AD8B55] inline-flex items-center gap-1"
+                      className="text-xs font-bold text-[var(--color-primary)] group-hover:text-[var(--color-accent)] inline-flex items-center gap-1"
                     >
                       <span>Chi tiết</span>
                       <ArrowRight className="w-3.5 h-3.5" />

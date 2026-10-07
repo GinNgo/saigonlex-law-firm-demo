@@ -44,7 +44,7 @@ export default function RecruitmentMau3Page() {
 
       <main className="flex-1">
         {/* Banner */}
-        <section className="bg-gradient-to-r from-[#17365D] via-[#0E2945] to-[#17365D] text-white py-14 lg:py-16 border-b border-[#E5E7EB]">
+        <section className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--bg-dark)] to-[var(--color-primary)] text-white py-14 lg:py-16 border-b border-[var(--color-border)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
@@ -54,7 +54,7 @@ export default function RecruitmentMau3Page() {
               theme="dark"
             />
             <div className="max-w-3xl mt-4 space-y-3">
-              <span className="text-xs font-bold text-[#AD8B55] uppercase tracking-widest block">
+              <span className="text-xs font-bold text-[var(--color-accent)] uppercase tracking-widest block">
                 GIA NHẬP ĐỘI NGŨ SAIGONLEX
               </span>
               <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
@@ -69,41 +69,41 @@ export default function RecruitmentMau3Page() {
         </section>
 
         {/* Culture & Benefits */}
-        <section className="py-14 bg-[#F8F9FA] border-b border-[#E5E7EB]">
+        <section className="py-14 bg-[var(--bg-section-alt)] border-b border-[var(--color-border)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-xl border border-[#E5E7EB] shadow-sm">
-                <div className="w-10 h-10 rounded-lg bg-[#17365D]/5 text-[#17365D] flex items-center justify-center mb-3">
-                  <Award className="w-5 h-5 text-[#AD8B55]" />
+              <div className="bg-[var(--surface)] p-6 rounded-xl border border-[var(--color-border)] shadow-sm">
+                <div className="w-10 h-10 rounded-lg bg-[var(--color-primary)]/10 text-[var(--color-primary)] flex items-center justify-center mb-3">
+                  <Award className="w-5 h-5 text-[var(--color-accent)]" />
                 </div>
-                <h3 className="font-heading text-base font-bold text-[#17365D] mb-1">
+                <h3 className="font-heading text-base font-bold text-[var(--color-primary)] mb-1">
                   Đào Tạo & Kèm Cặp Thực Chiến
                 </h3>
-                <p className="text-xs text-[#5F6368] leading-relaxed">
+                <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
                   Được trực tiếp hướng dẫn bởi Luật sư Điều hành và các Luật sư thành viên dày dạn kinh nghiệm.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-xl border border-[#E5E7EB] shadow-sm">
-                <div className="w-10 h-10 rounded-lg bg-[#17365D]/5 text-[#17365D] flex items-center justify-center mb-3">
-                  <Building2 className="w-5 h-5 text-[#AD8B55]" />
+              <div className="bg-[var(--surface)] p-6 rounded-xl border border-[var(--color-border)] shadow-sm">
+                <div className="w-10 h-10 rounded-lg bg-[var(--color-primary)]/10 text-[var(--color-primary)] flex items-center justify-center mb-3">
+                  <Building2 className="w-5 h-5 text-[var(--color-accent)]" />
                 </div>
-                <h3 className="font-heading text-base font-bold text-[#17365D] mb-1">
+                <h3 className="font-heading text-base font-bold text-[var(--color-primary)] mb-1">
                   Môi Trường Chuyên Nghiệp
                 </h3>
-                <p className="text-xs text-[#5F6368] leading-relaxed">
+                <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
                   Văn phòng tiện nghi tại trung tâm Quận 1, tiếp cận nguồn khách hàng đa dạng trong và ngoài nước.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-xl border border-[#E5E7EB] shadow-sm">
-                <div className="w-10 h-10 rounded-lg bg-[#17365D]/5 text-[#17365D] flex items-center justify-center mb-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#AD8B55]" />
+              <div className="bg-[var(--surface)] p-6 rounded-xl border border-[var(--color-border)] shadow-sm">
+                <div className="w-10 h-10 rounded-lg bg-[var(--color-primary)]/10 text-[var(--color-primary)] flex items-center justify-center mb-3">
+                  <CheckCircle2 className="w-5 h-5 text-[var(--color-accent)]" />
                 </div>
-                <h3 className="font-heading text-base font-bold text-[#17365D] mb-1">
+                <h3 className="font-heading text-base font-bold text-[var(--color-primary)] mb-1">
                   Đãi Ngộ Cạnh Tranh & Thưởng Dự Án
                 </h3>
-                <p className="text-xs text-[#5F6368] leading-relaxed">
+                <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
                   Lương cứng tương xứng năng lực kèm thưởng hiệu quả vụ việc minh bạch và cơ hội trở thành Partner.
                 </p>
               </div>
@@ -112,13 +112,13 @@ export default function RecruitmentMau3Page() {
         </section>
 
         {/* Positions List */}
-        <section className="py-16 sm:py-20 bg-white">
+        <section className="py-16 sm:py-20 bg-[var(--bg-section)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div>
-              <h2 className="font-heading text-2xl font-bold text-[#17365D] mb-2">
+              <h2 className="font-heading text-2xl font-bold text-[var(--color-primary)] mb-2">
                 Các Vị Trí Đang Mở Tuyển Dụng
               </h2>
-              <p className="text-sm text-[#5F6368]">
+              <p className="text-sm text-[var(--color-text-muted)]">
                 Vui lòng xem chi tiết mô tả công việc và gửi CV trực tiếp đến email nhân sự của SaigonLex.
               </p>
             </div>
@@ -127,30 +127,30 @@ export default function RecruitmentMau3Page() {
               {JOB_OPENINGS_MAU3.map((job) => (
                 <div
                   key={job.id}
-                  className="bg-[#F8F9FA] rounded-2xl p-7 sm:p-9 border border-[#E5E7EB] shadow-sm"
+                  className="bg-[var(--bg-section-alt)] rounded-2xl p-7 sm:p-9 border border-[var(--color-border)] shadow-sm"
                 >
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-[#E5E7EB]">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-[var(--color-border)]">
                     <div>
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="px-2.5 py-0.5 rounded bg-[#17365D] text-white text-xs font-bold">
+                        <span className="px-2.5 py-0.5 rounded bg-[var(--color-primary)] text-white text-xs font-bold">
                           {job.department}
                         </span>
-                        <span className="px-2.5 py-0.5 rounded bg-white text-[#17365D] border border-[#E5E7EB] text-xs font-semibold">
+                        <span className="px-2.5 py-0.5 rounded bg-[var(--surface)] text-[var(--color-primary)] border border-[var(--color-border)] text-xs font-semibold">
                           {job.employmentType}
                         </span>
                       </div>
-                      <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#17365D]">
+                      <h3 className="font-heading text-xl sm:text-2xl font-bold text-[var(--color-primary)]">
                         {job.position}
                       </h3>
                     </div>
 
-                    <div className="text-xs text-[#5F6368] space-y-1">
+                    <div className="text-xs text-[var(--color-text-muted)] space-y-1">
                       <div className="flex items-center gap-1.5">
-                        <MapPin className="w-3.5 h-3.5 text-[#AD8B55]" />
+                        <MapPin className="w-3.5 h-3.5 text-[var(--color-accent)]" />
                         <span>Địa điểm: {job.location}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <Calendar className="w-3.5 h-3.5 text-[#AD8B55]" />
+                        <Calendar className="w-3.5 h-3.5 text-[var(--color-accent)]" />
                         <span>Hạn nộp: {job.deadline}</span>
                       </div>
                     </div>
@@ -158,13 +158,13 @@ export default function RecruitmentMau3Page() {
 
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div>
-                      <h4 className="text-xs font-bold text-[#17365D] uppercase tracking-wider mb-3">
+                      <h4 className="text-xs font-bold text-[var(--color-primary)] uppercase tracking-wider mb-3">
                         Yêu cầu ứng viên:
                       </h4>
                       <ul className="space-y-2">
                         {job.requirements.map((req, rIdx) => (
-                          <li key={rIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#4B5563]">
-                            <CheckCircle2 className="w-4 h-4 text-[#AD8B55] shrink-0 mt-0.5" />
+                          <li key={rIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[var(--color-text)]">
+                            <CheckCircle2 className="w-4 h-4 text-[var(--color-accent)] shrink-0 mt-0.5" />
                             <span>{req}</span>
                           </li>
                         ))}
@@ -172,25 +172,25 @@ export default function RecruitmentMau3Page() {
                     </div>
 
                     <div>
-                      <h4 className="text-xs font-bold text-[#17365D] uppercase tracking-wider mb-3">
+                      <h4 className="text-xs font-bold text-[var(--color-primary)] uppercase tracking-wider mb-3">
                         Quyền lợi được hưởng:
                       </h4>
                       <ul className="space-y-2 mb-6">
                         {job.benefits.map((ben, bIdx) => (
-                          <li key={bIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#4B5563]">
+                          <li key={bIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[var(--color-text)]">
                             <CheckCircle2 className="w-4 h-4 text-[#10B981] shrink-0 mt-0.5" />
                             <span>{ben}</span>
                           </li>
                         ))}
                       </ul>
 
-                      <div className="p-4 rounded-xl bg-white border border-[#E5E7EB] flex items-center justify-between">
-                        <span className="text-xs font-semibold text-[#17365D]">
+                      <div className="p-4 rounded-xl bg-[var(--surface)] border border-[var(--color-border)] flex items-center justify-between">
+                        <span className="text-xs font-semibold text-[var(--color-primary)]">
                           Gửi CV: contact@saigonlex.vn
                         </span>
                         <a
                           href={`mailto:contact@saigonlex.vn?subject=Ứng tuyển ${encodeURIComponent(job.position)}`}
-                          className="px-4 py-2 rounded bg-[#17365D] hover:bg-[#0E2945] text-white text-xs font-bold transition-colors"
+                          className="px-4 py-2 rounded bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-xs font-bold transition-colors"
                         >
                           Ứng tuyển ngay
                         </a>

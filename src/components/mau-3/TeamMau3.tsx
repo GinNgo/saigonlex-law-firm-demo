@@ -47,19 +47,19 @@ export function TeamMau3() {
   ];
 
   return (
-    <section id="doi-ngu" className="py-16 sm:py-20 lg:py-24 bg-white border-b border-[#E5E7EB]">
+    <section id="doi-ngu" className="py-16 sm:py-20 lg:py-24 bg-[var(--bg-section)] border-b border-[var(--color-border)] transition-colors duration-250">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#17365D]/5 text-[#17365D] text-xs font-bold uppercase tracking-wider mb-3">
-              <Scale className="w-3.5 h-3.5 text-[#AD8B55]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-xs font-bold uppercase tracking-wider mb-3">
+              <Scale className="w-3.5 h-3.5 text-[var(--color-accent)]" />
               <span>ĐỘI NGŨ LUẬT SƯ & CHUYÊN GIA</span>
             </div>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[#17365D] tracking-tight mb-4">
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--color-primary)] tracking-tight mb-4">
               Người Đồng Hành Đáng Tin Cậy Của Thân Chủ
             </h2>
-            <p className="text-[#5F6368] text-sm sm:text-base font-body leading-relaxed">
+            <p className="text-[var(--color-text-secondary)] text-sm sm:text-base font-body leading-relaxed">
               Các luật sư thành viên và cộng sự của SaigonLex đều có chứng chỉ hành nghề chính thức,
               kinh nghiệm thực tiễn phong phú và luôn đặt đạo đức nghề nghiệp lên hàng đầu.
             </p>
@@ -68,10 +68,10 @@ export function TeamMau3() {
           <div className="mt-6 md:mt-0">
             <Link
               href="/mau-3/doi-ngu"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#17365D] hover:text-[#AD8B55] transition-colors group"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors group"
             >
               <span>Xem đầy đủ hồ sơ nhân sự</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-[#AD8B55]" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-[var(--color-accent)]" />
             </Link>
           </div>
         </div>
@@ -85,8 +85,8 @@ export function TeamMau3() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.35, delay: idx * 0.08 }}
-              className={`bg-[#F8F9FA] rounded-xl overflow-hidden border border-[#E5E7EB] hover:border-[#AD8B55] transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-md ${
-                member.featured ? "ring-2 ring-[#AD8B55]/30" : ""
+              className={`bg-[var(--surface)] rounded-xl overflow-hidden border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-md ${
+                member.featured ? "ring-2 ring-[var(--color-accent)]/30" : ""
               }`}
             >
               <div>
@@ -99,28 +99,28 @@ export function TeamMau3() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-dark)]/85 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
                   {member.featured && (
-                    <div className="absolute top-3 left-3 bg-[#AD8B55] text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded shadow">
+                    <div className="absolute top-3 left-3 bg-[var(--color-accent)] text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded shadow">
                       Managing Partner
                     </div>
                   )}
 
                   <div className="absolute bottom-3 left-3 right-3 text-white">
-                    <div className="text-[11px] font-medium text-[#F5F1E9]">{member.credentials}</div>
+                    <div className="text-[11px] font-medium text-slate-200">{member.credentials}</div>
                   </div>
                 </div>
 
                 {/* Info Content */}
                 <div className="p-5">
-                  <h3 className="font-heading text-base font-bold text-[#17365D] mb-1">
+                  <h3 className="font-heading text-base font-bold text-[var(--color-primary)] mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-xs font-semibold text-[#AD8B55] mb-3">
+                  <p className="text-xs font-semibold text-[var(--color-accent)] mb-3">
                     {member.role}
                   </p>
-                  <p className="text-xs text-[#5F6368] leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed mb-4 line-clamp-3">
                     {member.experience}
                   </p>
 
@@ -129,7 +129,7 @@ export function TeamMau3() {
                     {member.specialties.map((spec, i) => (
                       <span
                         key={i}
-                        className="text-[10px] bg-white text-[#17365D] px-2 py-0.5 rounded border border-[#E5E7EB] font-medium"
+                        className="text-[10px] bg-[var(--bg-section-alt)] text-[var(--color-primary)] px-2 py-0.5 rounded border border-[var(--color-border)] font-medium"
                       >
                         {spec}
                       </span>
@@ -142,7 +142,7 @@ export function TeamMau3() {
               <div className="p-5 pt-0">
                 <Link
                   href="/mau-3/doi-ngu"
-                  className="w-full py-2 rounded bg-white text-center text-xs font-semibold text-[#17365D] border border-[#E5E7EB] hover:bg-[#17365D] hover:text-white transition-colors block"
+                  className="w-full py-2 rounded bg-[var(--surface)] text-center text-xs font-semibold text-[var(--color-primary)] border border-[var(--color-border)] hover:bg-[var(--color-primary)] hover:text-white transition-colors block"
                 >
                   Xem chi tiết kinh nghiệm
                 </Link>

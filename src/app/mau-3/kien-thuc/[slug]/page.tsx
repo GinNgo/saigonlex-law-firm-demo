@@ -73,7 +73,7 @@ export default async function KnowledgeDetailPage({ params }: Props) {
 
       <main className="flex-1">
         {/* Banner with Breadcrumbs */}
-        <section className="bg-gradient-to-r from-[#17365D] via-[#0E2945] to-[#17365D] text-white py-12 lg:py-14 border-b border-[#E5E7EB]">
+        <section className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--bg-dark)] to-[var(--color-primary)] text-white py-12 lg:py-14 border-b border-[var(--color-border)]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
               items={[
@@ -84,7 +84,7 @@ export default async function KnowledgeDetailPage({ params }: Props) {
               theme="dark"
             />
             <div className="mt-4">
-              <span className="px-3 py-1 rounded bg-[#AD8B55] text-white text-xs font-bold uppercase tracking-wider inline-block mb-3">
+              <span className="px-3 py-1 rounded bg-[var(--color-accent)] text-white text-xs font-bold uppercase tracking-wider inline-block mb-3">
                 {post.category}
               </span>
               <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-snug">
@@ -93,15 +93,15 @@ export default async function KnowledgeDetailPage({ params }: Props) {
 
               <div className="flex flex-wrap items-center gap-4 text-xs text-[#D1D5DB] mt-4 pt-4 border-t border-white/10">
                 <span className="flex items-center gap-1.5">
-                  <User className="w-3.5 h-3.5 text-[#AD8B55]" />
+                  <User className="w-3.5 h-3.5 text-[var(--color-accent)]" />
                   {post.author} ({post.authorRole})
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-[#AD8B55]" />
+                  <Calendar className="w-3.5 h-3.5 text-[var(--color-accent)]" />
                   {post.publishDate}
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[#AD8B55]" />
+                  <Clock className="w-3.5 h-3.5 text-[var(--color-accent)]" />
                   {post.readTime}
                 </span>
               </div>
@@ -110,10 +110,10 @@ export default async function KnowledgeDetailPage({ params }: Props) {
         </section>
 
         {/* Content Area */}
-        <section className="py-12 sm:py-16 bg-white">
+        <section className="py-12 sm:py-16 bg-[var(--bg-section)]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Featured Image */}
-            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-lg border border-[#E5E7EB] mb-8">
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-lg border border-[var(--color-border)] mb-8">
               <Image
                 src={post.image || "/images/blog-1.png"}
                 alt={post.title}
@@ -126,9 +126,9 @@ export default async function KnowledgeDetailPage({ params }: Props) {
 
             {/* Table of Contents */}
             {post.tableOfContents && post.tableOfContents.length > 0 && (
-              <div className="bg-[#F8F9FA] rounded-xl p-6 border border-[#E5E7EB] mb-10">
-                <div className="flex items-center gap-2 font-heading text-sm font-bold text-[#17365D] uppercase tracking-wider mb-3">
-                  <List className="w-4 h-4 text-[#AD8B55]" />
+              <div className="bg-[var(--bg-section-alt)] rounded-xl p-6 border border-[var(--color-border)] mb-10">
+                <div className="flex items-center gap-2 font-heading text-sm font-bold text-[var(--color-primary)] uppercase tracking-wider mb-3">
+                  <List className="w-4 h-4 text-[var(--color-accent)]" />
                   <span>Mục lục bài viết</span>
                 </div>
                 <ul className="space-y-2 text-xs sm:text-sm">
@@ -136,7 +136,7 @@ export default async function KnowledgeDetailPage({ params }: Props) {
                     <li key={item.id}>
                       <a
                         href={`#${item.id}`}
-                        className="text-[#4B5563] hover:text-[#17365D] hover:underline"
+                        className="text-[var(--color-text)] hover:text-[var(--color-primary)] hover:underline"
                       >
                         {item.title}
                       </a>
@@ -148,19 +148,19 @@ export default async function KnowledgeDetailPage({ params }: Props) {
 
             {/* HTML Body */}
             <div
-              className="prose prose-slate max-w-none text-[#202124] leading-relaxed font-body text-base space-y-4"
+              className="prose prose-slate max-w-none text-[var(--color-text)] leading-relaxed font-body text-base space-y-4"
               dangerouslySetInnerHTML={{ __html: post.contentHtml }}
             />
 
             {/* Tags */}
             {post.tags && post.tags.length > 0 && (
-              <div className="mt-10 pt-6 border-t border-[#E5E7EB] flex flex-wrap items-center gap-2">
-                <Tag className="w-4 h-4 text-[#AD8B55]" />
-                <span className="text-xs font-bold text-[#17365D]">Từ khóa:</span>
+              <div className="mt-10 pt-6 border-t border-[var(--color-border)] flex flex-wrap items-center gap-2">
+                <Tag className="w-4 h-4 text-[var(--color-accent)]" />
+                <span className="text-xs font-bold text-[var(--color-primary)]">Từ khóa:</span>
                 {post.tags.map((t, i) => (
                   <span
                     key={i}
-                    className="text-xs bg-[#F3F4F6] text-[#4B5563] px-2.5 py-1 rounded-md"
+                    className="text-xs bg-[var(--bg-section-alt)] text-[var(--color-text)] px-2.5 py-1 rounded-md border border-[var(--color-border)]"
                   >
                     #{t}
                   </span>

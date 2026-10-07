@@ -98,9 +98,13 @@ export function HeaderMau3() {
   ];
 
   return (
-    <header className="w-full select-none z-30 relative">
+    <header className="sticky top-0 z-40 w-full bg-white select-none transition-shadow duration-300 shadow-xs">
       {/* 01. Top Information Bar (Corporate standard) */}
-      <div className="bg-[#0E2945] text-slate-200 text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-white/10 hidden md:block">
+      <div
+        className={`bg-[#0E2945] text-slate-200 text-xs px-4 sm:px-6 lg:px-8 border-b border-white/10 hidden md:block transition-all duration-300 overflow-hidden ${
+          isScrolled ? "max-h-0 py-0 opacity-0 border-b-0" : "max-h-12 py-2 opacity-100"
+        }`}
+      >
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           <div className="flex items-center gap-6 text-[12.5px]">
             <a
@@ -136,13 +140,13 @@ export function HeaderMau3() {
         </div>
       </div>
 
-      {/* 02. Premium Sticky Header */}
+      {/* 02. Premium Main Navbar */}
       <nav
         aria-label="Menu chính"
-        className={`w-full transition-all duration-300 ${
+        className={`w-full transition-all duration-200 border-b ${
           isScrolled
-            ? "sticky top-0 bg-white/98 text-[#171A1F] shadow-md backdrop-blur-md py-3.5 border-b border-stone-200"
-            : "bg-white text-[#171A1F] py-4 border-b border-stone-200/80"
+            ? "bg-white/98 text-[#171A1F] shadow-sm backdrop-blur-md py-3 border-stone-200"
+            : "bg-white text-[#171A1F] py-3.5 sm:py-4 border-stone-200/80"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -469,9 +473,9 @@ export function HeaderMau3() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="lg:hidden bg-white border-b border-stone-200 overflow-hidden shadow-2xl"
+            className="lg:hidden bg-white border-b border-stone-200 overflow-hidden shadow-2xl max-h-[calc(100vh-70px)] overflow-y-auto"
           >
-            <div className="px-4 py-5 space-y-3 max-h-[80vh] overflow-y-auto">
+            <div className="px-4 py-5 space-y-3">
               <div className="space-y-1">
                 {navLinks.map((item) => {
                   if (item.hasDropdown === "resources") {

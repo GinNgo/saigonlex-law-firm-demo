@@ -172,7 +172,7 @@ export function HeaderMau2() {
 
         {/* Mobile menu drawer */}
         {mobileOpen && (
-          <div className="lg:hidden bg-[var(--surface)] border-t border-[var(--color-border)] px-6 py-6 space-y-4">
+          <div className="lg:hidden bg-[var(--surface)] border-t border-[var(--color-border)] px-6 py-6 space-y-4 max-h-[calc(100vh-70px)] overflow-y-auto">
             <div className="flex flex-col space-y-2">
               {navLinks.map((link) => (
                 <Link

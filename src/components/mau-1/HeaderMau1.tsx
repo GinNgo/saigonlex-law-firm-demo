@@ -51,7 +51,7 @@ export function HeaderMau1() {
       {/* Executive Top Bar */}
       <div
         className={`bg-[var(--bg-dark)] text-slate-200 text-xs px-4 border-b border-white/10 hidden md:block transition-all duration-300 overflow-hidden ${
-          isScrolled ? "max-h-0 py-0 opacity-0 border-b-0" : "max-h-12 py-2 opacity-100"
+          isScrolled ? "max-h-0 py-0 opacity-0 border-b-0" : "max-h-12 md:py-2 opacity-100"
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">

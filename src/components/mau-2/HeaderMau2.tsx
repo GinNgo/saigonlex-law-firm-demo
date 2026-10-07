@@ -37,7 +37,7 @@ export function HeaderMau2() {
       {/* Editorial Micro Header Strip */}
       <div
         className={`bg-[var(--bg-section-alt)] text-[var(--color-text-secondary)] text-[11px] px-4 border-b border-[var(--color-border)] hidden md:block transition-all duration-300 overflow-hidden ${
-          isScrolled ? "max-h-0 py-0 opacity-0 border-b-0" : "max-h-10 py-1.5 opacity-100"
+          isScrolled ? "max-h-0 py-0 opacity-0 border-b-0" : "max-h-10 md:py-1.5 opacity-100"
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">

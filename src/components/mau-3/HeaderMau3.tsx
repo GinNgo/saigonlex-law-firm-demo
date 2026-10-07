@@ -18,9 +18,46 @@ import {
   Briefcase,
   FileText,
   Users,
-  Scale
+  Scale,
+  BookOpen,
+  Newspaper
 } from "lucide-react";
 import { PRACTICE_AREAS_MAU3, FEATURED_SERVICES_MAU3 } from "@/data/mau3Data";
+
+const RESOURCE_ITEMS_MAU3 = [
+  {
+    title: "Tin tức & Sự kiện",
+    desc: "Cập nhật hoạt động SaigonLex, thông cáo & án lệ",
+    href: "/mau-3/tin-tuc",
+    icon: Newspaper,
+    badge: "Mới",
+    badgeColor: "bg-red-50 text-red-700 border border-red-200/60"
+  },
+  {
+    title: "Kiến thức pháp lý",
+    desc: "Cẩm nang chuyên sâu, giải đáp & phân tích văn bản",
+    href: "/mau-3/kien-thuc",
+    icon: BookOpen,
+    badge: "Chuyên sâu",
+    badgeColor: "bg-blue-50 text-blue-700 border border-blue-200/60"
+  },
+  {
+    title: "Biểu mẫu pháp luật",
+    desc: "Kho biểu mẫu chuẩn doanh nghiệp & tố tụng tải về",
+    href: "/mau-3/bieu-mau",
+    icon: FileText,
+    badge: "Tải mẫu",
+    badgeColor: "bg-emerald-50 text-emerald-700 border border-emerald-200/60"
+  },
+  {
+    title: "Tuyển dụng nhân tài",
+    desc: "Cơ hội nghề nghiệp luật sư, cộng sự & thực tập sinh",
+    href: "/mau-3/tuyen-dung",
+    icon: Briefcase,
+    badge: "Đang tuyển",
+    badgeColor: "bg-amber-50 text-amber-700 border border-amber-200/60"
+  }
+];
 
 export function HeaderMau3() {
   const pathname = usePathname();
@@ -28,6 +65,7 @@ export function HeaderMau3() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [practiceDropdownOpen, setPracticeDropdownOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,10 +89,11 @@ export function HeaderMau3() {
       hasDropdown: "services"
     },
     { label: "Đội ngũ", href: "/mau-3/doi-ngu" },
-    { label: "Kiến thức", href: "/mau-3/kien-thuc" },
-    { label: "Biểu mẫu", href: "/mau-3/bieu-mau" },
-    { label: "Tin tức", href: "/mau-3/tin-tuc" },
-    { label: "Tuyển dụng", href: "/mau-3/tuyen-dung" },
+    {
+      label: "Tài nguyên & Tin tức",
+      href: "/mau-3/tin-tuc",
+      hasDropdown: "resources"
+    },
     { label: "Liên hệ", href: "/mau-3/lien-he" }
   ];
 
@@ -130,7 +169,7 @@ export function HeaderMau3() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden xl:flex items-center gap-1 lg:gap-2">
+          <div className="hidden lg:flex items-center gap-1 xl:gap-2">
             {navLinks.map((item) => {
               const isActive =
                 item.href === "/mau-3"
@@ -275,6 +314,106 @@ export function HeaderMau3() {
                 );
               }
 
+              if (item.hasDropdown === "resources") {
+                const isResourcesActive =
+                  pathname.startsWith("/mau-3/tin-tuc") ||
+                  pathname.startsWith("/mau-3/kien-thuc") ||
+                  pathname.startsWith("/mau-3/bieu-mau") ||
+                  pathname.startsWith("/mau-3/tuyen-dung");
+
+                return (
+                  <div
+                    key={item.href}
+                    className="relative"
+                    onMouseEnter={() => setResourcesDropdownOpen(true)}
+                    onMouseLeave={() => setResourcesDropdownOpen(false)}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setResourcesDropdownOpen(!resourcesDropdownOpen)}
+                      className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1 transition cursor-pointer ${
+                        isResourcesActive
+                          ? "text-[#17365D] bg-stone-100/90 font-bold"
+                          : "text-[#202124] hover:text-[#17365D] hover:bg-stone-50"
+                      }`}
+                    >
+                      <span>{item.label}</span>
+                      <ChevronDown
+                        className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                          resourcesDropdownOpen ? "rotate-180 text-[#17365D]" : "text-stone-400"
+                        }`}
+                      />
+                    </button>
+
+                    {/* Resources Dropdown */}
+                    <AnimatePresence>
+                      {resourcesDropdownOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 8 }}
+                          transition={{ duration: 0.18 }}
+                          className="absolute top-full left-0 w-[380px] bg-white rounded-2xl shadow-2xl border border-stone-200 p-3 space-y-1 z-50 mt-1"
+                        >
+                          <div className="px-3 py-2 border-b border-stone-100 flex items-center justify-between">
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-stone-500">
+                              Tài Nguyên & Truyền Thông
+                            </span>
+                            <span className="text-[10px] bg-amber-50 text-[#AD8B55] font-semibold px-2 py-0.5 rounded-full border border-amber-200/60">
+                              Cập nhật liên tục
+                            </span>
+                          </div>
+                          {RESOURCE_ITEMS_MAU3.map((res) => {
+                            const Icon = res.icon;
+                            const isItemActive =
+                              pathname === res.href || pathname.startsWith(res.href + "/");
+                            return (
+                              <Link
+                                key={res.href}
+                                href={res.href}
+                                onClick={() => setResourcesDropdownOpen(false)}
+                                className={`group/item p-2.5 rounded-xl hover:bg-stone-50 transition flex items-start gap-3 border ${
+                                  isItemActive
+                                    ? "bg-stone-50 border-stone-200"
+                                    : "border-transparent"
+                                }`}
+                              >
+                                <div
+                                  className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition ${
+                                    isItemActive
+                                      ? "bg-[#17365D] text-white"
+                                      : "bg-stone-100 text-[#17365D] group-hover/item:bg-[#17365D] group-hover/item:text-white"
+                                  }`}
+                                >
+                                  <Icon className="w-4 h-4" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <div className="flex items-center justify-between gap-1">
+                                    <h4 className="text-xs font-bold text-[#111827] group-hover/item:text-[#17365D] transition">
+                                      {res.title}
+                                    </h4>
+                                    {res.badge && (
+                                      <span
+                                        className={`text-[10px] font-semibold px-1.5 py-0.5 rounded ${res.badgeColor}`}
+                                      >
+                                        {res.badge}
+                                      </span>
+                                    )}
+                                  </div>
+                                  <p className="text-[11px] text-stone-500 line-clamp-1 mt-0.5">
+                                    {res.desc}
+                                  </p>
+                                </div>
+                              </Link>
+                            );
+                          })}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={item.href}
@@ -303,7 +442,7 @@ export function HeaderMau3() {
           </div>
 
           {/* Mobile Menu Hamburger Button */}
-          <div className="flex xl:hidden items-center gap-2">
+          <div className="flex lg:hidden items-center gap-2">
             <a
               href="tel:0908033115"
               className="p-2 rounded-lg bg-stone-100 text-[#17365D] sm:hidden"
@@ -330,11 +469,58 @@ export function HeaderMau3() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="xl:hidden bg-white border-b border-stone-200 overflow-hidden shadow-2xl"
+            className="lg:hidden bg-white border-b border-stone-200 overflow-hidden shadow-2xl"
           >
             <div className="px-4 py-5 space-y-3 max-h-[80vh] overflow-y-auto">
               <div className="space-y-1">
                 {navLinks.map((item) => {
+                  if (item.hasDropdown === "resources") {
+                    return (
+                      <div
+                        key={item.href}
+                        className="rounded-xl border border-stone-200/80 bg-stone-50/70 p-2.5 space-y-1.5 my-2"
+                      >
+                        <div className="px-1.5 py-1 text-xs font-bold uppercase tracking-wider text-[#17365D] flex items-center justify-between">
+                          <span>{item.label}</span>
+                          <span className="text-[10px] bg-stone-200/80 text-stone-700 px-1.5 py-0.5 rounded font-medium">
+                            4 chuyên mục
+                          </span>
+                        </div>
+                        <div className="space-y-1">
+                          {RESOURCE_ITEMS_MAU3.map((res) => {
+                            const Icon = res.icon;
+                            const isItemActive =
+                              pathname === res.href || pathname.startsWith(res.href + "/");
+                            return (
+                              <Link
+                                key={res.href}
+                                href={res.href}
+                                onClick={() => setMobileMenuOpen(false)}
+                                className={`flex items-center justify-between px-3 py-2 rounded-lg text-xs font-semibold transition ${
+                                  isItemActive
+                                    ? "bg-white text-[#17365D] font-bold shadow-xs border border-stone-200"
+                                    : "text-stone-700 hover:bg-white"
+                                }`}
+                              >
+                                <span className="flex items-center gap-2">
+                                  <Icon className="w-3.5 h-3.5 text-[#AD8B55]" />
+                                  <span>{res.title}</span>
+                                </span>
+                                {res.badge && (
+                                  <span
+                                    className={`text-[9.5px] px-1.5 py-0.5 rounded ${res.badgeColor}`}
+                                  >
+                                    {res.badge}
+                                  </span>
+                                )}
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  }
+
                   const isActive =
                     item.href === "/mau-3"
                       ? pathname === "/mau-3"

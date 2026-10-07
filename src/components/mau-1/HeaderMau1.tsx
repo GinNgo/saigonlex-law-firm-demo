@@ -47,11 +47,11 @@ export function HeaderMau1() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[var(--surface)] transition-shadow duration-300">
+    <header className="sticky top-0 z-40 w-full bg-[var(--surface)] transition-shadow duration-200 transform-gpu shadow-xs">
       {/* Executive Top Bar */}
       <div
-        className={`bg-[var(--bg-dark)] text-slate-200 text-xs px-4 border-b border-white/10 hidden md:block transition-all duration-300 overflow-hidden ${
-          isScrolled ? "max-h-0 py-0 opacity-0 border-b-0" : "max-h-12 md:py-2 opacity-100"
+        className={`bg-[var(--bg-dark)] text-slate-200 text-xs px-4 border-b border-white/10 hidden md:block md:transition-all md:duration-300 md:overflow-hidden ${
+          isScrolled ? "md:max-h-0 md:py-0 md:opacity-0 md:border-b-0" : "md:max-h-12 md:py-2 md:opacity-100"
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -89,13 +89,13 @@ export function HeaderMau1() {
 
       {/* Main Navbar */}
       <div
-        className={`w-full transition-all duration-200 border-b ${
+        className={`w-full border-b transition-colors duration-200 ${
           isScrolled
-            ? "bg-[var(--surface)]/95 backdrop-blur-md shadow-sm border-[var(--color-border)] py-3"
-            : "relative bg-[var(--surface)] border-[var(--color-border)] py-4"
+            ? "bg-[var(--surface)]/98 backdrop-blur-md shadow-sm border-[var(--color-border)] md:py-3"
+            : "bg-[var(--surface)] border-[var(--color-border)] md:py-4"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-auto flex items-center justify-between">
           {/* Logo */}
           <Link href="/mau-1" className="flex items-center gap-3.5 group">
             <div className="w-10 h-10 rounded-sm bg-[var(--color-primary)] text-[var(--color-accent)] flex items-center justify-center font-bold shadow-sm group-hover:bg-[var(--color-primary-dark)] transition">

@@ -199,11 +199,11 @@
   }
 
   html {
-    scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 16px;
+    overflow-x: clip;
   }
 
   body {
@@ -213,7 +213,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    overflow-x: hidden;
+    overflow-x: clip;
     transition: background-color 0.25s ease, color 0.25s ease;
   }
 

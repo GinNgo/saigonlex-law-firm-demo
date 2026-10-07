@@ -98,11 +98,11 @@ export function HeaderMau3() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-white select-none transition-shadow duration-300 shadow-xs">
+    <header className="sticky top-0 z-40 w-full bg-white select-none transition-shadow duration-200 transform-gpu shadow-xs">
       {/* 01. Top Information Bar (Corporate standard) */}
       <div
-        className={`bg-[#0E2945] text-slate-200 text-xs px-4 sm:px-6 lg:px-8 border-b border-white/10 hidden md:block transition-all duration-300 overflow-hidden ${
-          isScrolled ? "max-h-0 py-0 opacity-0 border-b-0" : "max-h-12 md:py-2 opacity-100"
+        className={`bg-[#0E2945] text-slate-200 text-xs px-4 sm:px-6 lg:px-8 border-b border-white/10 hidden md:block md:transition-all md:duration-300 md:overflow-hidden ${
+          isScrolled ? "md:max-h-0 md:py-0 md:opacity-0 md:border-b-0" : "md:max-h-12 md:py-2 md:opacity-100"
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
@@ -143,13 +143,13 @@ export function HeaderMau3() {
       {/* 02. Premium Main Navbar */}
       <nav
         aria-label="Menu chính"
-        className={`w-full transition-all duration-200 border-b ${
+        className={`w-full border-b transition-colors duration-200 ${
           isScrolled
-            ? "bg-white/98 text-[#171A1F] shadow-sm backdrop-blur-md py-3 border-stone-200"
-            : "bg-white text-[#171A1F] py-3.5 sm:py-4 border-stone-200/80"
+            ? "bg-white/98 text-[#171A1F] shadow-sm backdrop-blur-md md:py-3 border-stone-200"
+            : "bg-white text-[#171A1F] md:py-4 border-stone-200/80"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-auto flex items-center justify-between">
           {/* Brand Logo & Name */}
           <Link href="/mau-3" className="flex items-center gap-3 group">
             <div className="w-10 h-10 relative shrink-0">

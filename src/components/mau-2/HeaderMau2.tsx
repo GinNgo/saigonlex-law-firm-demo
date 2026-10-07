@@ -33,11 +33,11 @@ export function HeaderMau2() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full transition-all duration-300 bg-[var(--surface)] shadow-sm">
+    <header className="sticky top-0 z-40 w-full bg-[var(--surface)] transition-shadow duration-200 transform-gpu shadow-xs">
       {/* Editorial Micro Header Strip */}
       <div
-        className={`bg-[var(--bg-section-alt)] text-[var(--color-text-secondary)] text-[11px] px-4 border-b border-[var(--color-border)] hidden md:block transition-all duration-300 overflow-hidden ${
-          isScrolled ? "max-h-0 py-0 opacity-0 border-b-0" : "max-h-10 md:py-1.5 opacity-100"
+        className={`bg-[var(--bg-section-alt)] text-[var(--color-text-secondary)] text-[11px] px-4 border-b border-[var(--color-border)] hidden md:block md:transition-all md:duration-300 md:overflow-hidden ${
+          isScrolled ? "md:max-h-0 md:py-0 md:opacity-0 md:border-b-0" : "md:max-h-10 md:py-1.5 md:opacity-100"
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -58,13 +58,13 @@ export function HeaderMau2() {
 
       {/* Main Luxury Bar (Bright Ivory / Themed Surface) */}
       <div
-        className={`w-full transition-all duration-300 ${
+        className={`w-full border-b transition-colors duration-200 ${
           isScrolled
-            ? "bg-[var(--surface)]/95 backdrop-blur-md border-b border-[var(--color-border)] py-3.5 shadow-sm"
-            : "bg-[var(--surface)] border-b border-[var(--color-border)] py-4"
+            ? "bg-[var(--surface)]/98 backdrop-blur-md border-[var(--color-border)] md:py-3.5 shadow-sm"
+            : "bg-[var(--surface)] border-[var(--color-border)] md:py-4"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-auto flex items-center justify-between">
           {/* Monogram Brand Mark */}
           <Link href="/mau-2" className="flex items-center gap-3.5 group">
             <div className="w-10 h-10 rounded-sm bg-[var(--color-primary)] border border-[var(--color-accent)]/50 flex items-center justify-center text-[var(--color-accent)] shadow-sm group-hover:border-[var(--color-accent)] transition">

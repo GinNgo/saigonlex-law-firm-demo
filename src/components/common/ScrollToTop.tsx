@@ -62,7 +62,7 @@ export function ScrollToTop() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.7, y: 20 }}
           transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed bottom-20 right-4 md:bottom-8 md:right-8 z-40 select-none"
+          className="fixed bottom-6 left-3.5 md:bottom-8 md:left-8 z-40 select-none"
         >
           <motion.button
             type="button"
@@ -108,7 +108,7 @@ export function ScrollToTop() {
             <ArrowUp className="w-4 h-4 text-[var(--color-primary)] group-hover:text-[var(--color-accent)] group-hover:-translate-y-0.5 transition-all duration-200 relative z-10" />
 
             {/* Hover Tooltip (Desktop) */}
-            <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 px-2.5 py-1 rounded-md bg-[var(--bg-dark)] text-white text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 shadow-md">
+            <span className="hidden md:block absolute left-full ml-3 top-1/2 -translate-y-1/2 px-2.5 py-1 rounded-md bg-[var(--bg-dark)] text-white text-[11px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 shadow-md">
               Lên đầu trang
             </span>
           </motion.button>

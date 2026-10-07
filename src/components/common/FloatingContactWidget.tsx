@@ -79,11 +79,11 @@ export function FloatingContactWidget() {
   return (
     <>
       {/* ======================================================== */}
-      {/* 1. FLOATING CONTACT BUTTONS STACK (Bottom Left)          */}
+      {/* 1. FLOATING CONTACT BUTTONS STACK (Bottom Right)         */}
       {/* ======================================================== */}
       <aside
         aria-label="Liên hệ nhanh với luật sư"
-        className="fixed bottom-6 left-3.5 md:bottom-8 md:left-8 z-40 select-none print:hidden flex flex-col items-start gap-3"
+        className="fixed bottom-6 right-3.5 md:bottom-8 md:right-8 z-40 select-none print:hidden flex flex-col items-end gap-3"
       >
         <AnimatePresence>
           {!isMinimized && (
@@ -92,7 +92,7 @@ export function FloatingContactWidget() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 15, scale: 0.9 }}
               transition={{ duration: 0.2 }}
-              className="flex flex-col items-start gap-3"
+              className="flex flex-col items-end gap-3"
             >
               {/* ITEM 1: Đặt lịch tư vấn / Yêu cầu gọi lại */}
               <div className="relative group">
@@ -106,7 +106,7 @@ export function FloatingContactWidget() {
                 </button>
 
                 {/* Tooltip on Desktop */}
-                <div className="hidden md:flex items-center absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-[var(--surface)] text-[var(--color-text)] border border-[var(--color-border)] px-3 py-1.5 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap text-xs font-semibold gap-1.5">
+                <div className="hidden md:flex items-center absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-[var(--surface)] text-[var(--color-text)] border border-[var(--color-border)] px-3 py-1.5 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap text-xs font-semibold gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-[var(--color-accent)]" />
                   <span>Đặt hẹn tư vấn nhanh</span>
                 </div>
@@ -125,7 +125,7 @@ export function FloatingContactWidget() {
                 </a>
 
                 {/* Tooltip on Desktop */}
-                <div className="hidden md:flex items-center absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-[var(--surface)] text-[var(--color-text)] border border-[var(--color-border)] px-3 py-1.5 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap text-xs font-semibold gap-1.5">
+                <div className="hidden md:flex items-center absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-[var(--surface)] text-[var(--color-text)] border border-[var(--color-border)] px-3 py-1.5 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap text-xs font-semibold gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-[#0084FF]" />
                   <span>Chat Facebook Messenger</span>
                 </div>
@@ -147,7 +147,7 @@ export function FloatingContactWidget() {
                 </a>
 
                 {/* Tooltip on Desktop */}
-                <div className="hidden md:flex items-center absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-[var(--surface)] text-[var(--color-text)] border border-[var(--color-border)] px-3 py-1.5 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap text-xs font-semibold gap-1.5">
+                <div className="hidden md:flex items-center absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-[var(--surface)] text-[var(--color-text)] border border-[var(--color-border)] px-3 py-1.5 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap text-xs font-semibold gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-blue-500 animate-ping" />
                   <span>Chat Zalo tư vấn ngay</span>
                 </div>
@@ -173,7 +173,7 @@ export function FloatingContactWidget() {
           </a>
 
           {/* Desktop Hover Pill Badge */}
-          <div className="hidden md:flex items-center absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-[var(--surface)] text-[var(--color-text)] border border-[var(--color-border)] px-3.5 py-1.5 rounded-full shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap text-xs font-bold gap-2">
+          <div className="hidden md:flex items-center absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-[var(--surface)] text-[var(--color-text)] border border-[var(--color-border)] px-3.5 py-1.5 rounded-full shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap text-xs font-bold gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
             <span>Hotline 24/7: <strong className="text-red-600">{displayPhone}</strong></span>
           </div>

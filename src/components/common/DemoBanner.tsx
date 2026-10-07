@@ -11,6 +11,7 @@ export function DemoBanner() {
   const { activeTemplate, switchToTemplate, theme } = useDemoTheme();
   const isMauA = pathname.startsWith("/mau-1");
   const isMauB = pathname.startsWith("/mau-2");
+  const isMauC = pathname.startsWith("/mau-3");
 
   if (pathname === "/") return null;
 
@@ -24,7 +25,13 @@ export function DemoBanner() {
           <span className="text-slate-300 hidden sm:inline">
             Đang xem:{" "}
             <strong className="text-white">
-              {isMauA ? "MẪU A – Corporate Premium" : isMauB ? "MẪU B – Signature Premium" : "Trang Demo"}
+              {isMauA
+                ? "MẪU A – Corporate Premium"
+                : isMauB
+                ? "MẪU B – Signature Premium"
+                : isMauC
+                ? "MẪU C – Classic Modern Premium"
+                : "Trang Demo"}
             </strong>
           </span>
           <span className="inline-flex items-center gap-1 text-[11px] text-slate-300 bg-white/10 px-2 py-0.5 rounded">
@@ -36,29 +43,39 @@ export function DemoBanner() {
         <div className="flex items-center gap-2">
           <Link
             href="/"
-            className="text-slate-300 hover:text-white px-2.5 py-1 rounded hover:bg-slate-800 transition flex items-center gap-1.5"
+            className="text-slate-300 hover:text-white px-2 py-1 rounded hover:bg-slate-800 transition flex items-center gap-1 text-[11px]"
           >
             <LayoutGrid className="w-3.5 h-3.5 text-slate-400" />
-            <span>So sánh 2 Mẫu</span>
+            <span>So sánh 3 Mẫu</span>
           </Link>
 
-          {isMauA ? (
-            <button
-              onClick={() => switchToTemplate("mau-b")}
-              className="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-3 py-1 rounded transition flex items-center gap-1.5 shadow-sm"
-            >
-              <span>Xem MẪU B (Signature)</span>
-              <ArrowRight className="w-3 h-3" />
-            </button>
-          ) : (
+          {/* Quick template switch buttons */}
+          <div className="flex items-center gap-1 bg-slate-800/80 p-0.5 rounded-lg border border-slate-700/60">
             <button
               onClick={() => switchToTemplate("mau-a")}
-              className="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-3 py-1 rounded transition flex items-center gap-1.5 shadow-sm"
+              className={`px-2 py-0.5 rounded text-[11px] font-semibold transition ${
+                isMauA ? "bg-blue-600 text-white" : "text-slate-300 hover:text-white"
+              }`}
             >
-              <span>Xem MẪU A (Corporate)</span>
-              <ArrowRight className="w-3 h-3" />
+              Mẫu A
             </button>
-          )}
+            <button
+              onClick={() => switchToTemplate("mau-b")}
+              className={`px-2 py-0.5 rounded text-[11px] font-semibold transition ${
+                isMauB ? "bg-amber-600 text-white" : "text-slate-300 hover:text-white"
+              }`}
+            >
+              Mẫu B
+            </button>
+            <button
+              onClick={() => switchToTemplate("mau-c")}
+              className={`px-2 py-0.5 rounded text-[11px] font-semibold transition ${
+                isMauC ? "bg-emerald-600 text-white" : "text-slate-300 hover:text-white"
+              }`}
+            >
+              Mẫu C
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import React from "react";
 import { useDemoTheme } from "@/context/DemoThemeContext";
 
 interface TemplatePageWrapperProps {
-  templateId: "mau-a" | "mau-b";
+  templateId: "mau-a" | "mau-b" | "mau-c";
   children: React.ReactNode;
   className?: string;
 }

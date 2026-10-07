@@ -4,7 +4,7 @@ import React, { createContext, useContext, useEffect, useState, useCallback } fr
 import { usePathname, useRouter } from "next/navigation";
 
 export type DemoThemeId = "navy-gold" | "burgundy-cream" | "emerald-ivory" | "charcoal-blue";
-export type DemoTemplateId = "mau-a" | "mau-b";
+export type DemoTemplateId = "mau-a" | "mau-b" | "mau-c";
 
 export interface DemoThemeInfo {
   id: DemoThemeId;
@@ -100,7 +100,11 @@ export function DemoThemeProvider({ children }: { children: React.ReactNode }) {
   const [animationKey, setAnimationKey] = useState(0);
 
   // Derive active template from current route
-  const activeTemplate: DemoTemplateId = pathname.startsWith("/mau-2") ? "mau-b" : "mau-a";
+  const activeTemplate: DemoTemplateId = pathname.startsWith("/mau-3")
+    ? "mau-c"
+    : pathname.startsWith("/mau-2")
+    ? "mau-b"
+    : "mau-a";
 
   // Initialize theme from localStorage & apply to documentElement
   useEffect(() => {
@@ -139,7 +143,8 @@ export function DemoThemeProvider({ children }: { children: React.ReactNode }) {
 
       const currentIsTarget =
         (target === "mau-a" && pathname === "/mau-1") ||
-        (target === "mau-b" && pathname === "/mau-2");
+        (target === "mau-b" && pathname === "/mau-2") ||
+        (target === "mau-c" && pathname === "/mau-3");
 
       if (currentIsTarget) {
         // If already on the target template home, smooth scroll to top and replay
@@ -155,7 +160,7 @@ export function DemoThemeProvider({ children }: { children: React.ReactNode }) {
       // Step 2: Overlay fades in (duration ~320ms)
       setTimeout(() => {
         // Step 3: Client-side route change
-        const targetUrl = target === "mau-a" ? "/mau-1" : "/mau-2";
+        const targetUrl = target === "mau-a" ? "/mau-1" : target === "mau-b" ? "/mau-2" : "/mau-3";
         router.push(targetUrl);
 
         // Step 4: Immediately reset scroll to top (instant)

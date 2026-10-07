@@ -9,6 +9,8 @@ export function TemplateTransitionOverlay() {
   const { isTransitioning, transitionTarget } = useDemoTheme();
 
   const isTargetMauA = transitionTarget === "mau-a";
+  const isTargetMauB = transitionTarget === "mau-b";
+  const isTargetMauC = transitionTarget === "mau-c";
 
   return (
     <AnimatePresence>
@@ -22,6 +24,8 @@ export function TemplateTransitionOverlay() {
           className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center select-none backdrop-blur-md ${
             isTargetMauA
               ? "bg-[#F8FAFC]/95 text-slate-900"
+              : isTargetMauC
+              ? "bg-[#FFFFFF]/98 text-slate-900"
               : "bg-[#FAF7F0]/95 text-slate-900"
           }`}
           aria-live="polite"
@@ -72,6 +76,10 @@ export function TemplateTransitionOverlay() {
               {isTargetMauA ? (
                 <span>
                   Chuyển sang: <strong className="text-[#0F172A]">MẪU A • Corporate Premium</strong>
+                </span>
+              ) : isTargetMauC ? (
+                <span>
+                  Chuyển sang: <strong className="text-[#0F172A]">MẪU C • Classic Modern Premium</strong>
                 </span>
               ) : (
                 <span>

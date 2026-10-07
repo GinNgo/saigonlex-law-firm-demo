@@ -1,0 +1,383 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ChevronDown,
+  Menu,
+  X,
+  ArrowRight,
+  Shield,
+  Briefcase,
+  FileText,
+  Users,
+  Scale
+} from "lucide-react";
+import { PRACTICE_AREAS_MAU3, FEATURED_SERVICES_MAU3 } from "@/data/mau3Data";
+
+export function HeaderMau3() {
+  const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [practiceDropdownOpen, setPracticeDropdownOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { label: "Trang chủ", href: "/mau-3" },
+    { label: "Giới thiệu", href: "/mau-3/gioi-thieu" },
+    {
+      label: "Lĩnh vực",
+      href: "/mau-3/linh-vuc",
+      hasDropdown: "practice"
+    },
+    {
+      label: "Dịch vụ",
+      href: "/mau-3/dich-vu",
+      hasDropdown: "services"
+    },
+    { label: "Đội ngũ", href: "/mau-3/doi-ngu" },
+    { label: "Kiến thức", href: "/mau-3/kien-thuc" },
+    { label: "Biểu mẫu", href: "/mau-3/bieu-mau" },
+    { label: "Tin tức", href: "/mau-3/tin-tuc" },
+    { label: "Tuyển dụng", href: "/mau-3/tuyen-dung" },
+    { label: "Liên hệ", href: "/mau-3/lien-he" }
+  ];
+
+  return (
+    <header className="w-full select-none z-30 relative">
+      {/* 01. Top Information Bar (Corporate standard) */}
+      <div className="bg-[#0E2945] text-slate-200 text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-white/10 hidden md:block">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+          <div className="flex items-center gap-6 text-[12.5px]">
+            <a
+              href="tel:0908033115"
+              className="flex items-center gap-1.5 hover:text-[#AD8B55] transition text-amber-200/90 font-medium"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#AD8B55]" />
+              <span>Hotline: <strong>0908 033 115</strong></span>
+            </a>
+            <a
+              href="mailto:info.saigonlex@gmail.com"
+              className="flex items-center gap-1.5 hover:text-white transition text-slate-300"
+            >
+              <Mail className="w-3.5 h-3.5 text-slate-400" />
+              <span>info.saigonlex@gmail.com</span>
+            </a>
+            <div className="flex items-center gap-1.5 text-slate-300 hidden lg:flex">
+              <MapPin className="w-3.5 h-3.5 text-slate-400" />
+              <span>26-28 Cao Đức Lân, P. An Phú, TP. Thủ Đức, TP.HCM</span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-4 text-[12px] text-slate-300">
+            <div className="flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5 text-amber-400/80" />
+              <span>T2 – T6: 08:00 – 17:30 | T7: 08:00 – 12:00</span>
+            </div>
+            <span className="w-1 h-1 rounded-full bg-slate-500" />
+            <span className="text-amber-200/80 font-semibold tracking-wide">
+              Đoàn Luật sư TP.HCM
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* 02. Premium Sticky Header */}
+      <nav
+        aria-label="Menu chính"
+        className={`w-full transition-all duration-300 ${
+          isScrolled
+            ? "sticky top-0 bg-white/98 text-[#171A1F] shadow-md backdrop-blur-md py-3.5 border-b border-stone-200"
+            : "bg-white text-[#171A1F] py-4 border-b border-stone-200/80"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+          {/* Brand Logo & Name */}
+          <Link href="/mau-3" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 relative shrink-0">
+              <Image
+                src="/brand/logo.png"
+                alt="Logo Công ty Luật SaigonLex"
+                width={40}
+                height={40}
+                className="object-contain"
+                priority
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xs uppercase tracking-widest text-[#AD8B55] font-bold leading-none">
+                Công ty Luật TNHH
+              </span>
+              <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-[#17365D] group-hover:text-[#0E2945] transition-colors leading-tight font-serif">
+                SAIGON<span className="text-[#AD8B55]">LEX</span>
+              </span>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation Links */}
+          <div className="hidden xl:flex items-center gap-1 lg:gap-2">
+            {navLinks.map((item) => {
+              const isActive =
+                item.href === "/mau-3"
+                  ? pathname === "/mau-3"
+                  : pathname.startsWith(item.href);
+
+              if (item.hasDropdown === "practice") {
+                return (
+                  <div
+                    key={item.href}
+                    className="relative"
+                    onMouseEnter={() => setPracticeDropdownOpen(true)}
+                    onMouseLeave={() => setPracticeDropdownOpen(false)}
+                  >
+                    <Link
+                      href={item.href}
+                      className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1 transition ${
+                        isActive
+                          ? "text-[#17365D] bg-stone-100/90 font-bold"
+                          : "text-[#202124] hover:text-[#17365D] hover:bg-stone-50"
+                      }`}
+                    >
+                      <span>{item.label}</span>
+                      <ChevronDown
+                        className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                          practiceDropdownOpen ? "rotate-180 text-[#17365D]" : "text-stone-400"
+                        }`}
+                      />
+                    </Link>
+
+                    {/* Mega Dropdown for Practice Areas */}
+                    <AnimatePresence>
+                      {practiceDropdownOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 8 }}
+                          transition={{ duration: 0.18 }}
+                          className="absolute top-full left-0 w-[540px] bg-white rounded-2xl shadow-2xl border border-stone-200 p-5 grid grid-cols-2 gap-3 z-50 mt-1"
+                        >
+                          <div className="col-span-2 pb-2.5 mb-1 border-b border-stone-100 flex items-center justify-between">
+                            <span className="text-xs font-bold uppercase tracking-wider text-stone-500">
+                              8 Lĩnh Vực Hoạt Động Trọng Tâm
+                            </span>
+                            <Link
+                              href="/mau-3/linh-vuc"
+                              className="text-xs text-[#17365D] font-bold hover:underline flex items-center gap-1"
+                            >
+                              <span>Tất cả lĩnh vực</span>
+                              <ArrowRight className="w-3 h-3" />
+                            </Link>
+                          </div>
+                          {PRACTICE_AREAS_MAU3.map((pa) => (
+                            <Link
+                              key={pa.id}
+                              href={`/mau-3/linh-vuc/${pa.slug}`}
+                              className="group/item p-2.5 rounded-xl hover:bg-stone-50 transition border border-transparent hover:border-stone-200/80 flex items-start gap-2.5"
+                            >
+                              <span className="text-[11px] font-mono font-bold text-[#AD8B55] mt-0.5">
+                                {pa.number}
+                              </span>
+                              <div>
+                                <h4 className="text-xs font-bold text-[#111827] group-hover/item:text-[#17365D] transition">
+                                  {pa.title}
+                                </h4>
+                                <p className="text-[11px] text-stone-500 line-clamp-1 mt-0.5">
+                                  {pa.shortDesc}
+                                </p>
+                              </div>
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              }
+
+              if (item.hasDropdown === "services") {
+                return (
+                  <div
+                    key={item.href}
+                    className="relative"
+                    onMouseEnter={() => setServicesDropdownOpen(true)}
+                    onMouseLeave={() => setServicesDropdownOpen(false)}
+                  >
+                    <Link
+                      href={item.href}
+                      className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1 transition ${
+                        isActive
+                          ? "text-[#17365D] bg-stone-100/90 font-bold"
+                          : "text-[#202124] hover:text-[#17365D] hover:bg-stone-50"
+                      }`}
+                    >
+                      <span>{item.label}</span>
+                      <ChevronDown
+                        className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                          servicesDropdownOpen ? "rotate-180 text-[#17365D]" : "text-stone-400"
+                        }`}
+                      />
+                    </Link>
+
+                    {/* Services Dropdown */}
+                    <AnimatePresence>
+                      {servicesDropdownOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 8 }}
+                          transition={{ duration: 0.18 }}
+                          className="absolute top-full left-0 w-80 bg-white rounded-2xl shadow-2xl border border-stone-200 p-4 space-y-1.5 z-50 mt-1"
+                        >
+                          <div className="pb-2 mb-1 border-b border-stone-100 flex items-center justify-between">
+                            <span className="text-xs font-bold uppercase tracking-wider text-stone-500">
+                              Dịch Vụ Pháp Lý Nổi Bật
+                            </span>
+                            <Link
+                              href="/mau-3/dich-vu"
+                              className="text-xs text-[#17365D] font-bold hover:underline"
+                            >
+                              Xem tất cả
+                            </Link>
+                          </div>
+                          {FEATURED_SERVICES_MAU3.map((svc) => (
+                            <Link
+                              key={svc.id}
+                              href={svc.href}
+                              className="group/item p-2 rounded-lg hover:bg-stone-50 transition block"
+                            >
+                              <div className="text-xs font-bold text-stone-900 group-hover/item:text-[#17365D]">
+                                {svc.title}
+                              </div>
+                              <div className="text-[10.5px] text-stone-500 font-mono">
+                                {svc.subtitle}
+                              </div>
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`px-3 py-2 rounded-lg text-sm font-semibold transition ${
+                    isActive
+                      ? "text-[#17365D] bg-stone-100/90 font-bold"
+                      : "text-[#202124] hover:text-[#17365D] hover:bg-stone-50"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </div>
+
+          {/* Right Header CTA Button */}
+          <div className="hidden sm:flex items-center gap-3">
+            <Link
+              href="/mau-3/lien-he"
+              className="bg-[#17365D] hover:bg-[#0E2945] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-lg transition-all shadow-md hover:shadow-lg flex items-center gap-2 group"
+            >
+              <span>Đặt lịch tư vấn</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+            </Link>
+          </div>
+
+          {/* Mobile Menu Hamburger Button */}
+          <div className="flex xl:hidden items-center gap-2">
+            <a
+              href="tel:0908033115"
+              className="p-2 rounded-lg bg-stone-100 text-[#17365D] sm:hidden"
+              aria-label="Gọi hotline"
+            >
+              <Phone className="w-4 h-4" />
+            </a>
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 rounded-lg bg-stone-100 text-stone-700 hover:text-stone-900 focus:outline-hidden"
+              aria-label="Mở menu di động"
+            >
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Drawer Navigation */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25 }}
+            className="xl:hidden bg-white border-b border-stone-200 overflow-hidden shadow-2xl"
+          >
+            <div className="px-4 py-5 space-y-3 max-h-[80vh] overflow-y-auto">
+              <div className="space-y-1">
+                {navLinks.map((item) => {
+                  const isActive =
+                    item.href === "/mau-3"
+                      ? pathname === "/mau-3"
+                      : pathname.startsWith(item.href);
+
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`block px-3.5 py-2.5 rounded-xl text-sm font-semibold transition ${
+                        isActive
+                          ? "bg-stone-100 text-[#17365D] font-bold"
+                          : "text-stone-800 hover:bg-stone-50"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </div>
+
+              {/* Mobile CTA */}
+              <div className="pt-3 border-t border-stone-100 space-y-2">
+                <Link
+                  href="/mau-3/lien-he"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full bg-[#17365D] text-white font-bold text-center py-3 rounded-xl block text-sm"
+                >
+                  Đặt lịch tư vấn trực tiếp
+                </Link>
+                <a
+                  href="tel:0908033115"
+                  className="w-full bg-stone-100 text-stone-800 font-semibold text-center py-2.5 rounded-xl block text-xs flex items-center justify-center gap-1.5"
+                >
+                  <Phone className="w-3.5 h-3.5 text-[#AD8B55]" />
+                  <span>Hotline: 0908 033 115</span>
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}
